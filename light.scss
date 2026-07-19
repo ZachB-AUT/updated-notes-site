@@ -1,15 +1,77 @@
 /*-- scss:defaults --*/
-// Sass variables — must go here to override Bootstrap/Quarto defaults
-$primary: rgb(188, 82, 21);
-$body-bg: rgb(255, 252, 240);
-$body-color: rgb(16, 15, 15);
-$link-color: rgb(32, 94, 166);
+// Flexoki Light palette
+// BG      #FFFCF0  paper
+// BG-2    #F2F0E5
+// UI      #E6E4D9
+// UI-2    #DAD8CE
+// UI-3    #CECDC3
+// TX-3    #B7B5AC  faint
+// TX-2    #6F6E69  muted
+// TX      #100F0F  normal
+
+$body-bg:                #FFFCF0;
+$body-color:             #100F0F;
+$primary:                #BC5215;   // orange
+$secondary:              #6F6E69;   // TX-2 muted
+$link-color:             #205EA6;   // blue
+$link-hover-color:       #24837B;   // cyan
+$border-color:           #E6E4D9;   // UI
+
+$headings-color:         #100F0F;
+$hr-opacity:             1;
+
+$navbar-bg:              #FFFCF0;
+$navbar-fg:              #100F0F;
+$navbar-hl:              #BC5215;
+
+$code-color:             #AF3029;   // red
+$pre-bg:                 #F2F0E5;   // BG-2
+$pre-color:              #100F0F;
+
 $font-family-sans-serif: "Times New Roman", serif;
-$font-family-monospace: "JetBrains Mono", monospace;
+$font-family-monospace:  "JetBrains Mono", monospace;
 
 
 /*-- scss:rules --*/
-// Plain CSS rules — applied after Bootstrap is compiled
 .navbar {
+  border-bottom: 1px solid #E6E4D9;
+}
+
+.sidebar-navigation,
+#quarto-sidebar {
+  border-right: 1px solid #E6E4D9;
+}
+
+nav[role=doc-toc] ul > li > a.active,
+nav[role=doc-toc] ul > li > ul > li > a.active {
+  border-left-color: #BC5215;
+  color: #BC5215;
+}
+
+blockquote {
+  border-left: 3px solid #E6E4D9;
+  color: #6F6E69;
+}
+
+:not(pre) > code,
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  background-color: #F2F0E5;
+  color: #AF3029;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+hr {
+  border-color: #E6E4D9;
+}
+
+div.sourceCode {
+  background-color: #F2F0E5;
+  border-color: #E6E4D9;
+}
+
+.quarto-secondary-nav {
   border-bottom: 1px solid #E6E4D9;
 }

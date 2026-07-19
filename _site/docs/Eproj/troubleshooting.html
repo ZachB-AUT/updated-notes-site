@@ -8,7 +8,7 @@
 
 <meta name="author" content="Zach Barrett">
 
-<title>Troubleshooting for Electronics Project – Zachs Notes</title>
+<title>Troubleshooting for Electronics Project – Zach’s Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,14 +40,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7fde21fbbed941212ff23fc867eda995.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4b3ae02ca3d2c990793b4a58c5ee5acf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7fde21fbbed941212ff23fc867eda995.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15c9cf0a79d9be21a663fae9266e422b.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-705c1370192b55e760b8a22d89d357ff.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15c9cf0a79d9be21a663fae9266e422b.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-dc5b81e98f127854b75d13c17b83ed2e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-bd2fabb605e09471ae5d250673f218b8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-dc5b81e98f127854b75d13c17b83ed2e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3de89c0825b7bcddd27a0058131edcb7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d7385bc63b877872f439d6bbbbc8ace6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-3de89c0825b7bcddd27a0058131edcb7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -250,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Zachs Notes</span>
+    <span class="navbar-title">Zach’s Notes</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -266,6 +266,14 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About this Site</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/Eproj/Electronics Project.html"> 
+<span class="menu-text">Electronics Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/physics-B/Foundation Physics B.html"> 
+<span class="menu-text">Foundation Physics B</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -354,8 +362,7 @@ Note
 </section>
 <section id="how-to-fix-the-lastconnection.data-error-sometimes" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-fix-the-lastconnection.data-error-sometimes">How to fix the lastconnection.data error (sometimes)</h2>
-<p>We do not know why this works, only that it does. Please follow these steps as<br>
-closely as possible.</p>
+<p>We do not know why this works, only that it does most of the time. Please follow these steps as closely as possible.</p>
 <ol type="1">
 <li>Open the components menu.</li>
 <li>Click the three horizontal lines (hamburger) button.</li>
@@ -364,7 +371,7 @@ closely as possible.</p>
 <li>Select all libraries.</li>
 <li>Press “remove”.</li>
 <li>Press “Install”.</li>
-<li>Open the <a href="index.html#Altium Libraries Path">K drive libraries path</a>.</li>
+<li>Open the <a href="http://localhost:6384/docs/Eproj/troubleshooting.html#altium-libraries-path">K drive libraries path</a>.</li>
 <li>Select all libraries under “Altium Libraries”.</li>
 <li>Press “Open”.</li>
 <li>Close Altium.</li>
@@ -376,8 +383,7 @@ closely as possible.</p>
 </section>
 <section id="how-to-add-an-external-file-in-altium" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-add-an-external-file-in-altium">How to add an External File in Altium</h2>
-<p>For a file to be properly included in an Altium project, it must meet three<br>
-criteria:</p>
+<p>For a file to be properly included in an Altium project, it must meet three criteria:</p>
 <ol type="1">
 <li>It must be in the correct folder.<br>
 </li>
@@ -398,17 +404,11 @@ criteria:</p>
 </section>
 <section id="adding-the-file-to-the-project" class="level3">
 <h3 class="anchored" data-anchor-id="adding-the-file-to-the-project">Adding the file to the project</h3>
-<p>Once that is done, right click on the project and click “Add existing to<br>
-project”<br>
-</p>
+<p>Once that is done, right click on the project and click “Add existing to project”</p>
 <p><img src="../../assets/Add_Existing_To_Project.png" class="img-fluid"></p>
 <p>Select the new file, and press “Open”.<br>
 </p>
-<p>Ensure the file icon does not have an arrow on it like this icon: <img src="assets/BRUH.png" class="img-fluid"><br>
-If it does, you need to go through the “Add existing to project” step again.<br>
-Then, remove the old referenced file. Ensure you press “Exclude from project”<br>
-instead of deleting it, to make sure that you can recover from mistakes on this<br>
-step.<br>
+<p>Ensure the file icon does not have an arrow on it like this icon: <img src="../../assets/BRUH.png" class="img-fluid"> If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.<br>
 </p>
 <p><img src="../../assets/Remove_External_File.png" class="img-fluid"></p>
 <p><img src="../../assets/Exclude_Not_Delete.png" class="img-fluid"></p>

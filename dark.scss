@@ -1,15 +1,77 @@
 /*-- scss:defaults --*/
-// Sass variables — must go here to override Bootstrap/Quarto defaults
-$primary: rgb(218, 112, 44);
-$body-bg: rgb(16, 15, 15);
-$body-color: rgb(206, 205, 195);
-$link-color: rgb(67, 133, 190);
+// Flexoki Dark palette
+// BG      #100F0F
+// BG-2    #1C1B1A
+// UI      #282726
+// UI-2    #343331
+// UI-3    #403E3C
+// TX-3    #575653  faint
+// TX-2    #878580  muted
+// TX      #CECDC3  normal
+
+$body-bg:                #100F0F;
+$body-color:             #CECDC3;
+$primary:                #DA702C;   // orange
+$secondary:              #878580;   // TX-2 muted
+$link-color:             #4385BE;   // blue
+$link-hover-color:       #3AA99F;   // cyan
+$border-color:           #282726;   // UI
+
+$headings-color:         #CECDC3;
+$hr-opacity:             1;
+
+$navbar-bg:              #100F0F;
+$navbar-fg:              #CECDC3;
+$navbar-hl:              #DA702C;
+
+$code-color:             #D14D41;   // red
+$pre-bg:                 #1C1B1A;   // BG-2
+$pre-color:              #CECDC3;
+
 $font-family-sans-serif: "Times New Roman", serif;
-$font-family-monospace: "JetBrains Mono", monospace;
+$font-family-monospace:  "JetBrains Mono", monospace;
 
 
 /*-- scss:rules --*/
-// Plain CSS rules — applied after Bootstrap is compiled
 .navbar {
-  border-bottom: 1px solid #E6E4D9;
+  border-bottom: 1px solid #282726;
+}
+
+.sidebar-navigation,
+#quarto-sidebar {
+  border-right: 1px solid #282726;
+}
+
+nav[role=doc-toc] ul > li > a.active,
+nav[role=doc-toc] ul > li > ul > li > a.active {
+  border-left-color: #DA702C;
+  color: #DA702C;
+}
+
+blockquote {
+  border-left: 3px solid #282726;
+  color: #878580;
+}
+
+:not(pre) > code,
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  background-color: #1C1B1A;
+  color: #D14D41;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+hr {
+  border-color: #282726;
+}
+
+div.sourceCode {
+  background-color: #1C1B1A;
+  border-color: #282726;
+}
+
+.quarto-secondary-nav {
+  border-bottom: 1px solid #282726;
 }

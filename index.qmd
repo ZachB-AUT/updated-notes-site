@@ -4,4 +4,5 @@ author: "Zach Barrett"
 ---
 
 - [Electronics Project](./docs/Electronics Project.qmd)
+- [Foundation Physics B](./docs/physics-B/Foundation Physics B.qmd)
 

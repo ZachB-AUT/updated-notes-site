@@ -22,8 +22,8 @@ That being said, the following are quick guides on solving common problems.
 
 ## How to fix the lastconnection.data error (sometimes)
 
-We do not know why this works, only that it does. Please follow these steps as\
-closely as possible.
+We do not know why this works, only that it does most of the time. Please
+follow these steps as closely as possible.
 
 1. Open the components menu.
 2. Click the three horizontal lines (hamburger) button.
@@ -32,7 +32,7 @@ closely as possible.
 5. Select all libraries.
 6. Press "remove".
 7. Press "Install".
-8. Open the [K drive libraries path](<index.html#Altium Libraries Path>).
+8. Open the [K drive libraries path](http://localhost:6384/docs/Eproj/troubleshooting.html#altium-libraries-path).
 9. Select all libraries under "Altium Libraries".
 10. Press "Open".
 11. Close Altium.
@@ -43,7 +43,7 @@ closely as possible.
 
 ## How to add an External File in Altium
 
-For a file to be properly included in an Altium project, it must meet three\
+For a file to be properly included in an Altium project, it must meet three
 criteria:
 
 1. It must be in the correct folder.\
@@ -68,18 +68,18 @@ Now, move the file from its original location into the project:
 
 ### Adding the file to the project
 
-Once that is done, right click on the project and click "Add existing to\
-project"\
+Once that is done, right click on the project and click "Add existing to
+project"
 
 ![](../../assets/Add_Existing_To_Project.png)
 
 Select the new file, and press "Open".\
 
-Ensure the file icon does not have an arrow on it like this icon: ![](assets/BRUH.png)\
-If it does, you need to go through the "Add existing to project" step again.\
-Then, remove the old referenced file. Ensure you press "Exclude from project"\
-instead of deleting it, to make sure that you can recover from mistakes on this\
-step.\
+Ensure the file icon does not have an arrow on it like this icon: ![](../../assets/BRUH.png)
+If it does, you need to go through the "Add existing to project" step again.
+Then, remove the old referenced file. Ensure you press "Exclude from project"
+instead of deleting it, to make sure that you can recover from mistakes on this
+step.
 
 ![](../../assets/Remove_External_File.png)
 
