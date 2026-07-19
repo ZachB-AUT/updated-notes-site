@@ -1,0 +1,17 @@
+---
+title: "ENEL602 - Electronics Project"
+author: "Zach Barrett"
+date: last-modified
+---
+
+---
+
+## Pages:
+- Assignments:
+  - [Troubleshooting](./troubleshooting.qmd)
+  - [Project One](./Project One.qmd)
+  - [Project Two](./Project Two.qmd)
+  - [Final Report](./Final Report.qmd)
+- Misc:
+  - [Routing Rules](./routing.qmd)
+

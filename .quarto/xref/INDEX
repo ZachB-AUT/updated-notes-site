@@ -1,23 +1,58 @@
 {
   "index.qmd": {
-    "index.html": "4b1ba311"
+    "index.html": "4b1ba311",
+    "index.pdf": "4f71f3fd",
+    "index.typ": "534b4aa1"
   },
   "about.qmd": {
-    "about.html": "4e8ba267"
+    "about.html": "4e8ba267",
+    "about.typ": "d3892b12"
   },
   "docs/Electronics Project.qmd": {
     "Electronics Project.html": "441efd3b"
   },
   "docs/Eproj/troubleshooting.qmd": {
-    "troubleshooting.html": "6bfbb5c9"
+    "troubleshooting.html": "6bfbb5c9",
+    "troubleshooting.tex": "130e3014",
+    "troubleshooting.docx": "6680bfce",
+    "troubleshooting.typ": "044fe65b"
   },
   "docs/Eproj/expl.qmd": {
     "expl.html": "0492de09"
   },
   "docs/Eproj/Electronics Project.qmd": {
-    "Electronics Project.html": "6246cefa"
+    "Electronics Project.html": "6246cefa",
+    "Electronics Project.pdf": "e47891ec",
+    "Electronics Project.typ": "ffaf4e04"
   },
   "docs/physics-B/Foundation Physics B.qmd": {
-    "Foundation Physics B.html": "8ab7ea26"
+    "Foundation Physics B.html": "8ab7ea26",
+    "Foundation Physics B.typ": "64c6eeef"
+  },
+  "docs/Eproj/Project Two.qmd": {
+    "Project Two.html": "f17f76b0",
+    "Project Two.typ": "566f43a4"
+  },
+  "docs/Eproj/Project One.qmd": {
+    "Project One.html": "230b5805",
+    "Project One.typ": "2f183c3e"
+  },
+  "docs/Eproj/Final Report.qmd": {
+    "Final Report.html": "94c21ec5",
+    "Final Report.pdf": "52c326ee",
+    "Final-Report.tex": "2c5ec867",
+    "Final Report.typ": "f8542fa7"
+  },
+  "docs/electronics-project/Electronics Project.qmd": {
+    "Electronics Project.html": "c26c3855"
+  },
+  "docs/electronics-project/Project One.qmd": {
+    "Project One.html": "ec2479d4"
+  },
+  "docs/electronics-project/troubleshooting.qmd": {
+    "troubleshooting.html": "7256496a"
+  },
+  "docs/electronics-project/routing.qmd": {
+    "routing.html": "a2434950"
   }
 }

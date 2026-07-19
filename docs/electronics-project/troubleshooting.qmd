@@ -111,5 +111,3 @@ K:\WELLESLEY COPY\DESIGN & CREATIVE TECHNOLOGIES\School of Engineering\Electrica
 ```
 
 For projects one and two, you will use `2025S2.IntLib`.
-
-> _Note:_ Do not install libraries from `AltiumLibraries\Altium Libraries` (which is a subfolder of `AltiumLibraries`).

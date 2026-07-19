@@ -11,4 +11,4 @@ university username or sending me a teams message. My network username is`TWZ685
 Please don't use my `zach.barrett@aut.ac.nz` address. I do not check it.
 
 
-I made this website using [quarto](https://quarto.org/) and a custom theme based on stephango's excellent [flexoki](https://stephango.com/flexoki) colourscheme.
+I made this website using [quarto](https://quarto.org/) and a custom theme based on stephango's excellent [flexoki](https://stephango.com/flexoki) colour-scheme.

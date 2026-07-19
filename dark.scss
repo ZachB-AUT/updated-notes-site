@@ -28,7 +28,7 @@ $code-color:             #D14D41;   // red
 $pre-bg:                 #1C1B1A;   // BG-2
 $pre-color:              #CECDC3;
 
-$font-family-sans-serif: "Times New Roman", serif;
+$font-family-sans-serif: "Lora", serif;
 $font-family-monospace:  "JetBrains Mono", monospace;
 
 
@@ -74,4 +74,44 @@ div.sourceCode {
 
 .quarto-secondary-nav {
   border-bottom: 1px solid #282726;
+}
+
+// Code cell output — visually connected to the block above
+.cell:has(.cell-output) div.sourceCode {
+  border-radius: 0.25rem 0.25rem 0 0;
+  border-bottom: none;
+}
+
+.cell-output {
+  background-color: #1C1B1A;
+  border: 1px solid #282726;
+  border-top: 1px solid #403E3C;
+  border-radius: 0 0 0.25rem 0.25rem;
+  padding: 0.35em 0.75em 0.5em;
+  margin-top: 0;
+
+  &::before {
+    content: "output";
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7em;
+    color: #575653;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2em;
+  }
+
+  pre {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #878580;
+    font-size: 0.875em;
+  }
+
+  code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+  }
 }

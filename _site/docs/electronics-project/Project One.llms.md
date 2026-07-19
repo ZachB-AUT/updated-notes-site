@@ -1,0 +1,19 @@
+# Project One
+
+------------------------------------------------------------------------
+
+Your task for Project One is to design and build a small line following robot.
+
+You will be given a schematic to follow, (although you will need to recreate it yourself), and a template file for the PCB. You will then route the PCB according to the guidelines we give you.
+
+## Project One Design
+
+You will first need to create a new project, create a schematic file, and [import the PCB template](../../docs/electronics-project/troubleshooting.llms.md#how-to-add-an-external-file-in-altium)
+
+Once you are done with that, recreate the schematic in altium. Check the Bill of Materials to make sure you are using the right components from the right libraries.
+
+## Project One Assembly
+
+I will write this section when I know more about what this semester looks like. Check back here later.
+
+Back to top

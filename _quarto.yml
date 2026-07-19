@@ -1,8 +1,13 @@
 project:
   type: website
 
+jupyter: .venv/bin/python
+
 website:
   title: "Zach's Notes"
+  description: "This website is where I keep answers to commonly asked questions and solutions to common problems."
+  llms-txt: true
+  back-to-top-navigation: true
   navbar:
     left:
       - href: index.qmd
@@ -23,6 +28,13 @@ format:
       dark: flexoki-dark.theme
     css: styles.css
     toc: true
-
+    code-copy: true
+    smooth-scroll: true
+    anchor-sections: true
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
 

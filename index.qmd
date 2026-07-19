@@ -3,6 +3,8 @@ title: "Course Notes"
 author: "Zach Barrett"
 ---
 
-- [Electronics Project](./docs/Electronics Project.qmd)
-- [Foundation Physics B](./docs/physics-B/Foundation Physics B.qmd)
+Here are my notes for the two courses I TA for:
+
+[Electronics Project](./docs/electronics-project/Electronics Project.qmd)\
+[Foundation Physics B](./docs/physics-B/Foundation Physics B.qmd)
 

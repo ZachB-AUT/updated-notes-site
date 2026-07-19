@@ -1,17 +1,38 @@
 [
   {
+    "objectID": "docs/Eproj/Project One.html",
+    "href": "docs/Eproj/Project One.html",
+    "title": "Project One",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt\n\nx = range(100)\ny = [x_val**2 for x_val in x]\n\nplt.plot(x,y)\n\n\n\n\nExample of some code output.\n\n\n\n\n@fig_plot is fucked.\nThis page is under construction, please check again later.\n\n\n\n Back to top"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About this Site",
     "section": "",
-    "text": "Hello! My name is Zach, you may know me as a teaching assistant in one of your courses. I made this website to help answer common questions I and my fellow TAs get.\nI hope you find this website helpful, if you would like to contact me try emailing me using my university username or sending me a teams message. My network username isTWZ6852.\nPlease don’t use my zach.barrett@aut.ac.nz address. I do not check it.\nI made this website using quarto and a custom theme based on stephango’s excellent flexoki colourscheme."
+    "text": "Hello! My name is Zach, you may know me as a teaching assistant in one of your courses. I made this website to help answer common questions I and my fellow TAs get.\nI hope you find this website helpful, if you would like to contact me try emailing me using my university username or sending me a teams message. My network username isTWZ6852.\nPlease don’t use my zach.barrett@aut.ac.nz address. I do not check it.\nI made this website using quarto and a custom theme based on stephango’s excellent flexoki colour-scheme.\n\n\n\n Back to top"
   },
   {
-    "objectID": "docs/physics-B/Foundation Physics B.html#course-overview",
-    "href": "docs/physics-B/Foundation Physics B.html#course-overview",
-    "title": "PHYS401 - Foundation Physics B",
-    "section": "Course Overview",
-    "text": "Course Overview"
+    "objectID": "docs/Eproj/Electronics Project.html#pages",
+    "href": "docs/Eproj/Electronics Project.html#pages",
+    "title": "ENEL602 - Electronics Project",
+    "section": "Pages:",
+    "text": "Pages:\n\nTroubleshooting\nProject One\nProject Two\nFinal Report"
+  },
+  {
+    "objectID": "docs/Eproj/Project Two.html",
+    "href": "docs/Eproj/Project Two.html",
+    "title": "Final Report",
+    "section": "",
+    "text": "This page is under construction, please check again later.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/Eproj/Final Report.html",
+    "href": "docs/Eproj/Final Report.html",
+    "title": "Final Report",
+    "section": "",
+    "text": "This page is under construction, please check again later.\n\n\n\n Back to top"
   },
   {
     "objectID": "docs/Eproj/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
@@ -32,27 +53,90 @@
     "href": "docs/Eproj/troubleshooting.html#how-to-add-an-external-file-in-altium",
     "title": "Troubleshooting for Electronics Project",
     "section": "How to add an External File in Altium",
-    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\n\nIt must not be a referenced file.\n\nIt must be added to version control.\n\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\n\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\n\nOnce that is done, add it to version control by right-clicking it, going under\nHistory and Version Control, and selecting “Add to Version Control”\n\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save.\n\n\nChecking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
+    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\n\nIt must not be a referenced file.\n\nIt must be added to version control.\n\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\n\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under\nHistory and Version Control, and selecting “Add to Version Control”\n\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save.\n\n\nChecking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
   },
   {
     "objectID": "docs/Eproj/troubleshooting.html#altium-libraries-path",
     "href": "docs/Eproj/troubleshooting.html#altium-libraries-path",
     "title": "Troubleshooting for Electronics Project",
     "section": "Altium Libraries Path",
-    "text": "Altium Libraries Path\nThis is the path you will use to install the K Drive libraries.\nK:\\WELLESLEY COPY\\DESIGN & CREATIVE TECHNOLOGIES\\School of Engineering\\Electrical & Electronic Engineering\\Resources\\AltiumLibraries\\\nFor projects one and two, you will use 2025S2.IntLib.\n\nNote: Do not install libraries from AltiumLibraries\\Altium Libraries (which is a subfolder of AltiumLibraries)."
+    "text": "Altium Libraries Path\nThis is the path you will use to install the K Drive libraries.\nK:\\WELLESLEY COPY\\DESIGN & CREATIVE TECHNOLOGIES\\School of Engineering\\Electrical & Electronic Engineering\\Resources\\AltiumLibraries\\\nFor projects one and two, you will use 2025S2.IntLib."
   },
   {
-    "objectID": "docs/Eproj/Electronics Project.html#pages",
-    "href": "docs/Eproj/Electronics Project.html#pages",
-    "title": "ENEL602 - Electronics Project",
-    "section": "Pages:",
-    "text": "Pages:\n\nTroubleshooting\nProject One\nProject Two"
+    "objectID": "docs/physics-B/Foundation Physics B.html#course-overview",
+    "href": "docs/physics-B/Foundation Physics B.html#course-overview",
+    "title": "PHYS401 - Foundation Physics B",
+    "section": "Course Overview",
+    "text": "Course Overview"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Course Notes",
     "section": "",
-    "text": "Electronics Project\nFoundation Physics B"
+    "text": "Here are my notes for the two courses I TA for:\nElectronics Project\nFoundation Physics B\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/Electronics Project.html#pages",
+    "href": "docs/electronics-project/Electronics Project.html#pages",
+    "title": "ENEL602 - Electronics Project",
+    "section": "Pages:",
+    "text": "Pages:\n\nAssignments:\n\nTroubleshooting\nProject One\nProject Two\nFinal Report\n\nMisc:\n\nRouting Rules"
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html#project-one-design",
+    "href": "docs/electronics-project/Project One.html#project-one-design",
+    "title": "Project One",
+    "section": "Project One Design",
+    "text": "Project One Design\nYou will first need to create a new project, create a schematic file, and import the PCB template\nOnce you are done with that, recreate the schematic in altium. Check the Bill of Materials to make sure you are using the right components from the right libraries."
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html",
+    "href": "docs/electronics-project/Project One.html",
+    "title": "Project One",
+    "section": "",
+    "text": "Your task for Project One is to design and build a small line following robot.\nYou will be given a schematic to follow, (although you will need to recreate it yourself), and a template file for the PCB. You will then route the PCB according to the guidelines we give you."
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
+    "href": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
+    "title": "Troubleshooting for Electronics Project",
+    "section": "How to fix the getting kicked off workspace problem",
+    "text": "How to fix the getting kicked off workspace problem\n\nClose Altium.\nOpen Altium\nIMMEDIATELY OPEN COMPONENTS BEFORE ANYTHING ELSE OPENS\nReconnect to workspace\nLogin"
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-lastconnection.data-error-sometimes",
+    "href": "docs/electronics-project/troubleshooting.html#how-to-fix-the-lastconnection.data-error-sometimes",
+    "title": "Troubleshooting for Electronics Project",
+    "section": "How to fix the lastconnection.data error (sometimes)",
+    "text": "How to fix the lastconnection.data error (sometimes)\nWe do not know why this works, only that it does most of the time. Please follow these steps as closely as possible.\n\nOpen the components menu.\nClick the three horizontal lines (hamburger) button.\nSelect “libraries preferences”\nOpen the “Installed” tab.\nSelect all libraries.\nPress “remove”.\nPress “Install”.\nOpen the K drive libraries path.\nSelect all libraries under “Altium Libraries”.\nPress “Open”.\nClose Altium.\nReopen Altium\nImmediately select the components tab\nLog in.\nConnect to the AUT workspace."
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
+    "href": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
+    "title": "Troubleshooting for Electronics Project",
+    "section": "How to add an External File in Altium",
+    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\n\nIt must not be a referenced file.\n\nIt must be added to version control.\n\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\n\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under\nHistory and Version Control, and selecting “Add to Version Control”\n\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save.\n\n\nChecking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
+    "href": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
+    "title": "Troubleshooting for Electronics Project",
+    "section": "Altium Libraries Path",
+    "text": "Altium Libraries Path\nThis is the path you will use to install the K Drive libraries.\nK:\\WELLESLEY COPY\\DESIGN & CREATIVE TECHNOLOGIES\\School of Engineering\\Electrical & Electronic Engineering\\Resources\\AltiumLibraries\\\nFor projects one and two, you will use 2025S2.IntLib."
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html#project-one-assembly",
+    "href": "docs/electronics-project/Project One.html#project-one-assembly",
+    "title": "Project One",
+    "section": "Project One Assembly",
+    "text": "Project One Assembly\nI will write this section when I know more about what this semester looks like. Check back here later."
+  },
+  {
+    "objectID": "docs/electronics-project/routing.html",
+    "href": "docs/electronics-project/routing.html",
+    "title": "Common Routing Errors",
+    "section": "",
+    "text": "ImportantDisclaimer\n\n\n\nThis is not an exhaustive list! There are errors you can make that I am not yet aware of. This is just a list of errors I have seen and instructions on how to avoid them. When in doubt, ask Michael or one of the TAs!\n\n\n\n\n\n\n\n\n Back to top"
   }
 ]
