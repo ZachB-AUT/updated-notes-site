@@ -1,0 +1,7 @@
+---
+title: "Course Notes"
+author: "Zach Barrett"
+---
+
+- [Electronics Project](./docs/Electronics Project.qmd)
+

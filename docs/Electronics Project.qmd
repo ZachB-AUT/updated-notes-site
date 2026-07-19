@@ -1,0 +1,13 @@
+---
+title: "Electronics Project"
+author: "Zach Barrett"
+---
+
+---
+
+## Pages:
+- [Troubleshooting](./Eproj/troubleshooting.qmd)
+- Project One
+- Project Two
+
+

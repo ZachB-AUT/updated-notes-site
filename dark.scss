@@ -1,0 +1,15 @@
+/*-- scss:defaults --*/
+// Sass variables — must go here to override Bootstrap/Quarto defaults
+$primary: rgb(218, 112, 44);
+$body-bg: rgb(16, 15, 15);
+$body-color: rgb(206, 205, 195);
+$link-color: rgb(67, 133, 190);
+$font-family-sans-serif: "Times New Roman", serif;
+$font-family-monospace: "JetBrains Mono", monospace;
+
+
+/*-- scss:rules --*/
+// Plain CSS rules — applied after Bootstrap is compiled
+.navbar {
+  border-bottom: 1px solid #E6E4D9;
+}

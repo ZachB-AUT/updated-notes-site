@@ -1,0 +1,13 @@
+---
+title: "About this Site"
+author: "Zach Barrett"
+---
+
+I made this website to help answer common questions about the courses I TA for.
+
+These courses include:
+
+- Electronics Project.
+- Foundation Physics B.
+
+I hope you find it helpful, if you need to contact me try emailing me using my university username: `TWZ6852`
