@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About this Site",
     "section": "",
-    "text": "Hello! My name is Zach, you may know me as a teaching assistant in one of your courses. I made this website to help answer common questions I and the other TAs get.\nI hope you find this website helpful, if you would like to contact me for whatever reason try emailing me using my student email or sending me a teams message. My network username isTWZ6852.\nPlease contact me if you notice any mistakes or if you would like to add something. If you write notes for it I am happy to credit you as the author, or credit you in a footnote for anything I change based on your recommendation.\nPlease don’t use my zach.barrett@aut.ac.nz address. I do not check it.\nI made this website using quarto and a custom theme based on stephango’s excellent flexoki colour-scheme. It is deployed using cloudflare pages and costs me nothing to run.\nIf you are an AUT staff member and want me to take this down for some reason let me know and we can talk about it.\nThe source code for this website can be found here\n\n\n\n Back to top"
+    "text": "Hello! My name is Zach, you may know me as a teaching assistant in one of your courses. I made this website to help answer common questions I and the other TAs get.\nI hope you find this website helpful, if you would like to contact me for whatever reason try emailing me using my student email or sending me a teams message. My network username isTWZ6852.\nPlease contact me if you notice any mistakes or if you would like to add something. If you write notes for it I am happy to credit you as the author, or credit you in a footnote for anything I change based on your recommendation.\nPlease don’t use my zach.barrett@aut.ac.nz address. I do not check it.\nI made this website using quarto and a custom theme based on stephango’s excellent flexoki colour-scheme. It is deployed using cloudflare pages and costs me nothing to run.\nIf you are an AUT staff member and want me to take this down for some reason let me know and we can talk about it.\n\n\n\n Back to top"
   },
   {
     "objectID": "docs/physics-B/Foundation Physics B.html",
@@ -14,102 +14,18 @@
     "text": "Warning\n\n\n\nI have not written this page yet, please check again later.\n\n\nMy role in this course is basically just to help with labs, but I may add some more information about the course content if I can find the time.\n\n\n\nLab Information\n\n\n\n\nLab One\n\n\nLab Two\n\n\nLab Three\n\n\nLab Four\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "docs/electronics-project/routing.html",
-    "href": "docs/electronics-project/routing.html",
-    "title": "Common Routing Errors",
+    "objectID": "docs/physics-B/Labs/Lab Four.html",
+    "href": "docs/physics-B/Labs/Lab Four.html",
+    "title": "PHYS401 - Lab Four",
     "section": "",
-    "text": "There are two guiding principles for routing, almost all errors are violating one of these. All tracks should be neat and as short as possible.\nWe want them to be neat for aesthetic reasons, but we want them to be as short as possible because the longer a track is, the more resistance it has. We can see this from the formula for resistance: \\[\nR = \\rho \\frac{L}{A} \\] Where:\nBecause \\(R \\propto L\\) (\\(R\\) is proportional to \\(L\\)), if we double the length of the wire, we double its resistance. Because of this, we try to keep any power tracks as short as possible.\nFor example, in project one we have power lines that can draw as much as \\(300mA\\). This means that if have a power track with a resistance of \\(1 \\Omega\\) we get a voltage drop across it of \\(300 mV\\).\nTherefore, with power lines (such as +5V and GND), we want to keep them as short as possible to minimise resistance."
+    "text": "This page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "docs/electronics-project/routing.html#functional-guidelines",
-    "href": "docs/electronics-project/routing.html#functional-guidelines",
-    "title": "Common Routing Errors",
-    "section": "Functional Guidelines",
-    "text": "Functional Guidelines\nThese are guidelines that affect the functionality of the board.\n\nLong Tracks\nThis one matters more for power wires because the voltage drop across a wire is proportional to current. For most signal lines the current through them is extremely low, so the resistance doesn’t matter too much.\nGenerally shorter lines are more efficient, but prioritise making power lines shorter even if that means using a longer signal line.\n\n\nRight Angles\nRight angle traces are generally frowned upon. This is because if you have a right angle, generally speaking you can get a shorter path by taking a diagonal path.\nOne exception to this is junctions. We prefer a T junction over something like this:\n1\n1 All images taken from the week 2 slides on canvas.\n\nUnnecessary Vias\nFor both project one and project two you will have a limit to the number of vias you can use. Avoid using them unnecessarily, for example:\n\nOnly one of the vias in the green circle is necessary as the diode on the right is a through hole component, and as such the top layer track (red) can connect to it directly."
-  },
-  {
-    "objectID": "docs/electronics-project/routing.html#aesthetic-guidelines",
-    "href": "docs/electronics-project/routing.html#aesthetic-guidelines",
-    "title": "Common Routing Errors",
-    "section": "Aesthetic Guidelines",
-    "text": "Aesthetic Guidelines\nThese are guidelines that are entirely aesthetic preferences. If you violate these you will probably receive a lower grade, but they shouldn’t affect how functional your board is.\n\n45 Degree Pad Connections on Square Pads\nWith circular pads you can connect to it at either right angles or 45 degree angles, but with square pads you should only connect to it on one of the flat sides.\n\n\n\n\n\n\nAllowed\n\n\n\n\n\n\n\n\n\n\n\n\n\nNot Allowed\n\n\n\n\n\n\n\n\n“Squiggles”\nThe shortest path between two points is a straight line\n\n\nAcceptable Angles"
-  },
-  {
-    "objectID": "docs/electronics-project/Project One.html",
-    "href": "docs/electronics-project/Project One.html",
-    "title": "Project One",
+    "objectID": "docs/physics-B/Labs/Lab One.html",
+    "href": "docs/physics-B/Labs/Lab One.html",
+    "title": "PHYS401 - Lab One",
     "section": "",
-    "text": "Your task for Project One is to design and build a small line following robot.\nYou will be given a schematic to follow, (although you will need to recreate it yourself), and a template file for the PCB. You will then route the PCB according to the guidelines we give you."
-  },
-  {
-    "objectID": "docs/electronics-project/Project One.html#project-one-design",
-    "href": "docs/electronics-project/Project One.html#project-one-design",
-    "title": "Project One",
-    "section": "Project One Design",
-    "text": "Project One Design\nYou will first need to create a new project, create a schematic file, and import the PCB template\nOnce you are done with that, recreate the schematic in altium. Check the Bill of Materials to make sure you are using the right components from the right libraries."
-  },
-  {
-    "objectID": "docs/electronics-project/Project One.html#project-one-assembly",
-    "href": "docs/electronics-project/Project One.html#project-one-assembly",
-    "title": "Project One",
-    "section": "Project One Assembly",
-    "text": "Project One Assembly\nI will write this section when I know more about what this semester looks like. Check back here later."
-  },
-  {
-    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-robot",
-    "href": "docs/electronics-project/programming.html#writing-code-for-the-robot",
-    "title": "Programming for Electronics Project",
-    "section": "Writing Code for the Robot",
-    "text": "Writing Code for the Robot\n\nvoid main() {\n\n\n}"
-  },
-  {
-    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-starger",
-    "href": "docs/electronics-project/programming.html#writing-code-for-the-starger",
-    "title": "Programming for Electronics Project",
-    "section": "Writing Code for the Starger",
-    "text": "Writing Code for the Starger"
-  },
-  {
-    "objectID": "docs/electronics-project/Altium Test.html",
-    "href": "docs/electronics-project/Altium Test.html",
-    "title": "Midterm Assessment",
-    "section": "",
-    "text": "Work in progress!\n\n\n\n\n\n\nThe midterm test is a closed book assessment. Because of that and the fact that I like my job, I cannot give you much information about it.\nThat being said, what I can tell you, is that it has two parts. The first is a multi choice questionaire, and the second is a timed PCB design assessment. You will get ~3.5 hours to route a PCB.\nI would recommend that you learn how to route a PCB quickly, and with minimal outside information. You will also need to make the outline of the PCB, so I recommend learning how to do that.\nGood luck, this one is hard.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/electronics-project/Assignments.html",
-    "href": "docs/electronics-project/Assignments.html",
-    "title": "Electronics Project Assignments",
-    "section": "",
-    "text": "Assignments\n\n\n\n\nProject One\n\n\nProject Two\n\n\nMidterm Test\n\n\nFinal Report\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/electronics-project/Final Report.html",
-    "href": "docs/electronics-project/Final Report.html",
-    "title": "Final Report",
-    "section": "",
-    "text": "Work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/electronics-project/Electronics Project.html",
-    "href": "docs/electronics-project/Electronics Project.html",
-    "title": "ENEL602 - Electronics Project",
-    "section": "",
-    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nInformation about this courses assignments\nAssignments"
-  },
-  {
-    "objectID": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
-    "href": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
-    "title": "ENEL602 - Electronics Project",
-    "section": "",
-    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nInformation about this courses assignments\nAssignments"
-  },
-  {
-    "objectID": "docs/electronics-project/glossary.html",
-    "href": "docs/electronics-project/glossary.html",
-    "title": "Zach's Notes",
-    "section": "",
-    "text": "Back to top"
+    "text": "Still need to finish writing this one!\n\n\n\n\n Back to top"
   },
   {
     "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
@@ -130,7 +46,7 @@
     "href": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
     "title": "Troubleshooting Altium",
     "section": "How to add an External File in Altium",
-    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\n\nIt must not be a referenced file.\n\nIt must be added to version control.\n\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\n\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under\nHistory and Version Control, and selecting “Add to Version Control”\n\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save.\n\n\nChecking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
+    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\n\nIt must not be a referenced file.\n\nIt must be added to version control.\n\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\n\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under\nHistory and Version Control, and selecting “Add to Version Control”\n\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save. ### Checking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
   },
   {
     "objectID": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
@@ -140,17 +56,115 @@
     "text": "Altium Libraries Path\nWe will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.\nThe path looks like:\nK:/\n  └── WELLESLEY COPY/\n      └── DESIGN & CREATIVE TECHNOLOGIES/\n          └── School of Engineering/\n              └── Electrical & Electronic Engineering/\n                  └── Resources/\n                      └── AltiumLibraries/\nFor projects one and two, you will use 2025S2.IntLib.\nFor reinstalling the altium libraries as described in fixing the lastconnection.data error, use the libraries in the AltiumLibraries\\Altium Libraries path."
   },
   {
-    "objectID": "docs/physics-B/Labs/Lab One.html",
-    "href": "docs/physics-B/Labs/Lab One.html",
-    "title": "PHYS401 - Lab One",
+    "objectID": "docs/electronics-project/glossary.html",
+    "href": "docs/electronics-project/glossary.html",
+    "title": "Zach's Notes",
     "section": "",
-    "text": "Still need to finish writing this one!\n\n\n\n\n Back to top"
+    "text": "Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/Electronics Project.html",
+    "href": "docs/electronics-project/Electronics Project.html",
+    "title": "ENEL602 - Electronics Project",
+    "section": "",
+    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nInformation about this courses assignments\nAssignments"
+  },
+  {
+    "objectID": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
+    "href": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
+    "title": "ENEL602 - Electronics Project",
+    "section": "",
+    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nInformation about this courses assignments\nAssignments"
+  },
+  {
+    "objectID": "docs/electronics-project/Final Report.html",
+    "href": "docs/electronics-project/Final Report.html",
+    "title": "Final Report",
+    "section": "",
+    "text": "Work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/Assignments.html",
+    "href": "docs/electronics-project/Assignments.html",
+    "title": "Electronics Project Assignments",
+    "section": "",
+    "text": "Assignments\n\n\n\n\nProject One\n\n\nProject Two\n\n\nMidterm Test\n\n\nFinal Report\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/Altium Test.html",
+    "href": "docs/electronics-project/Altium Test.html",
+    "title": "Midterm Assessment",
+    "section": "",
+    "text": "Work in progress!\n\n\n\n\n\n\nThe midterm test is a closed book assessment. Because of that and the fact that I like my job, I cannot give you much information about it.\nThat being said, what I can tell you, is that it has two parts. The first is a multi choice questionaire, and the second is a timed PCB design assessment. You will get ~3.5 hours to route a PCB.\nI would recommend that you learn how to route a PCB quickly, and with minimal outside information. You will also need to make the outline of the PCB, so I recommend learning how to do that.\nGood luck, this one is hard.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-robot",
+    "href": "docs/electronics-project/programming.html#writing-code-for-the-robot",
+    "title": "Programming for Electronics Project",
+    "section": "Writing Code for the Robot",
+    "text": "Writing Code for the Robot\n\nvoid main() {\n\n\n}"
+  },
+  {
+    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-starger",
+    "href": "docs/electronics-project/programming.html#writing-code-for-the-starger",
+    "title": "Programming for Electronics Project",
+    "section": "Writing Code for the Starger",
+    "text": "Writing Code for the Starger"
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html#project-naming-scheme",
+    "href": "docs/electronics-project/Project One.html#project-naming-scheme",
+    "title": "ENEL602 - Project One",
+    "section": "Project Naming Scheme",
+    "text": "Project Naming Scheme\nWe will use the naming scheme:\nP1_FIRSTNAME_LASTNAME_STUDENT-ID\nFor example, my name is Zach Barrett, and if my student ID was 12345678 I would call my project P1_ZACH_BARRETT_22160418, my schematic would be called P1_ZACH_BARRETT_22160418.SchDoc, and my PCB would be called P1_ZACH_BARRETT_22160418.PcbDoc"
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html#project-one-setup",
+    "href": "docs/electronics-project/Project One.html#project-one-setup",
+    "title": "ENEL602 - Project One",
+    "section": "Project One Setup",
+    "text": "Project One Setup\n\nCreate project in Altium 365 using the naming scheme.\n\nMake sure it is under your folder!\n\nOpen it in Altium Designer.\nImport the PCB template file.\nRename the PCB template file to use the naming scheme.\nCreate a schematic file using the naming scheme.\nInstall project library (S12025.IntLib), find it under this path.\nSave to Server to upload an initial commit."
+  },
+  {
+    "objectID": "docs/electronics-project/routing.html",
+    "href": "docs/electronics-project/routing.html",
+    "title": "Common Routing Errors",
+    "section": "",
+    "text": "There are two guiding principles for routing, almost all errors are violating one of these. All tracks should be neat and as short as possible.\nWe want them to be neat for aesthetic reasons, but we want them to be as short as possible because the longer a track is, the more resistance it has. We can see this from the formula for resistance: \\[\nR = \\rho \\frac{L}{A} \\] Where:\nBecause \\(R \\propto L\\) (\\(R\\) is proportional to \\(L\\)), if we double the length of the wire, we double its resistance. Because of this, we try to keep any power tracks as short as possible.\nFor example, in project one we have power lines that can draw as much as \\(300mA\\). This means that if have a power track with a resistance of \\(1 \\Omega\\) we get a voltage drop across it of \\(300 mV\\).\nTherefore, with power lines (such as +5V and GND), we want to keep them as short as possible to minimise resistance."
+  },
+  {
+    "objectID": "docs/electronics-project/routing.html#functional-guidelines",
+    "href": "docs/electronics-project/routing.html#functional-guidelines",
+    "title": "Common Routing Errors",
+    "section": "Functional Guidelines",
+    "text": "Functional Guidelines\nThese are guidelines that affect the functionality of the board.\n\nLong Tracks\nThis one matters more for power wires because the voltage drop across a wire is proportional to current. For most signal lines the current through them is extremely low, so the resistance doesn’t matter too much.\nGenerally shorter lines are more efficient, but prioritise making power lines shorter even if that means using a longer signal line.\n\n\nRight Angles\nRight angle traces are generally frowned upon. This is because if you have a right angle, generally speaking you can get a shorter path by taking a diagonal path.\nOne exception to this is junctions. We prefer a T junction over something like this:\n1\n1 All images taken from the week 2 slides on canvas.\n\nUnnecessary Vias\nFor both project one and project two you will have a limit to the number of vias you can use. Avoid using them unnecessarily, for example:\n\nOnly one of the vias in the green circle is necessary as the diode on the right is a through hole component, and as such the top layer track (red) can connect to it directly."
+  },
+  {
+    "objectID": "docs/electronics-project/routing.html#aesthetic-guidelines",
+    "href": "docs/electronics-project/routing.html#aesthetic-guidelines",
+    "title": "Common Routing Errors",
+    "section": "Aesthetic Guidelines",
+    "text": "Aesthetic Guidelines\nThese are guidelines that are entirely aesthetic preferences. If you violate these you will probably receive a lower grade, but they shouldn’t affect how functional your board is.\n\n45 Degree Pad Connections on Square Pads\nWith circular pads you can connect to it at either right angles or 45 degree angles, but with square pads you should only connect to it on one of the flat sides.\n\n\n\n\n\n\nAllowed\n\n\n\n\n\n\n\n\n\n\n\n\n\nNot Allowed"
+  },
+  {
+    "objectID": "docs/physics-B/Labs/Lab Three.html",
+    "href": "docs/physics-B/Labs/Lab Three.html",
+    "title": "PHYS401 - Lab Three",
+    "section": "",
+    "text": "This page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/physics-B/Labs/Lab Two.html",
+    "href": "docs/physics-B/Labs/Lab Two.html",
+    "title": "PHYS401 - Lab Two",
+    "section": "",
+    "text": "This page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Courses",
     "section": "",
-    "text": "If you are looking for what was on this website before, I have moved the content here.\nOtherwise, take a look at these:\n\nENEL602 - Electronics Project\nPHYS401 - Foundation Physics B\n\n\n\n\n Back to top"
+    "text": "If you are looking for electronics project troubleshooting information, open this page.\nOtherwise, take a look at these:\n\nENEL602 - Electronics Project\nPHYS401 - Foundation Physics B\n\n\n\n\n Back to top"
   }
 ]

@@ -10,7 +10,8 @@ date: last-modified
 I have not written this page yet, please check again later.
 :::
 
-My role in this course is basically just to help with labs, but I may add some more information about the course content if I can find the time.
+My role in this course is basically just to help with labs, but I may add some
+more information about the course content if I can find the time.
 
 
 | *Lab Information*                 |

@@ -2,20 +2,24 @@
 title: "About this Site"
 ---
 
-Hello! My name is Zach, you may know me as a teaching assistant in one of your courses.
-I made this website to help answer common questions I and the other TAs get.
+Hello! My name is Zach, you may know me as a teaching assistant in
+one of your courses. I made this website to help answer common
+questions I and the other TAs get.
 
-I hope you find this website helpful, if you would like to contact me for whatever reason try emailing me using my student email or sending me a teams
-message. My network username is`TWZ6852`.
+I hope you find this website helpful, if you would like to contact me
+for whatever reason try emailing me using my student email or sending
+me a teams message. My network username is`TWZ6852`.
 
-Please contact me if you notice any mistakes or if you would like to add something.
-If you write notes for it I am happy to credit you as the author, or credit you in a footnote for anything I change based on your recommendation.
+Please contact me if you notice any mistakes or if you would like to
+add something. If you write notes for it I am happy to credit you as
+the author, or credit you in a footnote for anything I change based
+on your recommendation.
 
-Please don't use my `zach.barrett@aut.ac.nz` address. I do not check it.
+Please don't use my `zach.barrett@aut.ac.nz` address. I do not check
+it.
 
 I made this website using [quarto](https://quarto.org/) and a custom theme based on stephango's excellent [flexoki](https://stephango.com/flexoki) colour-scheme. It is deployed using cloudflare pages and costs me nothing to run.
 
-If you are an AUT staff member and want me to take this down for some reason let me know and we can talk about it.
-
-The source code for this website can be found [here](https://github.com/ZachB-AUT/updated-notes-site)
+If you are an AUT staff member and want me to take this down for some
+reason let me know and we can talk about it.
 

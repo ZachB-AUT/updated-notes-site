@@ -76,6 +76,70 @@ div.sourceCode {
   border-bottom: 1px solid #E6E4D9;
 }
 
+// Task list checkboxes
+ul.task-list {
+  padding-left: 1.5em;
+
+  li {
+    margin-bottom: 0.2em;
+  }
+
+  li > label {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.5em;
+    cursor: pointer;
+  }
+
+  li input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    flex: 0 0 auto;
+    width: 0.95em;
+    height: 0.95em;
+    margin: 0.28em 0 0 -1.45em;
+    border: 1.5px solid #CECDC3;   // UI-3
+    border-radius: 3px;
+    background-color: #FFFCF0;
+    transition: background-color 0.12s ease, border-color 0.12s ease;
+
+    &:hover:not(:disabled) {
+      border-color: #BC5215;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #205EA6;
+      outline-offset: 2px;
+    }
+
+    &:checked {
+      background-color: #BC5215;
+      border-color: #BC5215;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0.28em;
+        top: 0.08em;
+        width: 0.22em;
+        height: 0.45em;
+        border: solid #FFFCF0;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+
+  li:has(input[type="checkbox"]:checked) > label {
+    color: #6F6E69;   // TX-2 muted
+  }
+}
+
 // Code cell output — visually connected to the block above
 .cell:has(.cell-output) div.sourceCode {
   border-radius: 0.25rem 0.25rem 0 0;

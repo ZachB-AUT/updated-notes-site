@@ -8,18 +8,19 @@ reference-location: "margin"
 
 ::: {.callout-warning}
 # Work in progress!
+I will add more of these as I remember them.
 :::
 
 :::{.callout-important}
 ## Disclaimer
 This is not an exhaustive list! There are errors you can make that I am not yet
 aware of. This is just a list of errors I can remember and instructions on how
-to avoid them. When in doubt, ask Michael or one of the TAs! Sometimes you need to do something kind of bad to avoid doing something worse, and thats ok.
+to avoid them. When in doubt, ask Michael or one of the TAs! Sometimes you need
+to do something kind of bad to avoid doing something worse, and thats ok.
 
 Additionally, many of these are subjective, and this guide represents only my
 opinion, not the opinion of the lecturer. When in doubt, ask them.
 :::
-
 
 
 There are two guiding principles for routing, almost all errors are violating one of these.
@@ -104,10 +105,10 @@ sides.
 ![](../../assets/square_pad_45.png){width=50%}
 :::
 
-### "Squiggles"
-
-The shortest path between two points is a straight line
-
-### Acceptable Angles
+<!-- ### "Squiggles" -->
+<!---->
+<!-- The shortest path between two points is a straight line -->
+<!---->
+<!-- ### Acceptable Angles -->
 
 [^1]: All images taken from the week 2 slides on canvas.

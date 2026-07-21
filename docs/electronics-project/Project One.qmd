@@ -1,5 +1,5 @@
 ---
-title: "Project One"
+title: "ENEL602 - Project One"
 author: "Zach Barrett"
 date: last-modified
 ---
@@ -7,23 +7,48 @@ date: last-modified
 ---
 
 ::: {.callout-warning}
-# Work in progress!
+## Work in progress!
+More content will be added as time goes on.
 :::
 
-Your task for Project One is to design and build a small line following robot.
+## Project Naming Scheme
 
-You will be given a schematic to follow, (although you will need to recreate it
-yourself), and a template file for the PCB. You will then route the PCB
-according to the guidelines we give you.
+We will use the naming scheme:
 
-## Project One Design
+`P1_FIRSTNAME_LASTNAME_STUDENT-ID`
 
-You will first need to create a new project, create a schematic file, and [import the PCB template](./troubleshooting.qmd#how-to-add-an-external-file-in-altium)
-
-Once you are done with that, recreate the schematic in altium. Check the Bill of Materials to make sure you are using the right components from the right libraries.
+For example, my name is Zach Barrett, and if my student ID was 12345678 I would call my project `P1_ZACH_BARRETT_22160418`, my schematic would be called `P1_ZACH_BARRETT_22160418.SchDoc`, and my PCB would be called `P1_ZACH_BARRETT_22160418.PcbDoc`
 
 
-## Project One Assembly
 
-I will write this section when I know more about what this semester looks like. Check back here later.
+## Project One Setup
+
+- [ ] Create project in Altium 365 using the naming scheme.
+	- Make sure it is under your folder!
+- [ ] Open it in Altium Designer.
+- [ ] [Import the PCB template file](./troubleshooting.qmd#how-to-add-an-external-file-in-altium).
+- [ ] Rename the PCB template file to use the naming scheme.
+- [ ] Create a schematic file using the naming scheme.
+- [ ] Install project library (`S12025.IntLib`), find it under [this path](./troubleshooting.qmd#altium-libraries-path).
+- [ ] Save to Server to upload an initial commit.
+ 
+
+<!-- ## Project Overview -->
+<!---->
+<!-- Your task for Project One is to design and build a small line following robot. -->
+<!---->
+<!-- You will be given a schematic to follow, (although you will need to recreate it -->
+<!-- yourself), and a template file for the PCB. You will then route the PCB -->
+<!-- according to the guidelines we give you. -->
+<!---->
+<!-- ## Project One Design -->
+<!---->
+<!-- You will first need to create a new project, create a schematic file, and [import the PCB template](./troubleshooting.qmd#how-to-add-an-external-file-in-altium) -->
+<!---->
+<!-- Once you are done with that, recreate the schematic in altium. Check the Bill of Materials to make sure you are using the right components from the right libraries. -->
+<!---->
+<!---->
+<!-- ## Project One Assembly -->
+<!---->
+<!-- I will write this section when I know more about what this semester looks like. Check back here later. -->
 

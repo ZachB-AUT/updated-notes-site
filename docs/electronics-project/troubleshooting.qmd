@@ -15,7 +15,6 @@ That being said, the following are quick guides on solving common problems. Try 
 :::
 
 
-
 ## How to fix the getting kicked off workspace problem
 
 1. Close Altium.
@@ -63,7 +62,6 @@ Once you have your project open, right click on it and select "Explore"
 
 This will open the file explorer location for the project you are working on.
 
-
 Now, move the file from its original location into the project:
 
 ![](../../assets/MoveFile.png)
@@ -98,7 +96,6 @@ History and Version Control, and selecting "Add to Version Control"\
 ### Saving to Server
 
 Finally, right click "Save to Server" next to your project, add a meaningful commit message, and save.
-
 ### Checking you have done it correctly
 
 Open up Altium 365 and check your project has the file you added, if not call over a TA.

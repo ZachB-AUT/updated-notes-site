@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Zach Barrett">
-<meta name="dcterms.date" content="2026-07-20">
+<meta name="dcterms.date" content="2026-07-21">
 
-<title>Project One – Zach’s Notes</title>
+<title>ENEL602 - Project One – Zach’s Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,8 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0cca5fc61a86381c25c6f89577cc0b16.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-de9a086891c683f2f4ecffb484de7a6c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-3769d82e56f8f123aff02e5c1fa96bd4.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-ab6248ef7f5763b7c49dcadd362bc237.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-7682f02b2f8be0fb2fa2f68fe04025c6.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -130,8 +130,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-one-design" id="toc-project-one-design" class="nav-link active" data-scroll-target="#project-one-design">Project One Design</a></li>
-  <li><a href="#project-one-assembly" id="toc-project-one-assembly" class="nav-link" data-scroll-target="#project-one-assembly">Project One Assembly</a></li>
+  <li><a href="#project-naming-scheme" id="toc-project-naming-scheme" class="nav-link active" data-scroll-target="#project-naming-scheme">Project Naming Scheme</a></li>
+  <li><a href="#project-one-setup" id="toc-project-one-setup" class="nav-link" data-scroll-target="#project-one-setup">Project One Setup</a></li>
   </ul>
 </nav>
     </div>
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project One</h1>
+<h1 class="title">ENEL602 - Project One</h1>
 </div>
 
 
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 20, 2026</p>
+      <p class="date">July 21, 2026</p>
     </div>
   </div>
   
@@ -180,19 +180,47 @@ Work in progress!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p>More content will be added as time goes on.</p>
 </div>
 </div>
-<p>Your task for Project One is to design and build a small line following robot.</p>
-<p>You will be given a schematic to follow, (although you will need to recreate it yourself), and a template file for the PCB. You will then route the PCB according to the guidelines we give you.</p>
-<section id="project-one-design" class="level2">
-<h2 class="anchored" data-anchor-id="project-one-design">Project One Design</h2>
-<p>You will first need to create a new project, create a schematic file, and <a href="../../docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium">import the PCB template</a></p>
-<p>Once you are done with that, recreate the schematic in altium. Check the Bill of Materials to make sure you are using the right components from the right libraries.</p>
+<section id="project-naming-scheme" class="level2">
+<h2 class="anchored" data-anchor-id="project-naming-scheme">Project Naming Scheme</h2>
+<p>We will use the naming scheme:</p>
+<p><code>P1_FIRSTNAME_LASTNAME_STUDENT-ID</code></p>
+<p>For example, my name is Zach Barrett, and if my student ID was 12345678 I would call my project <code>P1_ZACH_BARRETT_22160418</code>, my schematic would be called <code>P1_ZACH_BARRETT_22160418.SchDoc</code>, and my PCB would be called <code>P1_ZACH_BARRETT_22160418.PcbDoc</code></p>
 </section>
-<section id="project-one-assembly" class="level2">
-<h2 class="anchored" data-anchor-id="project-one-assembly">Project One Assembly</h2>
-<p>I will write this section when I know more about what this semester looks like. Check back here later.</p>
+<section id="project-one-setup" class="level2">
+<h2 class="anchored" data-anchor-id="project-one-setup">Project One Setup</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Create project in Altium 365 using the naming scheme.</label>
+<ul>
+<li>Make sure it is under your folder!</li>
+</ul></li>
+<li><label><input type="checkbox">Open it in Altium Designer.</label></li>
+<li><label><input type="checkbox"><a href="../../docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium">Import the PCB template file</a>.</label></li>
+<li><label><input type="checkbox">Rename the PCB template file to use the naming scheme.</label></li>
+<li><label><input type="checkbox">Create a schematic file using the naming scheme.</label></li>
+<li><label><input type="checkbox">Install project library (<code>S12025.IntLib</code>), find it under <a href="../../docs/electronics-project/troubleshooting.html#altium-libraries-path">this path</a>.</label></li>
+<li><label><input type="checkbox">Save to Server to upload an initial commit.</label></li>
+</ul>
+<!-- ## Project Overview -->
+<!---->
+<!-- Your task for Project One is to design and build a small line following robot. -->
+<!---->
+<!-- You will be given a schematic to follow, (although you will need to recreate it -->
+<!-- yourself), and a template file for the PCB. You will then route the PCB -->
+<!-- according to the guidelines we give you. -->
+<!---->
+<!-- ## Project One Design -->
+<!---->
+<!-- You will first need to create a new project, create a schematic file, and [import the PCB template](./troubleshooting.qmd#how-to-add-an-external-file-in-altium) -->
+<!---->
+<!-- Once you are done with that, recreate the schematic in altium. Check the Bill of Materials to make sure you are using the right components from the right libraries. -->
+<!---->
+<!---->
+<!-- ## Project One Assembly -->
+<!---->
+<!-- I will write this section when I know more about what this semester looks like. Check back here later. -->
 
 
 </section>
