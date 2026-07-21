@@ -6,14 +6,14 @@ jupyter: .venv/bin/python
 website:
   title: "Zach's Notes"
   description: "This website is where I keep answers to commonly asked questions and solutions to common problems."
-  llms-txt: true
   back-to-top-navigation: true
+  favicon: ./favicons/favicon.ico
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
-      - href: docs/Eproj/Electronics Project.qmd
+      - href: docs/electronics-project/Electronics Project.qmd
         text: Electronics Project
       - href: docs/physics-B/Foundation Physics B.qmd
         text: Foundation Physics B
@@ -27,9 +27,10 @@ format:
       light: flexoki-light.theme
       dark: flexoki-dark.theme
     css: styles.css
-    toc: true
+    # toc: true
     code-copy: true
     smooth-scroll: true
+    toc: true
     anchor-sections: true
     include-in-header:
       text: |

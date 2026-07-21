@@ -4,14 +4,15 @@ author: "Zach Barrett"
 date: last-modified
 ---
 
----
+## Electronics Project Notes
 
-## Pages:
-- Assignments:
-  - [Troubleshooting](./troubleshooting.qmd)
-  - [Project One](./Project One.qmd)
-  - [Project Two](./Project Two.qmd)
-  - [Final Report](./Final Report.qmd)
-- Misc:
-  - [Routing Rules](./routing.qmd)
+| Description                                | Link                                            |
+| ------------------------------------------ | ----------------------------------------------- |
+| Information on altium troubleshooting      | [Troubleshooting Altium](./troubleshooting.qmd) |
+| Descriptions of common routing errors      | [Common Routing Errors](./routing.qmd)          |
+| Information about this courses assignments | [Assignments](./Assignments.qmd)                |
+
+
+
+
 

@@ -1,29 +1,32 @@
 ---
-title: "Troubleshooting for Electronics Project"
+title: "Troubleshooting Altium"
 author: "Zach Barrett"
+date: last-modified
+reference-location: margin
 ---
 
 ---
 
-::: {.callout-note}
- *To be clear, if you do not know what you are doing, ask a TA.*\
+::: {.callout-warning}
+ *If you do not know what you are doing, ask a TA.*\
  *We are literally paid to help you.*
 
-That being said, the following are quick guides on solving common problems.
+That being said, the following are quick guides on solving common problems. Try these first.
 :::
+
+
 
 ## How to fix the getting kicked off workspace problem
 
 1. Close Altium.
-2. Open Altium
-3. IMMEDIATELY OPEN COMPONENTS BEFORE ANYTHING ELSE OPENS
-4. Reconnect to workspace
-5. Login
+2. Open Altium.
+3. IMMEDIATELY OPEN COMPONENTS BEFORE ANYTHING ELSE OPENS.
+4. Reconnect to workspace.
+5. Login.
 
-## How to fix the lastconnection.data error (sometimes)
+## How to fix the lastconnection.data error
 
-We do not know why this works, only that it does most of the time. Please
-follow these steps as closely as possible.
+We do not know why this works, only that it does most of the time. Please follow these steps as closely as possible.
 
 1. Open the components menu.
 2. Click the three horizontal lines (hamburger) button.
@@ -32,7 +35,7 @@ follow these steps as closely as possible.
 5. Select all libraries.
 6. Press "remove".
 7. Press "Install".
-8. Open the [K drive libraries path](http://localhost:6384/docs/Eproj/troubleshooting.html#altium-libraries-path).
+8. Open the [K drive libraries path](#altium-libraries-path).
 9. Select all libraries under "Altium Libraries".
 10. Press "Open".
 11. Close Altium.
@@ -60,11 +63,13 @@ Once you have your project open, right click on it and select "Explore"
 
 This will open the file explorer location for the project you are working on.
 
+
 Now, move the file from its original location into the project:
 
 ![](../../assets/MoveFile.png)
 
 (Demo has been moved from downloads into here)
+
 
 ### Adding the file to the project
 
@@ -104,10 +109,19 @@ Open up Altium 365 and check your project has the file you added, if not call ov
 
 ## Altium Libraries Path
 
-This is the path you will use to install the K Drive libraries.
+We will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.
 
+The path looks like:
 ```
-K:\WELLESLEY COPY\DESIGN & CREATIVE TECHNOLOGIES\School of Engineering\Electrical & Electronic Engineering\Resources\AltiumLibraries\
+K:/
+  └── WELLESLEY COPY/
+      └── DESIGN & CREATIVE TECHNOLOGIES/
+          └── School of Engineering/
+              └── Electrical & Electronic Engineering/
+                  └── Resources/
+                      └── AltiumLibraries/
 ```
 
 For projects one and two, you will use `2025S2.IntLib`.
+
+For reinstalling the altium libraries as described in [fixing the lastconnection.data error](#how-to-fix-the-lastconnection.data-error), use the libraries in the `AltiumLibraries\Altium Libraries` path.

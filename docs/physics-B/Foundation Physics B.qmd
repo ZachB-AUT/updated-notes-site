@@ -1,11 +1,22 @@
 ---
 title: "PHYS401 - Foundation Physics B"
 author: "Zach Barrett"
+date: last-modified
 ---
 
 ---
 
-## Course Overview
+::: {.callout-warning}
+I have not written this page yet, please check again later.
+:::
+
+My role in this course is basically just to help with labs, but I may add some more information about the course content if I can find the time.
 
 
+| *Lab Information*                 |
+| --------------------------------- |
+| [Lab One](./Labs/Lab One.qmd)     |
+| [Lab Two](./Labs/Lab Two.qmd)     |
+| [Lab Three](./Labs/Lab Three.qmd) |
+| [Lab Four](./Labs/Lab Four.qmd)   |
 

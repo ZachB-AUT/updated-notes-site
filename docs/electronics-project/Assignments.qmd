@@ -1,0 +1,13 @@
+---
+title: "Electronics Project Assignments"
+date: 07/20/2026
+---
+
+| **Assignments**                    |
+| ---------------------------------- |
+| [Project One](./Project One.qmd)   |
+| [Project Two](./Project Two.qmd)   |
+| [Midterm Test](./Altium Test.qmd)  |
+| [Final Report](./Final Report.qmd) |
+
+

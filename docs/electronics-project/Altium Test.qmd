@@ -1,0 +1,26 @@
+---
+title: "Midterm Assessment"
+author: "Zach Barrett"
+date: last-modified
+---
+
+---
+
+
+::: {.callout-warning}
+# Work in progress!
+:::
+
+
+The midterm test is a closed book assessment. Because of that and the fact that
+I like my job, I cannot give you much information about it.
+
+That being said, what I *can* tell you, is that it has two parts. The first
+is a multi choice questionaire, and the second is a timed PCB design
+assessment. You will get ~3.5 hours to route a PCB.
+
+I would recommend that you learn how to route a PCB *quickly*, and with minimal
+outside information. You will also need to make the *outline* of the PCB, so I
+recommend learning how to do that.
+
+Good luck, this one is hard.

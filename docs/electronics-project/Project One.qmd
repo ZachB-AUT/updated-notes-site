@@ -1,15 +1,20 @@
 ---
 title: "Project One"
+author: "Zach Barrett"
+date: last-modified
 ---
 
 ---
+
+::: {.callout-warning}
+# Work in progress!
+:::
 
 Your task for Project One is to design and build a small line following robot.
 
 You will be given a schematic to follow, (although you will need to recreate it
 yourself), and a template file for the PCB. You will then route the PCB
 according to the guidelines we give you.
-
 
 ## Project One Design
 
@@ -21,3 +26,4 @@ Once you are done with that, recreate the schematic in altium. Check the Bill of
 ## Project One Assembly
 
 I will write this section when I know more about what this semester looks like. Check back here later.
+

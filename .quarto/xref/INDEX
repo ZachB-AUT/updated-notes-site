@@ -54,5 +54,30 @@
   },
   "docs/electronics-project/routing.qmd": {
     "routing.html": "a2434950"
+  },
+  "docs/electronics-project/Final Report.qmd": {
+    "Final Report.html": "7c1db096"
+  },
+  "docs/electronics-project/Project Two.qmd": {
+    "Project Two.html": "e5636d6a",
+    "Project Two.typ": "942ea0ef"
+  },
+  "docs/electronics-project/programming.qmd": {
+    "programming.html": "983a8890"
+  },
+  "docs/electronics-project/Altium Test.qmd": {
+    "Altium Test.html": "a1fb3683"
+  },
+  "docs/physics-B/Labs/Lab One.qmd": {
+    "Lab One.html": "3127c440"
+  },
+  "docs/other-courses/industrial-robotics/week-2.qmd": {
+    "week-2.html": "88448914"
+  },
+  "docs/electronics-project/Assignments.qmd": {
+    "Assignments.html": "f37e4fce"
+  },
+  "docs/electronics-project/glossary.qmd": {
+    "glossary.html": "4d1e91cb"
   }
 }

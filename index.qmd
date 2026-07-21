@@ -1,10 +1,15 @@
 ---
-title: "Course Notes"
+title: "Courses"
 author: "Zach Barrett"
+date: last-modified
 ---
 
-Here are my notes for the two courses I TA for:
+***
 
-[Electronics Project](./docs/electronics-project/Electronics Project.qmd)\
-[Foundation Physics B](./docs/physics-B/Foundation Physics B.qmd)
+If you are looking for what was on this website before, I have moved the content [here](./docs/electronics-project/troubleshooting.qmd).
+
+Otherwise, take a look at these:
+
+- [ENEL602 - Electronics Project](./docs/electronics-project/Electronics Project.qmd)
+- [PHYS401 - Foundation Physics B](./docs/physics-B/Foundation Physics B.qmd)
 

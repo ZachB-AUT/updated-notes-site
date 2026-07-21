@@ -1,0 +1,25 @@
+---
+title: "Programming for Electronics Project"
+author: "Zach Barrett"
+date: 07/20/2026
+---
+
+---
+
+::: {.callout-warning}
+# Work in progress!
+:::
+
+
+## Writing Code for the Robot
+
+```c
+
+void main() {
+
+
+}
+```
+
+
+## Writing Code for the Starger
