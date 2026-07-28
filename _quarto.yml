@@ -1,7 +1,9 @@
+
+author: "Zach Barrett"
+date: last-modified
+
 project:
   type: website
-
-jupyter: .venv/bin/python
 
 website:
   title: "Zach's Notes"

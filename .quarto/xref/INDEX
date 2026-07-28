@@ -88,5 +88,32 @@
   },
   "docs/physics-B/Labs/Lab Two.qmd": {
     "Lab Two.html": "6a44114b"
+  },
+  "docs/electronics-project/working_from_home.qmd": {
+    "working_from_home.html": "2797049d"
+  },
+  "docs/personal_notes/human-computer-interaction/week_2.qmd": {
+    "week_2.html": "99d64af6"
+  },
+  "docs/personal_notes/personal_notes.qmd": {
+    "personal_notes.html": "ac38d29e"
+  },
+  "docs/personal_notes/human-computer-interaction/COMP822-HCI.qmd": {
+    "COMP822-HCI.html": "8e5a558b"
+  },
+  "docs/personal_notes/industrial-robotics/industrial-robotics.qmd": {
+    "industrial-robotics.html": "3611ef89"
+  },
+  "docs/personal_notes/industrial-robotics/ENME800_W2.qmd": {
+    "ENME800_W2.html": "487bdcd2"
+  },
+  "docs/personal_notes/industrial-robotics/ENME800_W2_Lab.qmd": {
+    "ENME800_W2_Lab.html": "ce519c7e"
+  },
+  "docs/electronics-project/submitting_an_altium_project.qmd": {
+    "submitting_an_altium_project.html": "43928698"
+  },
+  "docs/electronics-project/smart-pdf-export.qmd": {
+    "smart-pdf-export.html": "517f9ebd"
   }
 }

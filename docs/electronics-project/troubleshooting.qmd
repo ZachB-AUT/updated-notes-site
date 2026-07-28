@@ -48,9 +48,9 @@ We do not know why this works, only that it does most of the time. Please follow
 For a file to be properly included in an Altium project, it must meet three
 criteria:
 
-1. It must be in the correct folder.\
-2. It must not be a referenced file.\
-3. It must be added to version control.\
+1. It must be in the correct folder.
+2. It must not be a referenced file.
+3. It must be added to version control.
 
 You must make sure that any externally added file meets these conditions.
 
@@ -76,7 +76,7 @@ project"
 
 ![](../../assets/Add_Existing_To_Project.png)
 
-Select the new file, and press "Open".\
+Select the new file, and press "Open".
 
 Ensure the file icon does not have an arrow on it like this icon: ![](../../assets/BRUH.png)
 If it does, you need to go through the "Add existing to project" step again.
@@ -88,8 +88,8 @@ step.
 
 ![](../../assets/Exclude_Not_Delete.png)
 
-Once that is done, add it to version control by right-clicking it, going under\
-History and Version Control, and selecting "Add to Version Control"\
+Once that is done, add it to version control by right-clicking it, going under
+History and Version Control, and selecting "Add to Version Control"
 
 ![](../../assets/Add_To_Version_Control.png)
 
@@ -111,7 +111,7 @@ We will use a set of libraries in the K: drive, which is a network drive common 
 The path looks like:
 ```
 K:/
-  └── WELLESLEY COPY/
+ └── WELLESLEY COPY/
       └── DESIGN & CREATIVE TECHNOLOGIES/
           └── School of Engineering/
               └── Electrical & Electronic Engineering/
@@ -119,6 +119,14 @@ K:/
                       └── AltiumLibraries/
 ```
 
-For projects one and two, you will use `2025S2.IntLib`.
+<!-- - K:/ -->
+<!--   - WELLESLEY COPY/ -->
+<!--       - DESIGN & CREATIVE TECHNOLOGIES/ -->
+<!--           - School of Engineering/ -->
+<!--               - Electrical & Electronic Engineering/ -->
+<!--                   - Resources/ -->
+<!--                       - AltiumLibraries/ -->
+
+For projects one and two, you will use `2026S2.IntLib`.
 
 For reinstalling the altium libraries as described in [fixing the lastconnection.data error](#how-to-fix-the-lastconnection.data-error), use the libraries in the `AltiumLibraries\Altium Libraries` path.

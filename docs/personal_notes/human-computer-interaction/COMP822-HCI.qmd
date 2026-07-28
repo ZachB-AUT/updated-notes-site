@@ -1,0 +1,9 @@
+---
+title: "COMP822 - Human Computer Interaction"
+author: "Zach Barrett"
+date: last-modified
+---
+
+## Weeks
+
+2. [Week Two](./week_2.qmd)

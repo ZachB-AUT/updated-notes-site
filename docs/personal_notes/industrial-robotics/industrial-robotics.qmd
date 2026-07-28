@@ -1,0 +1,11 @@
+---
+title: "ENME800 - Industrial Robotics: Mechanics & Planning"
+author: "Zach Barrett"
+date: last-modified
+---
+
+---
+
+Week notes:
+2. [Week Two](./ENME800_W2.qmd)
+

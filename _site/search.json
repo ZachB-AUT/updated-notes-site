@@ -18,14 +18,154 @@
     "href": "docs/physics-B/Labs/Lab Four.html",
     "title": "PHYS401 - Lab Four",
     "section": "",
-    "text": "This page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "WarningThis page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "docs/physics-B/Labs/Lab One.html",
     "href": "docs/physics-B/Labs/Lab One.html",
     "title": "PHYS401 - Lab One",
     "section": "",
-    "text": "Still need to finish writing this one!\n\n\n\n\n Back to top"
+    "text": "WarningWork in Progress!\n\n\n\nStill need to finish writing this one!\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/smart-pdf-export.html",
+    "href": "docs/electronics-project/smart-pdf-export.html",
+    "title": "Exporting a Smart PDF",
+    "section": "",
+    "text": "To create a smart PDF, go to “file” in the top bar, and select “Smart PDF”.\n\nNext, press “next” until you get to “Export Bill of Materials” and disable “Export a Bill of Materials”\n\nIn “PCB Printout Settings” enable “Holes”.\n\nIn “Additional PDF Settings”, ensure that the PCB Color Mode is set to “Color”.\n\nNothing needs to be changed for “Structure Settings”, just press next.\nIn “Final Steps” disable “Save Settings to Output Job Document”.\n\nPress “Finish”.\nAfter a short wait, the Smart PDF will open in the default browser (Edge), click “Save As” in the top right corner, and save it somewhere you know how to get to (such as the desktop).\nThis is the document you will upload to canvas when you submit altium designs (such as projects one and two, and the midterm assessment)\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html#project-naming-scheme",
+    "href": "docs/electronics-project/Project One.html#project-naming-scheme",
+    "title": "ENEL602 - Project One",
+    "section": "Project Naming Scheme",
+    "text": "Project Naming Scheme\nWe will use the naming scheme:\nP1_FIRSTNAME_LASTNAME_STUDENT-ID\nFor example, my name is Zach Barrett, and if my student ID was 12345678 I would call my project P1_ZACH_BARRETT_22160418, my schematic would be called P1_ZACH_BARRETT_22160418.SchDoc, and my PCB would be called P1_ZACH_BARRETT_22160418.PcbDoc"
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html#project-one-setup",
+    "href": "docs/electronics-project/Project One.html#project-one-setup",
+    "title": "ENEL602 - Project One",
+    "section": "Project One Setup",
+    "text": "Project One Setup\n\nCreate project in Altium 365 using the naming scheme.\n\nMake sure it is under your folder!\n\nOpen it in Altium Designer.\nImport the PCB template file.\nRename the PCB template file to use the naming scheme.\nCreate a schematic file using the naming scheme.\nInstall project library (2026S2.IntLib), find it under this path.\nSave to Server to upload an initial commit."
+  },
+  {
+    "objectID": "docs/electronics-project/Project One.html#project-submission",
+    "href": "docs/electronics-project/Project One.html#project-submission",
+    "title": "ENEL602 - Project One",
+    "section": "Project Submission",
+    "text": "Project Submission\nIn order to submit project one, you need to do two things.\nFirst, you must ensure your project is properly saved to server. Ensure that when you open Altium 365 and navigate to your project, both the schematic and PCB are present (and correct).\nSecondly, you must create a “Smart PDF”, and upload it to canvas. Ensure you create it with the correct settings. Ensure you save it with the correct file name (follow the naming scheme!)"
+  },
+  {
+    "objectID": "docs/electronics-project/glossary.html",
+    "href": "docs/electronics-project/glossary.html",
+    "title": "Zach's Notes",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/Electronics Project.html",
+    "href": "docs/electronics-project/Electronics Project.html",
+    "title": "ENEL602 - Electronics Project",
+    "section": "",
+    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nProject One Information\nProject One\n\n\nHow to create Smart PDFs\nSmart PDF export"
+  },
+  {
+    "objectID": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
+    "href": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
+    "title": "ENEL602 - Electronics Project",
+    "section": "",
+    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nProject One Information\nProject One\n\n\nHow to create Smart PDFs\nSmart PDF export"
+  },
+  {
+    "objectID": "docs/electronics-project/Final Report.html",
+    "href": "docs/electronics-project/Final Report.html",
+    "title": "Final Report",
+    "section": "",
+    "text": "WarningWork in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/submitting_an_altium_project.html",
+    "href": "docs/electronics-project/submitting_an_altium_project.html",
+    "title": "Submitting an Altium Project",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "docs/personal_notes/human-computer-interaction/COMP822-HCI.html",
+    "href": "docs/personal_notes/human-computer-interaction/COMP822-HCI.html",
+    "title": "COMP822 - Human Computer Interaction",
+    "section": "",
+    "text": "Week Two"
+  },
+  {
+    "objectID": "docs/personal_notes/human-computer-interaction/COMP822-HCI.html#weeks",
+    "href": "docs/personal_notes/human-computer-interaction/COMP822-HCI.html#weeks",
+    "title": "COMP822 - Human Computer Interaction",
+    "section": "",
+    "text": "Week Two"
+  },
+  {
+    "objectID": "docs/personal_notes/industrial-robotics/ENME800_W2_Lab.html",
+    "href": "docs/personal_notes/industrial-robotics/ENME800_W2_Lab.html",
+    "title": "ENME800 - W2 Lab Code",
+    "section": "",
+    "text": "WarningNot complete!\n\n\n\n\n\n\n\nfrom pytransform3d import rotations as pr\nfrom pytransform3d.plot_utils import plot_vector, remove_frame\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Plot the original frame: Frame A\nframe_A = pr.plot_basis(R=np.eye(3), s=0.8, p=0, ax_s=1, label=\"Frame A\")\n\n# Remove the axis\nremove_frame(frame_A)\n\ndef rotation_matrix(angle,axis):\n    match axis:\n        case 'x':\n            return np.array([[1, 0, 0],\n                             [0, np.cos(angle), -np.sin(angle)],\n                             [0, np.sin(angle), np.cos(angle)]])\n        case 'y':\n            return np.array([[np.cos(angle), 0, np.sin(angle)],\n                                [0, 1, 0],\n                                [-np.sin(angle), 0, np.cos(angle)]])\n        case 'z':\n            return np.array([[np.cos(angle), -np.sin(angle), 0],\n                             [np.sin(angle), np.cos(angle), 0],\n                             [0, 0, 1]])\n        case _:\n            raise ValueError(\"WHY DID YOU PUT A DIFFERENT THING IN IT!!!!!!!!!\")\n\n# Define the rotation matrix at a particular axis\nangle = np.deg2rad(70)\naxis = 'z'\nR = rotation_matrix(angle,axis)\n\ndef plot_p_origin_B_in_A(vec,vec_color):\n    plot_vector(\n    # A vector is defined by start, direction, and s (scaling)\n    start=np.zeros(3), direction=vec,\n    s=1,\n    ax_s=1, # Scaling of 3D axes\n    lw=0, # Remove line around arrow\n    color=vec_color)\n\n# Define the origin of Frame B with respect to Frame A\np_origin_B_in_A = np.array([2,2,1]) # x = 2, y = 2, z = 1\nplot_p_origin_B_in_A(p_origin_B_in_A,\"Brown\")\n\n# Plot Frame B\nframe_B = pr.plot_basis(R=R, s=1, p=p_origin_B_in_A, ax_s=1, label=\"Frame B\")\nremove_frame(frame_B)\n\ndef plot_vec_in_B(vec,R,p, vec_color):\n    global axis\n    match axis:\n        case 'x':\n            a = np.array([1, 0, 0, angle])\n        case 'y':\n            a = np.array([0, 1, 0, angle])\n        case 'z':\n            a = np.array([0, 0, 1, angle])\n        case _:\n            raise ValueError(\"Thats not even an axis Bozo\")\n\n    pr.plot_axis_angle(frame_A, a=a, p=np.zeros(3))\n    plot_vector(start=p_origin_B_in_A, direction=vec, color=vec_color, s=1, ax_s=1, label='vector')\n\n# Define a vector in Frame B\nvec_1_B = np.array([0.5,0.5,0.5])\nprint(\"vec_1_B\", vec_1_B)\n# Plot vec_1_B\nplot_vec_in_B(vec_1_B, R, p_origin_B_in_A, \"Orange\")\n\ndef homogeneous_transformation(R,p,vec):\n    T = np.zeros((4,4))\n    T[0:3,0:3] = R\n    T[0:3,3] = np.array([p, 1])\n\n    return np.multiply(T,vec)\n\n\n# Show the plot\nplt.show()\n\nvec_1_B [0.5 0.5 0.5]\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/personal_notes/industrial-robotics/industrial-robotics.html",
+    "href": "docs/personal_notes/industrial-robotics/industrial-robotics.html",
+    "title": "ENME800 - Industrial Robotics: Mechanics & Planning",
+    "section": "",
+    "text": "Week notes: 2. Week Two\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/personal_notes/personal_notes.html",
+    "href": "docs/personal_notes/personal_notes.html",
+    "title": "Personal Notes",
+    "section": "",
+    "text": "This is where I keep notes for my personal classes. These might be useful, but I am mostly publishing them to force me to type them out.\nClasses:\n\n\n\nCourse Code\nCourse\n\n\n\n\nCOMP822\nHuman Computer Interaction\n\n\nENME800\nIndustrial Robotics\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/personal_notes/industrial-robotics/ENME800_W2.html",
+    "href": "docs/personal_notes/industrial-robotics/ENME800_W2.html",
+    "title": "ENME800 - Industrial Robotics Week 2",
+    "section": "",
+    "text": "WarningNot complete!\n\n\n\n\n\n\n\nfrom pytransform3d import rotations as pr\nfrom pytransform3d.plot_utils import plot_vector, remove_frame\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Plot the original frame: Frame A\nframe_A = pr.plot_basis(R=np.eye(3), s=0.8, p=0, ax_s=1, label=\"Frame A\")\n\n# Remove the axis\nremove_frame(frame_A)\n\ndef rotation_matrix(angle,axis):\n    match axis:\n        case 'x':\n            return np.array([[1, 0, 0],\n                             [0, np.cos(angle), -np.sin(angle)],\n                             [0, np.sin(angle), np.cos(angle)]])\n        case 'y':\n            return np.array([[np.cos(angle), 0, np.sin(angle)],\n                                [0, 1, 0],\n                                [-np.sin(angle), 0, np.cos(angle)]])\n        case 'z':\n            return np.array([[np.cos(angle), -np.sin(angle), 0],\n                             [np.sin(angle), np.cos(angle), 0],\n                             [0, 0, 1]])\n        case _:\n            raise ValueError(\"WHY DID YOU PUT A DIFFERENT THING IN IT!!!!!!!!!\")\n\n# Define the rotation matrix at a particular axis\nangle = np.deg2rad(70)\naxis = 'z'\nR = rotation_matrix(angle,axis)\n\ndef plot_p_origin_B_in_A(vec,vec_color):\n    plot_vector(\n    # A vector is defined by start, direction, and s (scaling)\n    start=np.zeros(3), direction=vec,\n    s=1,\n    ax_s=1, # Scaling of 3D axes\n    lw=0, # Remove line around arrow\n    color=vec_color)\n\n# Define the origin of Frame B with respect to Frame A\np_origin_B_in_A = np.array([2,2,1]) # x = 2, y = 2, z = 1\nplot_p_origin_B_in_A(p_origin_B_in_A,\"Brown\")\n\n# Plot Frame B\nframe_B = pr.plot_basis(R=R, s=1, p=p_origin_B_in_A, ax_s=1, label=\"Frame B\")\nremove_frame(frame_B)\n\ndef plot_vec_in_B(vec,R,p, vec_color):\n    global axis\n    match axis:\n        case 'x':\n            a = np.array([1, 0, 0, angle])\n        case 'y':\n            a = np.array([0, 1, 0, angle])\n        case 'z':\n            a = np.array([0, 0, 1, angle])\n        case _:\n            raise ValueError(\"Thats not even an axis Bozo\")\n\n    pr.plot_axis_angle(frame_A, a=a, p=np.zeros(3))\n    plot_vector(start=p_origin_B_in_A, direction=vec, color=vec_color, s=1, ax_s=1, label='vector')\n\n# Define a vector in Frame B\nvec_1_B = np.array([0.5,0.5,0.5])\nprint(\"vec_1_B\", vec_1_B)\n# Plot vec_1_B\nplot_vec_in_B(vec_1_B, R, p_origin_B_in_A, \"Orange\")\n\ndef homogeneous_transformation(R,p,vec):\n    T = np.zeros((4,4))\n    T[0:3,0:3] = R\n    T[0:3,3] = np.array([p, 1])\n\n    return np.multiply(T,vec)\n\n\n# Show the plot\nplt.show()\n\nvec_1_B [0.5 0.5 0.5]\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/personal_notes/human-computer-interaction/week_2.html#sketching",
+    "href": "docs/personal_notes/human-computer-interaction/week_2.html#sketching",
+    "title": "COMP822 - Week 2 Notes",
+    "section": "Sketching",
+    "text": "Sketching"
+  },
+  {
+    "objectID": "docs/electronics-project/Assignments.html",
+    "href": "docs/electronics-project/Assignments.html",
+    "title": "Electronics Project Assignments",
+    "section": "",
+    "text": "Assignments\n\n\n\n\nProject One\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/Altium Test.html",
+    "href": "docs/electronics-project/Altium Test.html",
+    "title": "Midterm Assessment",
+    "section": "",
+    "text": "WarningWork in progress!\n\n\n\n\n\n\nThe midterm test is a closed book assessment. Because of that and the fact that I like my job, I cannot give you much information about it.\nThat being said, what I can tell you, is that it has two parts. The first is a multi choice questionaire, and the second is a timed PCB design assessment. You will get ~3.5 hours to route a PCB.\nI would recommend that you learn how to route a PCB quickly, and with minimal outside information. You will also need to make the outline of the PCB, so I recommend learning how to do that.\nGood luck, this one is hard.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-robot",
+    "href": "docs/electronics-project/programming.html#writing-code-for-the-robot",
+    "title": "Programming for Electronics Project",
+    "section": "Writing Code for the Robot",
+    "text": "Writing Code for the Robot\n\nvoid main() {\n\n\n}"
+  },
+  {
+    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-starger",
+    "href": "docs/electronics-project/programming.html#writing-code-for-the-starger",
+    "title": "Programming for Electronics Project",
+    "section": "Writing Code for the Starger",
+    "text": "Writing Code for the Starger"
   },
   {
     "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
@@ -46,84 +186,14 @@
     "href": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
     "title": "Troubleshooting Altium",
     "section": "How to add an External File in Altium",
-    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\n\nIt must not be a referenced file.\n\nIt must be added to version control.\n\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\n\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under\nHistory and Version Control, and selecting “Add to Version Control”\n\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save. ### Checking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
+    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\nIt must not be a referenced file.\nIt must be added to version control.\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under History and Version Control, and selecting “Add to Version Control”\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save. ### Checking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
   },
   {
     "objectID": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
     "href": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
     "title": "Troubleshooting Altium",
     "section": "Altium Libraries Path",
-    "text": "Altium Libraries Path\nWe will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.\nThe path looks like:\nK:/\n  └── WELLESLEY COPY/\n      └── DESIGN & CREATIVE TECHNOLOGIES/\n          └── School of Engineering/\n              └── Electrical & Electronic Engineering/\n                  └── Resources/\n                      └── AltiumLibraries/\nFor projects one and two, you will use 2025S2.IntLib.\nFor reinstalling the altium libraries as described in fixing the lastconnection.data error, use the libraries in the AltiumLibraries\\Altium Libraries path."
-  },
-  {
-    "objectID": "docs/electronics-project/glossary.html",
-    "href": "docs/electronics-project/glossary.html",
-    "title": "Zach's Notes",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "docs/electronics-project/Electronics Project.html",
-    "href": "docs/electronics-project/Electronics Project.html",
-    "title": "ENEL602 - Electronics Project",
-    "section": "",
-    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nInformation about this courses assignments\nAssignments"
-  },
-  {
-    "objectID": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
-    "href": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
-    "title": "ENEL602 - Electronics Project",
-    "section": "",
-    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nInformation about this courses assignments\nAssignments"
-  },
-  {
-    "objectID": "docs/electronics-project/Final Report.html",
-    "href": "docs/electronics-project/Final Report.html",
-    "title": "Final Report",
-    "section": "",
-    "text": "Work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/electronics-project/Assignments.html",
-    "href": "docs/electronics-project/Assignments.html",
-    "title": "Electronics Project Assignments",
-    "section": "",
-    "text": "Assignments\n\n\n\n\nProject One\n\n\nProject Two\n\n\nMidterm Test\n\n\nFinal Report\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/electronics-project/Altium Test.html",
-    "href": "docs/electronics-project/Altium Test.html",
-    "title": "Midterm Assessment",
-    "section": "",
-    "text": "Work in progress!\n\n\n\n\n\n\nThe midterm test is a closed book assessment. Because of that and the fact that I like my job, I cannot give you much information about it.\nThat being said, what I can tell you, is that it has two parts. The first is a multi choice questionaire, and the second is a timed PCB design assessment. You will get ~3.5 hours to route a PCB.\nI would recommend that you learn how to route a PCB quickly, and with minimal outside information. You will also need to make the outline of the PCB, so I recommend learning how to do that.\nGood luck, this one is hard.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-robot",
-    "href": "docs/electronics-project/programming.html#writing-code-for-the-robot",
-    "title": "Programming for Electronics Project",
-    "section": "Writing Code for the Robot",
-    "text": "Writing Code for the Robot\n\nvoid main() {\n\n\n}"
-  },
-  {
-    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-starger",
-    "href": "docs/electronics-project/programming.html#writing-code-for-the-starger",
-    "title": "Programming for Electronics Project",
-    "section": "Writing Code for the Starger",
-    "text": "Writing Code for the Starger"
-  },
-  {
-    "objectID": "docs/electronics-project/Project One.html#project-naming-scheme",
-    "href": "docs/electronics-project/Project One.html#project-naming-scheme",
-    "title": "ENEL602 - Project One",
-    "section": "Project Naming Scheme",
-    "text": "Project Naming Scheme\nWe will use the naming scheme:\nP1_FIRSTNAME_LASTNAME_STUDENT-ID\nFor example, my name is Zach Barrett, and if my student ID was 12345678 I would call my project P1_ZACH_BARRETT_22160418, my schematic would be called P1_ZACH_BARRETT_22160418.SchDoc, and my PCB would be called P1_ZACH_BARRETT_22160418.PcbDoc"
-  },
-  {
-    "objectID": "docs/electronics-project/Project One.html#project-one-setup",
-    "href": "docs/electronics-project/Project One.html#project-one-setup",
-    "title": "ENEL602 - Project One",
-    "section": "Project One Setup",
-    "text": "Project One Setup\n\nCreate project in Altium 365 using the naming scheme.\n\nMake sure it is under your folder!\n\nOpen it in Altium Designer.\nImport the PCB template file.\nRename the PCB template file to use the naming scheme.\nCreate a schematic file using the naming scheme.\nInstall project library (S12025.IntLib), find it under this path.\nSave to Server to upload an initial commit."
+    "text": "Altium Libraries Path\nWe will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.\nThe path looks like:\nK:/\n └── WELLESLEY COPY/\n      └── DESIGN & CREATIVE TECHNOLOGIES/\n          └── School of Engineering/\n              └── Electrical & Electronic Engineering/\n                  └── Resources/\n                      └── AltiumLibraries/\n\n\n\n\n\n\n\nFor projects one and two, you will use 2026S2.IntLib.\nFor reinstalling the altium libraries as described in fixing the lastconnection.data error, use the libraries in the AltiumLibraries\\Altium Libraries path."
   },
   {
     "objectID": "docs/electronics-project/routing.html",
@@ -144,27 +214,41 @@
     "href": "docs/electronics-project/routing.html#aesthetic-guidelines",
     "title": "Common Routing Errors",
     "section": "Aesthetic Guidelines",
-    "text": "Aesthetic Guidelines\nThese are guidelines that are entirely aesthetic preferences. If you violate these you will probably receive a lower grade, but they shouldn’t affect how functional your board is.\n\n45 Degree Pad Connections on Square Pads\nWith circular pads you can connect to it at either right angles or 45 degree angles, but with square pads you should only connect to it on one of the flat sides.\n\n\n\n\n\n\nAllowed\n\n\n\n\n\n\n\n\n\n\n\n\n\nNot Allowed"
+    "text": "Aesthetic Guidelines\nThese are guidelines that are entirely aesthetic preferences. If you violate these you will probably receive a lower grade, but they shouldn’t affect how functional your board is.\n\n45 Degree Pad Connections on Square Pads\nWith circular pads you can connect to it at either right angles or 45 degree angles, but with square pads you should only connect to it on one of the flat sides.\n\n\n\n\n\n\nTipAllowed\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportantNot Allowed"
   },
   {
     "objectID": "docs/physics-B/Labs/Lab Three.html",
     "href": "docs/physics-B/Labs/Lab Three.html",
     "title": "PHYS401 - Lab Three",
     "section": "",
-    "text": "This page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "WarningThis page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "docs/physics-B/Labs/Lab Two.html",
     "href": "docs/physics-B/Labs/Lab Two.html",
     "title": "PHYS401 - Lab Two",
     "section": "",
-    "text": "This page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "WarningThis page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Courses",
     "section": "",
-    "text": "If you are looking for electronics project troubleshooting information, open this page.\nOtherwise, take a look at these:\n\nENEL602 - Electronics Project\nPHYS401 - Foundation Physics B\n\n\n\n\n Back to top"
+    "text": "If you are looking for electronics project troubleshooting information, open this page."
+  },
+  {
+    "objectID": "index.html#classes-i-ta-for",
+    "href": "index.html#classes-i-ta-for",
+    "title": "Courses",
+    "section": "Classes I TA for",
+    "text": "Classes I TA for\n\nENEL602 - Electronics Project\nPHYS401 - Foundation Physics B"
+  },
+  {
+    "objectID": "index.html#my-classes",
+    "href": "index.html#my-classes",
+    "title": "Courses",
+    "section": "My Classes",
+    "text": "My Classes\nPersonal Courses"
   }
 ]

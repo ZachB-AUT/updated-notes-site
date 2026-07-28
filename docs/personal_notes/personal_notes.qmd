@@ -1,0 +1,15 @@
+---
+title: "Personal Notes"
+author: "Zach Barrett"
+date: last-modified
+---
+
+This is where I keep notes for my personal classes. These might be useful, but
+I am mostly publishing them to force me to type them out.
+
+Classes:
+
+| Course Code | Course                                                                     |
+| ----------- | -------------------------------------------------------------------------- |
+| COMP822     | [Human Computer Interaction](./human-computer-interaction/COMP822-HCI.qmd) |
+| ENME800     | [Industrial Robotics](./industrial-robotics/industrial-robotics.qmd)       |
