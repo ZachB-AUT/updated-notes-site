@@ -1,0 +1,65 @@
+---
+title: "Placing a Mechanical-1 layer for Project 1"
+reference-location: margin
+---
+---
+For Project 1, you will need to place a mechanical 1 board outline. This was
+only clarified in the lab last night, so for those of you who were not there
+please follow these instructions.
+
+If you submitted project one before doing this, you will need to resubmit. This
+means saving to server again[^2] and submitting another [Smart PDF](./smart-pdf-export.qmd).
+If you are out of submissions on canvas you should probably send Michael an email.
+
+## Instructions
+1. First, select the mechanical 1 layer.
+
+![](../../assets/m1_layer/mech1.png)
+
+2. In the toolbar at the top, select the line tool.
+
+![](../../assets/m1_layer/linetool.png)
+
+3. Start drawing a line by snapping onto one of the breakaway tab points. [^1]
+
+![](../../assets/m1_layer/start_on_break.png)
+
+4. Drag it out along the edge to the next breakaway tab point, make sure you make a right angle at the corners of the board
+
+![](../../assets/m1_layer/go_to_corner.png)
+
+![](../../assets/m1_layer/end_on_break.png)
+
+5. Repeat for all edges.
+
+::: {.callout-important}
+## DO NOT DO THIS
+![](../../assets/m1_layer/BAD.png){width=50%}
+:::
+::: {.callout-tip}
+## DO THIS INSTEAD
+![](../../assets/m1_layer/GOOD.png){width=50%}
+:::
+
+6. Once you are done, you should select all of the lines you just made:
+
+![](../../assets/m1_layer/select_all_of_them.png)
+
+7. Open properties and change the "Width"
+
+![](../../assets/m1_layer/edit_this.png)
+
+8. Set the thickness to "0.8mm". Not 0.8 mils, 0.8 *millimeters*. You do this by
+	putting "mm" after the "0.8" It will automatically convert that to mils for
+	you.
+
+![](../../assets/m1_layer/zero_point_eight.png)
+![](../../assets/m1_layer/see_it_converts.png)
+
+9. Once you do that, your board should look something like this:
+
+![](../../assets/m1_layer/should_look_like_this.png)
+
+
+[^1]: Make sure the green circle pops up to indicate you are locking to the breakway point (teal circle)
+[^2]: With a commit message like "Hello Michael please mark this one instead" or something.

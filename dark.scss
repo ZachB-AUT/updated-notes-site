@@ -31,6 +31,8 @@ $pre-color:              #CECDC3;
 $font-family-sans-serif: "Lora", serif;
 $font-family-monospace:  "JetBrains Mono", monospace;
 
+// Width of the code-annotation number column (see annotation-lines.html)
+$annotation-rail-width:  2.2rem;
 
 /*-- scss:rules --*/
 .navbar {
@@ -70,6 +72,166 @@ hr {
 div.sourceCode {
   background-color: #1C1B1A;
   border-color: #282726;
+  border-radius: 0;
+}
+
+// Code block filename header — a label strip, not a second code panel
+.code-with-filename .code-with-filename-file,
+.quarto-dark .code-with-filename .code-with-filename-file {
+  display: flex;
+  align-items: center;
+  min-height: 1.9rem;
+  background-color: #100F0F;   // page bg, so it reads as a caption above the code
+  border: 1px solid #282726;   // UI
+  border-bottom: none;
+  border-radius: 0;
+  padding: 0.15em 0.75em;
+  padding-right: 2.25rem;      // room for the copy button
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75em;
+  letter-spacing: 0.02em;
+  color: #878580;              // TX-2 muted
+
+  pre,
+  strong {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 400;
+    color: #878580;
+  }
+
+  // A flex item won't shrink below its content by default, so a long
+  // filename would push the header wider than the page on a phone.
+  pre {
+    min-width: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Copy button lives in the filename bar when there is one.
+// The scaffold stays position:relative — Quarto's annotation JS measures
+// offsetTop against it — so the button is lifted into the header instead,
+// by exactly the header's height.
+.code-with-filename {
+  .code-copy-button,
+  .code-annotated .code-copy-button {
+    top: -1.9rem;
+    right: 0;
+    height: 1.9rem;
+    margin: 0;
+    padding: 0 0.6rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Click-to-highlight band: don't bleed 4em out to the left of the block, and
+// stop at the rail rather than running under it.
+#code-annotation-line-highlight {
+  margin-left: 0;
+  width: auto;
+  right: $annotation-rail-width;
+}
+
+// Annotated lines — a quiet neutral marker; orange is reserved for selection
+pre.code-annotation-code span.annotated-line {
+  box-sizing: content-box;
+  display: inline-block;
+  width: 100%;
+  margin-left: -0.4em;         // cancel pre's padding so the band is flush
+  padding-left: 0.4em;
+  background-color: rgba(206, 205, 195, 0.045);
+  box-shadow: inset 2px 0 0 #403E3C;   // UI-3
+}
+
+// Annotation numbers sit in their own column beside the code — annotation
+// -lines.html moves them out of the <pre>. The code scrolls horizontally
+// inside its own box; the rail is a sibling, so it never moves and the code
+// can never slide underneath it.
+div.sourceCode.has-annotation-rail {
+  display: flex;
+  align-items: stretch;
+}
+
+pre.sourceCode.code-annotation-code {
+  flex: 1 1 auto;
+  min-width: 0;              // let the pre shrink so it, not the page, scrolls
+  overflow-x: auto;
+  padding-right: 0.4em;
+
+  // Widen the code to its longest line so a full-width line marker covers the
+  // whole scrollable width rather than stopping at the visible edge. Block,
+  // not inline-block — an inline-block would sit on a baseline and leave a
+  // gap above and below the code.
+  > code.sourceCode {
+    display: block;
+    min-width: max-content;
+  }
+}
+
+.annotation-rail {
+  position: relative;
+  flex: 0 0 $annotation-rail-width;
+  background-color: #1C1B1A;   // same as the code block
+  border-left: 1px solid #282726;
+
+  // Quarto's circle styling is scoped to `code.sourceCode .code-annotation
+  // -anchor`, so it no longer applies once the anchor moves out of the code.
+  .code-annotation-anchor {
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    width: 18px;
+    height: 18px;
+    line-height: 17px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    border: 1px solid #403E3C;   // UI-3
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// The overlay gutter is replaced by the rail, but has to stay in the DOM:
+// Quarto's annotation JS appends its selection band to it.
+.has-annotation-rail {
+  .code-annotation-gutter,
+  .code-annotation-gutter-bg {
+    display: none;
+  }
+}
+
+// Click-to-highlight band from the annotation list below the block
+#code-annotation-line-highlight,
+#code-annotation-line-highlight-gutter {
+  background-color: rgba(218, 112, 44, 0.14);
+  border-top: solid rgba(218, 112, 44, 0.4) 1px;
+  border-bottom: solid rgba(218, 112, 44, 0.4) 1px;
+}
+
+// Code annotation gutter — a margin rail, separated by a rule, not a fill
+.code-annotation-gutter-bg {
+  background-color: #100F0F;   // page bg, sits behind the gutter
+}
+
+.code-annotation-gutter {
+  background-color: #1C1B1A;   // same as the code block
+  border-left: 1px solid #282726;
+}
+
+.code-annotation-anchor {
+  color: #878580;
+  border-color: #403E3C;       // UI-3
+
+  &:hover {
+    color: #DA702C;
+    border-color: #DA702C;
+  }
 }
 
 .quarto-secondary-nav {
@@ -142,7 +304,7 @@ ul.task-list {
 
 // Code cell output — visually connected to the block above
 .cell:has(.cell-output) div.sourceCode {
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0;
   border-bottom: none;
 }
 
@@ -150,7 +312,7 @@ ul.task-list {
   background-color: #1C1B1A;
   border: 1px solid #282726;
   border-top: 1px solid #403E3C;
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0;
   padding: 0.35em 0.75em 0.5em;
   margin-top: 0;
 

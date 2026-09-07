@@ -1,1 +1,2 @@
 QUARTO_PYTHON=.venv/bin/python
+RETICULATE_PYTHON=/Users/zachb/Code/updated-notes-site/.venv/bin/python

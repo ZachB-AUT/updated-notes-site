@@ -6,12 +6,15 @@ date: last-modified
 
 ***
 
-If you are looking for electronics project troubleshooting information, [open this page.](./docs/electronics-project/troubleshooting.qmd)
+If you are looking for electronics project troubleshooting information, [open
+this page](./docs/electronics-project/troubleshooting.qmd).
+
+If you have questions about the first lab for Physics B, see
+[this](./docs/physics-B/Labs/Lab One.qmd).
 
 ## Classes I TA for
 - [ENEL602 - Electronics Project](./docs/electronics-project/Electronics Project.qmd)
 - [PHYS401 - Foundation Physics B](./docs/physics-B/Foundation Physics B.qmd)
 
-## My Classes
-
-[Personal Courses](./docs/personal_notes/personal_notes.qmd)
+<!-- ## My Classes -->
+<!-- [Personal Courses](./docs/personal_notes/personal_notes.qmd) -->

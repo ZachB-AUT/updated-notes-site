@@ -1,18 +1,45 @@
 ---
 title: "ENEL602 - Electronics Project"
-author: "Zach Barrett"
-date: last-modified
+---
 ---
 
-## Electronics Project Notes
 
-| Description                           | Link                                            |
-| ------------------------------------- | ----------------------------------------------- |
-| Information on altium troubleshooting | [Troubleshooting Altium](./troubleshooting.qmd) |
-| Descriptions of common routing errors | [Common Routing Errors](./routing.qmd)          |
-| Project One Information               | [Project One](./Project One.qmd)                |
-| How to create Smart PDFs             | [Smart PDF export](./smart-pdf-export.qmd)      |
+::: {.callout-tip}
+# Highlights
+You are probably looking for one of:\
+- [Information on Altium Troubleshooting](./troubleshooting.qmd)\
+- [How to Create Smart PDFs](./smart-pdf-export.qmd)
+:::
 
+## PCB Design
+- [Project One Design Assessment](./P1-Design-Info.qmd)
+	- [How to create the Mechanical One Outline for Project One](./P1_mechanical_1_layer.qmd)
+	- [How to create the screw for Project One](./p1_screw.qmd)
+- [Project Two Design Assessment](./P2-Design-Info.qmd)
+- [Altium Test](./Altium Test.qmd)
 
+<!-- ## PCB Assembly -->
+<!---->
+<!-- ::: {.callout-warning} -->
+<!-- ## To Be Released -->
+<!-- ::: -->
+<!---->
+<!-- ## Programming -->
+<!---->
+<!-- ::: {.callout-warning} -->
+<!-- ## To Be Released -->
+<!-- ::: -->
+<!---->
+<!-- ## Final Report -->
+<!---->
+<!-- ::: {.callout-warning} -->
+<!-- ## To Be Released -->
+<!-- ::: -->
 
+## Misc
+
+- [How to Program AVR microcontrollers on MacOS](./avr-programming-macos.qmd)
+- [How to Create Smart PDF's](./smart-pdf-export.qmd)
+- [Information on Altium Troubleshooting](./troubleshooting.qmd)
+- [Making a board cutout (for real)](./board-cutouts.qmd)
 

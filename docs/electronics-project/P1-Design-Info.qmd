@@ -1,0 +1,52 @@
+---
+title: "Project One - PCB Design"
+date: last-modified
+---
+
+---
+
+::: {.callout-warning}
+## Work in progress!
+More content will be added as time goes on.
+:::
+
+::: {.callout-important}
+## NOTICE - BROKEN TEMPLATE
+The template originally provided on canvas is broken! You will need to fix it!
+Follow [these steps](./p1_screw.qmd) to do so!
+:::
+
+## Project Naming Scheme
+
+We will use the naming scheme:
+
+`P1_FIRSTNAME_LASTNAME_STUDENT-ID`
+
+For example, my name is Zach Barrett, and if my student ID was 12345678 I would
+call my project `P1_ZACH_BARRETT_12345678`, my schematic would be called
+`P1_ZACH_BARRETT_12345678.SchDoc`, and my PCB would be called
+`P1_ZACH_BARRETT_12345678.PcbDoc`.
+
+## Project One Setup
+
+- [ ] Create project in Altium 365 using the naming scheme.
+	- Make sure it is under your folder!
+- [ ] Open it in Altium Designer.
+- [ ] [Import the PCB template file](./troubleshooting.qmd#how-to-add-an-external-file-in-altium).
+- [ ] Rename the PCB template file to use the naming scheme.
+- [ ] Create a schematic file using the naming scheme.
+- [ ] Install project library (`2026S2.IntLib`), find it under [this path](./troubleshooting.qmd#altium-libraries-path).
+- [ ] Save to Server to upload an initial commit.
+
+## Project Submission
+
+In order to submit project one, you need to do two things.
+
+First, you must ensure your project is properly saved to server. Ensure that
+when you open Altium 365 and navigate to your project, both the schematic and
+PCB are present (and correct).
+
+Secondly, you must create a "Smart PDF", and upload it to canvas. Ensure you
+[create it with the correct settings](./smart-pdf-export.qmd). Ensure you save
+it with the correct file name (follow the naming scheme!)
+

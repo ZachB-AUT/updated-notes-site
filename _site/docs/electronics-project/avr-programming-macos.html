@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Zach Barrett">
+<meta name="dcterms.date" content="2026-08-10">
+
+<title>AVR Programming on MacOS – Zach’s Notes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../.././favicons/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-87c8eabe2b0af90fe7463c77d0cbc8fc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-498bccf478a5aea9dad54aa2b42d53be.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-87c8eabe2b0af90fe7463c77d0cbc8fc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-60ac156d3fb8eef846f5d859668a8297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3f5f57a08496c514461e477438cf32f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-60ac156d3fb8eef846f5d859668a8297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Zach’s Notes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About this Site</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/electronics-project/Electronics Project.html"> 
+<span class="menu-text">Electronics Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/physics-B/Foundation Physics B.html"> 
+<span class="menu-text">Foundation Physics B</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#software-installation" id="toc-software-installation" class="nav-link active" data-scroll-target="#software-installation">Software Installation</a>
+  <ul class="collapse">
+  <li><a href="#installing-homebrew" id="toc-installing-homebrew" class="nav-link" data-scroll-target="#installing-homebrew">Installing Homebrew</a></li>
+  <li><a href="#installing-the-avr-toolchain-and-avrdude" id="toc-installing-the-avr-toolchain-and-avrdude" class="nav-link" data-scroll-target="#installing-the-avr-toolchain-and-avrdude">Installing the AVR toolchain and AVRDUDE</a></li>
+  </ul></li>
+  <li><a href="#compiling-and-flashing" id="toc-compiling-and-flashing" class="nav-link" data-scroll-target="#compiling-and-flashing">Compiling and Flashing</a></li>
+  <li><a href="#getting-clangd-to-stop-complaining" id="toc-getting-clangd-to-stop-complaining" class="nav-link" data-scroll-target="#getting-clangd-to-stop-complaining">Getting clangd to stop complaining</a></li>
+  <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together">Putting it all together</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AVR Programming on MacOS</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zach Barrett </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<p>My main computer is a Macbook, and I dislike both windows and Microchip Studio. Because of this I went to great lengths to be able to program microcontrollers from my laptop. Turns out it is not very hard. These instructions are for MacOS, but the process is pretty similar for Linux.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="software-installation" class="level2">
+<h2 class="anchored" data-anchor-id="software-installation">Software Installation</h2>
+<section id="installing-homebrew" class="level3">
+<h3 class="anchored" data-anchor-id="installing-homebrew">Installing Homebrew</h3>
+<p>Skip this if you are not using MacOS or already have homebrew installed.</p>
+<p>Homebrew is a “package manager” for MacOS, it helps you install software easily. I highly recommend it.</p>
+<ol type="1">
+<li>If you dont have the XCode dev tools installed, do that by running <code>xcode-select --install</code> in your terminal.</li>
+<li>Go to <a href="https://brew.sh/">their website</a>, paste the command into your terminal.</li>
+<li>Add homebrew to your path by running <code>export PATH="/opt/homebrew/bin:$PATH" &gt;&gt; ~/.zshrc</code> in your terminal<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</li>
+<li>Reload your shell config by either closing and reopening it or running <code>source ~/.zshrc</code></li>
+</ol>
+</section>
+<section id="installing-the-avr-toolchain-and-avrdude" class="level3">
+<h3 class="anchored" data-anchor-id="installing-the-avr-toolchain-and-avrdude">Installing the AVR toolchain and AVRDUDE</h3>
+<p>Once homebrew is installed, run these commands</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> tap osx-cross/avr</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> trust osx-cross/avr</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install avr-gcc avr-binutils avrdude</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now you should be basically done! That is all you need to install. You can move on to <a href="#compiling-and-flashing">Compiling and flashing</a></p>
+</section>
+</section>
+<section id="compiling-and-flashing" class="level2">
+<h2 class="anchored" data-anchor-id="compiling-and-flashing">Compiling and Flashing</h2>
+<p>The commands to compile and flash code for a microcontroller are extremely long and hard to remember. For example, here is the sequence of commands to compile a program called <code>main.c</code> for the <em>attiny1634</em> and upload it over the dragon programming module.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">avr-gcc</span> <span class="at">-Wall</span> <span class="at">-mmcu</span><span class="op">=</span>attiny1634 <span class="at">-Os</span> <span class="at">-o</span> main.elf main.c</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">avr-objcopy</span> <span class="at">-O</span> ihex main.elf main.hex</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">avrdude</span> <span class="at">-c</span> dragon_isp <span class="at">-p</span> attiny1634 <span class="at">-v</span> <span class="at">-U</span> <span class="st">"flash:w:main.hex:i"</span> <span class="at">-B10</span> <span class="at">-P</span> usb</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>These, in order:</p>
+<ol type="1">
+<li>Compile your program to a <code>.elf</code></li>
+<li>Convert that <code>.elf</code> to a <code>.hex</code> file</li>
+<li>Transmit that .hex file to the microcontroller over the programming module.</li>
+</ol>
+<p>This would be an enormous pain to type out (or even copy paste) every time you wanted to program your microcontroller. Fortunately, some nerds 30 years ago ran into the same kind of problem and wrote something to make this easier. It is (in my opinion), one of the best programs ever written. It is called <code>make</code>. It comes preinstalled on both Mac and Linux.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tangent about Make
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Basically Make let you define a set of named shell scripts called “targets”, each target is a sequence of shell commands used to create the target. Normally a target is the name of a <em>file</em> the target produces, i.e.&nbsp;a target called <code>example.txt</code> is a list of instructions used to construct the file <code>example.txt</code>. However, targets can be called anything or do anything.</p>
+<p>The really cool thing about makefiles is that targets <em>can depend on each other</em>. If the target <code>file1.txt</code> depends on <code>file2.txt</code> and <code>file2.txt</code> does not exist, Make automatically uses the <code>file2.txt</code> target to generate it before creating <code>file1.txt</code>. Importantly it also keeps track on a targets dependencies to see if they have changed, recreating them if they have. In a makefile this would look like:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode makefile code-with-copy"><code class="sourceCode makefile"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">file1.txt:</span><span class="dt"> file2.txt</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Something that turns file2.txt into file1.txt</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">file2.txt:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Something that produces file2.txt</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In the makefile I give you later the <code>upload</code> target depends on <code>main.hex</code>, which then depends on <code>main.c</code>. This means that when you try and upload your code to the robot it will automatically compile it, but will then only recompile it before flashing if you have changed <code>main.c</code> since the last time you uploaded (unlike microchip studio that recompiles every time you try and flash).</p>
+<p>In combination with other more advanced features (shell subsitutions, pattern matching, automatic variables, etc) this makes Make a very very powerful tool and I cannot recommend using it enough. Make is so awesome. Big Make fan over here.</p>
+</div>
+</div>
+</div>
+<p>If you are interested I would highly recommend <a href="https://www.gnu.org/software/make/manual/html_node/Introduction.html">learning more about makefiles</a>, I use them constantly and love them. Otherwise, here is the one I use for this process:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>makefile</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-3" data-filename="makefile"><pre class="sourceCode makefile code-annotation-code code-with-copy code-annotated"><code class="sourceCode makefile"><a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-1" class="code-annotation-target"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">MCU</span> <span class="ch">:=</span><span class="st"> "attiny1634"</span></span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">upload:</span><span class="dt"> main.hex</span></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>avrdude -c dragon_isp -p <span class="ch">$(</span><span class="dt">MCU</span><span class="ch">)</span> -v -U <span class="st">"flash:w:main.hex:i"</span> -B10 -P usb</span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a><span class="dv">main.hex:</span><span class="dt"> main.c</span></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>avr-gcc -Wall -mmcu=<span class="ch">$(</span><span class="dt">MCU</span><span class="ch">)</span> -Os  -o main.elf main.c</span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a>    avr-objcopy -O ihex main.elf main.hex</span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10" aria-hidden="true" tabindex="-1"></a><span class="dv">clean:</span></span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11" aria-hidden="true" tabindex="-1"></a><span class="er">    </span>rm *.hex *.elf</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="1" data-code-annotation="1">Change this to “attiny2313” for project two.</span>
+</dd>
+</dl>
+<p>Copy this into a file called <code>makefile</code> on the same level as your <code>robot.c</code>. Then when you want to compile and flash your code, run <code>make</code> in the same directory. <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> If you use the excellent <a href="https://zed.dev/">zed</a> text editor (which you should, its great), you can press <code>Cmd-Shift-R</code> and select the “all” target to do this faster. Otherwise, if you are using VSCode you can use <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools">this extension</a>.</p>
+</section>
+<section id="getting-clangd-to-stop-complaining" class="level2">
+<h2 class="anchored" data-anchor-id="getting-clangd-to-stop-complaining">Getting clangd to stop complaining</h2>
+<p>When you open AVR C code in a text editor (Such as VSCode) you will probably get many errors because your LSP<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> cannot find the headers you reference in the file (such as <code>avr/io.h</code>). It should still <em>compile</em> just fine using <code>avr-gcc</code><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, but its still worth fixing. Most text editors use <a href="https://clangd.llvm.org/">clangd</a> for syntax highlighting and error detection in C, which can be told where to find these headers using a <code>compile_commands.json</code> file.</p>
+<p>If you are on MacOS this file will look like:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>compile_commands.json</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-4" data-filename="compile_commands.json"><pre class="sourceCode json code-annotation-code code-with-copy code-annotated"><code class="sourceCode json"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"arguments"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="annotated-cell-4-4"><a href="#annotated-cell-4-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"/opt/homebrew/bin/avr-gcc"</span><span class="ot">,</span></span>
+<span id="annotated-cell-4-5"><a href="#annotated-cell-4-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-c"</span><span class="ot">,</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-4-6" class="code-annotation-target"><a href="#annotated-cell-4-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"--mmcu=attiny1634"</span><span class="ot">,</span></span>
+<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-Wall"</span><span class="ot">,</span></span>
+<span id="annotated-cell-4-8"><a href="#annotated-cell-4-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-Os"</span><span class="ot">,</span></span>
+<span id="annotated-cell-4-9"><a href="#annotated-cell-4-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-o"</span><span class="ot">,</span></span>
+<span id="annotated-cell-4-10"><a href="#annotated-cell-4-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"main.elf"</span><span class="ot">,</span></span>
+<span id="annotated-cell-4-11"><a href="#annotated-cell-4-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"main.c"</span><span class="ot">,</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-4-12" class="code-annotation-target"><a href="#annotated-cell-4-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-I/usr/lib/gcc/avr/15.1.0/include"</span><span class="ot">,</span></span>
+<span id="annotated-cell-4-13"><a href="#annotated-cell-4-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"-I/usr/lib/gcc/avr/15.1.0/include-fixed"</span></span>
+<span id="annotated-cell-4-14"><a href="#annotated-cell-4-14" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-4-15" class="code-annotation-target"><a href="#annotated-cell-4-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"directory"</span><span class="fu">:</span> <span class="st">"/Users/YOURUSERNAME/Example"</span><span class="fu">,</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-4-16" class="code-annotation-target"><a href="#annotated-cell-4-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"file"</span><span class="fu">:</span> <span class="st">"/Users/YOURUSERNAME/Example/main.c"</span><span class="fu">,</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-4-17" class="code-annotation-target"><a href="#annotated-cell-4-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"output"</span><span class="fu">:</span> <span class="st">"/Users/YOURUSERNAME/Example/main.elf"</span></span>
+<span id="annotated-cell-4-18"><a href="#annotated-cell-4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="annotated-cell-4-19"><a href="#annotated-cell-4-19" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="6" data-code-annotation="1">Change this to <code>--mmcu=attiny2313</code> for project two.</span>
+</dd>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="12,13" data-code-annotation="2">These paths may change! Particularly the version number. Check where it is on your machine!</span>
+</dd>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="15" data-code-annotation="3">This is the path to your current project, make sure it is an <em>absolute</em> path with no trailing slash <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></span>
+</dd>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="16" data-code-annotation="4">This is the path to whatever file you are trying to compile, in this case <code>main.c</code> but change it if you call it something else.</span>
+</dd>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="17" data-code-annotation="5">Output <code>.elf</code> file, its fine if you call it something else but keep it consistent with 4.</span>
+</dd>
+</dl>
+</section>
+<section id="putting-it-all-together" class="level2">
+<h2 class="anchored" data-anchor-id="putting-it-all-together">Putting it all together</h2>
+<p>Once you have installed all the software you need, you should have a directory that looks like this:</p>
+<pre><code>exampledirectory/
+├── main.c
+├── compile_commands.json
+└── makefile </code></pre>
+<p>You will copy the contents of <code>compilecommands.json</code> and the <code>makefile</code> into their appropriate files alongside your <code>main.c</code>. When you are ready to compile your code you can run <code>make compile</code>, and to flash it you run <code>make flash</code>. To do both you can run <code>make</code> by itself (which will run the first target, which depends on the other two.)</p>
+<p>You will almost certainly run into errors doing this, its a complicated setup process the first time you do it. That is fine and expected. Read the error messages, google them, fix it yourself (or ask AI to do it for you if you can’t be bothered.)</p>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>If you are doing this on linux you can probably figure out the differences yourself. If not, reach out to me and I am happy to help!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This step tells your computer where to look for programs you install with homebrew. Without it they are still <em>installed</em> but you can’t access them without specifying the whole path of the program. i.e.&nbsp;you have to go like <code>/opt/homebrew/bin/gcc</code> instead of just <code>gcc</code> which would be annoying.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>I use the word “directory” here but you can mentally swap out the word “folder” if you want.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>This stands for <a href="https://en.wikipedia.org/wiki/Language_Server_Protocol">Language Server Protocol</a>, which is basically a server that tells your editor what is wrong with your code.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Because <code>avr-gcc</code> already knows where to look (the headers are included in the same directory when you install it)<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Hot tip, run <code>pwd | pbcopy</code> to copy the current absolute directory path to your clipboard.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script>
+  // Code annotation layout.
+  //
+  // Quarto renders annotation numbers as right-floated anchors *inside* the
+  // code, with a gutter strip overlaid on top of it. That means the numbers
+  // scroll with the code, and long lines slide underneath them. This moves the
+  // anchors into a real column beside the <pre>, outside its scroll container.
+  //
+  // It also tags every line of a multi-line annotation: Quarto marks only the
+  // first line with .code-annotation-target, but the full range is on the
+  // annotation list entry as data-code-lines (e.g. "12,13").
+  //
+  // The marker class is .annotated-line rather than Quarto's own
+  // .code-annotation-target, and the Quarto class is stripped. The copy button
+  // deletes every child of <code> whose class starts with "code-annotation-" —
+  // meant for the number anchors, but it matches the marked lines too, so
+  // annotated lines go missing from copied code. Keeping the class off the
+  // line spans leaves the copy handler with nothing to delete.
+  (function () {
+    const RAIL_ANCHOR_SIZE = 18;
+
+    // (cell, annotation number) -> [line element ids]
+    const lineIdsByAnnotation = new Map();
+
+    const collectAnnotations = () => {
+      const notes = window.document.querySelectorAll(
+        "span[data-code-cell][data-code-lines][data-code-annotation]"
+      );
+      for (const note of notes) {
+        const cell = note.getAttribute("data-code-cell");
+        const number = note.getAttribute("data-code-annotation");
+        const ids = note
+          .getAttribute("data-code-lines")
+          .split(",")
+          .map((line) => cell + "-" + line.trim());
+        lineIdsByAnnotation.set(cell + "/" + number, ids);
+      }
+    };
+
+    const markAnnotatedLines = () => {
+      for (const ids of lineIdsByAnnotation.values()) {
+        for (const id of ids) {
+          const lineEl = window.document.getElementById(id);
+          if (lineEl) {
+            lineEl.classList.remove("code-annotation-target");
+            lineEl.classList.add("annotated-line");
+          }
+        }
+      }
+    };
+
+    const buildRails = () => {
+      for (const pre of window.document.querySelectorAll("pre.code-annotation-code")) {
+        const container = pre.parentElement;
+        if (!container || container.querySelector(":scope > .annotation-rail")) {
+          continue;
+        }
+        const rail = window.document.createElement("div");
+        rail.className = "annotation-rail";
+        container.appendChild(rail);
+        container.classList.add("has-annotation-rail");
+        // Move, don't clone — the anchors carry Quarto's own click handling.
+        for (const anchor of pre.querySelectorAll("a.code-annotation-anchor")) {
+          rail.appendChild(anchor);
+        }
+      }
+    };
+
+    // Anchors are absolutely positioned in the rail, so they have to be lined
+    // up with their code line by measurement. Redone on resize and font load.
+    const positionAnchors = () => {
+      for (const rail of window.document.querySelectorAll(".annotation-rail")) {
+        const railTop = rail.getBoundingClientRect().top;
+        for (const anchor of rail.querySelectorAll("a.code-annotation-anchor")) {
+          const key =
+            anchor.getAttribute("data-target-cell") +
+            "/" +
+            anchor.getAttribute("data-target-annotation");
+          const ids = lineIdsByAnnotation.get(key);
+          if (!ids || ids.length === 0) {
+            continue;
+          }
+          const lineEl = window.document.getElementById(ids[0]);
+          if (!lineEl) {
+            continue;
+          }
+          const rect = lineEl.getBoundingClientRect();
+          const offset = (rect.height - RAIL_ANCHOR_SIZE) / 2;
+          anchor.style.top = rect.top - railTop + offset + "px";
+        }
+      }
+    };
+
+    const relayout = () => {
+      positionAnchors();
+    };
+
+    const init = () => {
+      collectAnnotations();
+      if (lineIdsByAnnotation.size === 0) {
+        return;
+      }
+      markAnnotatedLines();
+      buildRails();
+      positionAnchors();
+
+      let frame;
+      window.addEventListener("resize", () => {
+        window.cancelAnimationFrame(frame);
+        frame = window.requestAnimationFrame(relayout);
+      });
+      if (window.document.fonts && window.document.fonts.ready) {
+        window.document.fonts.ready.then(relayout);
+      }
+    };
+
+    if (window.document.readyState === "loading") {
+      window.document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,211 @@
+---
+title: "AVR Programming on MacOS"
+reference-location: "document"
+---
+---
+
+My main computer is a Macbook, and I dislike both windows and Microchip Studio.
+Because of this I went to great lengths to be able to program microcontrollers
+from my laptop. Turns out it is not very hard. These instructions are for
+MacOS, but the process is pretty similar for Linux.[^2]
+
+## Software Installation
+
+### Installing Homebrew
+Skip this if you are not using MacOS or already have homebrew installed.
+
+Homebrew is a "package manager" for MacOS, it helps you install software
+easily. I highly recommend it.
+
+1. If you dont have the XCode dev tools installed, do that by running `xcode-select
+   --install` in your terminal.
+2. Go to [their website](https://brew.sh/), paste the command into your
+   terminal.
+3. Add homebrew to your path by running `export PATH="/opt/homebrew/bin:$PATH"
+   >> ~/.zshrc` in your terminal[^1].
+4. Reload your shell config by either closing and reopening it or running
+   `source ~/.zshrc`
+
+
+### Installing the AVR toolchain and AVRDUDE
+
+Once homebrew is installed, run these commands
+```sh
+brew tap osx-cross/avr
+brew trust osx-cross/avr
+brew install avr-gcc avr-binutils avrdude
+```
+
+Now you should be basically done! That is all you need to install. You can move
+on to [Compiling and flashing](#compiling-and-flashing)
+
+## Compiling and Flashing
+
+The commands to compile and flash code for a microcontroller are extremely long
+and hard to remember. For example, here is the sequence of commands to compile
+a program called `main.c` for the _attiny1634_ and upload it over the dragon
+programming module.
+
+```sh
+avr-gcc -Wall -mmcu=attiny1634 -Os -o main.elf main.c
+avr-objcopy -O ihex main.elf main.hex
+avrdude -c dragon_isp -p attiny1634 -v -U "flash:w:main.hex:i" -B10 -P usb
+```
+These, in order:
+
+1. Compile your program to a `.elf`
+2. Convert that `.elf` to a `.hex` file
+3. Transmit that .hex file to the microcontroller over the programming module.
+
+This would be an enormous pain to type out (or even copy paste) every time you
+wanted to program your microcontroller. Fortunately, some nerds 30 years ago
+ran into the same kind of problem and wrote something to make this easier. It
+is (in my opinion), one of the best programs ever written. It is called `make`.
+It comes preinstalled on both Mac and Linux.
+
+::: {.callout-tip collapse="true"}
+## Tangent about Make
+
+Basically Make let you define a set of named shell scripts called "targets",
+each target is a sequence of shell commands used to create the target. Normally
+a target is the name of a *file* the target produces, i.e. a target called
+`example.txt` is a list of instructions used to construct the file
+`example.txt`. However, targets can be called anything or do anything.
+
+The really cool thing about makefiles is that targets _can depend on each
+other_. If the target `file1.txt` depends on `file2.txt` and `file2.txt` does
+not exist, Make automatically uses the `file2.txt` target to generate it before
+creating `file1.txt`. Importantly it also keeps track on a targets
+dependencies to see if they have changed, recreating them if they have.
+In a makefile this would look like:
+
+```makefile
+file1.txt: file2.txt
+	# Something that turns file2.txt into file1.txt
+
+file2.txt:
+	# Something that produces file2.txt
+```
+
+In the makefile I give you later the `upload` target depends on `main.hex`,
+which then depends on `main.c`. This means that when you try and upload your
+code to the robot it will automatically compile it, but will then only
+recompile it before flashing if you have changed `main.c` since the last time
+you uploaded (unlike microchip studio that recompiles every time you try and
+flash).
+
+In combination with other more advanced features (shell subsitutions, pattern
+matching, automatic variables, etc) this makes Make a very very powerful tool
+and I cannot recommend using it enough. Make is so awesome. Big Make fan over
+here.
+:::
+
+If you are interested I would highly recommend [learning more about
+makefiles](https://www.gnu.org/software/make/manual/html_node/Introduction.html),
+I use them constantly and love them. Otherwise, here is the one I use for this
+process:
+
+```{.makefile filename="makefile"}
+MCU := "attiny1634" #<1>
+
+upload: main.hex
+	avrdude -c dragon_isp -p $(MCU) -v -U "flash:w:main.hex:i" -B10 -P usb
+
+main.hex: main.c
+	avr-gcc -Wall -mmcu=$(MCU) -Os  -o main.elf main.c
+	avr-objcopy -O ihex main.elf main.hex
+
+clean:
+	rm *.hex *.elf
+``` 
+1. Change this to "attiny2313" for project two.
+
+Copy this into a file called `makefile` on the same level as your `robot.c`.
+Then when you want to compile and flash your code, run `make` in the same
+directory. [^6] If you use the excellent [zed](https://zed.dev/) text editor (which
+you should, its great), you can press `Cmd-Shift-R` and select the "all" target
+to do this faster. Otherwise, if you are using VSCode you can use [this
+extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools).
+
+## Getting clangd to stop complaining
+
+When you open AVR C code in a text editor (Such as VSCode) you will probably
+get many errors because your LSP[^4] cannot find the headers you reference in
+the file (such as `avr/io.h`). It should still *compile* just fine using
+`avr-gcc`[^5], but its still worth fixing. Most text editors use
+[clangd](https://clangd.llvm.org/) for syntax highlighting and error detection
+in C, which can be told where to find these headers using a
+`compile_commands.json` file. 
+
+If you are on MacOS this file will look like:
+
+```{.json filename="compile_commands.json"}
+[
+  {
+    "arguments": [
+      "/opt/homebrew/bin/avr-gcc",
+      "-c",
+      "--mmcu=attiny1634",				//<1>
+      "-Wall",
+      "-Os",
+      "-o",
+      "main.elf",
+      "main.c",
+      "-I/usr/lib/gcc/avr/15.1.0/include",		//<2>
+      "-I/usr/lib/gcc/avr/15.1.0/include-fixed"		//<2>
+    ],
+    "directory": "/Users/YOURUSERNAME/Example",		//<3>
+    "file": "/Users/YOURUSERNAME/Example/main.c",	//<4>
+    "output": "/Users/YOURUSERNAME/Example/main.elf"	//<5>
+  }
+]
+```
+
+1. Change this to `--mmcu=attiny2313` for project two.
+2. These paths may change! Particularly the version number. Check where it is
+   on your machine!
+3. This is the path to your current project, make sure it is an *absolute* path
+   with no trailing slash [^3]
+4. This is the path to whatever file you are trying to compile, in this case
+   `main.c` but change it if you call it something else.
+5. Output `.elf` file, its fine if you call it something else but keep it
+   consistent with 4.
+
+## Putting it all together
+
+Once you have installed all the software you need, you should have a directory
+that looks like this:
+
+```
+exampledirectory/
+├── main.c
+├── compile_commands.json
+└── makefile 
+```
+
+You will copy the contents of `compilecommands.json` and the `makefile` into
+their appropriate files alongside your `main.c`. When you are ready to compile
+your code you can run `make compile`, and to flash it you run `make flash`. To
+do both you can run `make` by itself (which will run the first target, which
+depends on the other two.)
+
+You will almost certainly run into errors doing this, its a complicated setup
+process the first time you do it. That is fine and expected. Read the error
+messages, google them, fix it yourself (or ask AI to do it for you if you can't
+be bothered.)
+
+[^1]: This step tells your computer where to look for programs you install with
+	homebrew. Without it they are still *installed* but you can't access them
+	without specifying the whole path of the program. i.e. you have to go like
+	`/opt/homebrew/bin/gcc` instead of just `gcc` which would be annoying.
+[^2]: If you are doing this on linux you can probably figure out the
+	differences yourself. If not, reach out to me and I am happy to help!
+[^3]: Hot tip, run `pwd | pbcopy` to copy the current absolute directory path
+	to your clipboard.
+[^4]: This stands for [Language Server
+	Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol), which is
+	basically a server that tells your editor what is wrong with your code.
+[^5]: Because `avr-gcc` already knows where to look (the headers are
+	included in the same directory when you install it)
+[^6]: I use the word "directory" here but you can mentally swap out the word
+	"folder" if you want.

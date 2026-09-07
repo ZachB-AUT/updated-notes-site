@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Zach Barrett">
-<meta name="dcterms.date" content="2026-07-22">
+<meta name="dcterms.date" content="2026-08-01">
 
 <title>PHYS401 - Lab One – Zach’s Notes</title>
 <style>
@@ -47,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-87c8eabe2b0af90fe7463c77d0cbc8fc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-19376518d03d1ed6661cd0ed358ad9b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-2981175552b475d06fb59f79bc67145b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-19376518d03d1ed6661cd0ed358ad9b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-60ac156d3fb8eef846f5d859668a8297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-3f5f57a08496c514461e477438cf32f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-60ac156d3fb8eef846f5d859668a8297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,6 +82,35 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -293,11 +322,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#taking-measurements" id="toc-taking-measurements" class="nav-link active" data-scroll-target="#taking-measurements">Taking Measurements</a>
+  <ul class="collapse">
+  <li><a href="#measuring-wavelength-λ" id="toc-measuring-wavelength-λ" class="nav-link" data-scroll-target="#measuring-wavelength-λ">Measuring Wavelength (λ)</a></li>
+  <li><a href="#measuring-the-distance-between-the-bright-spots-x" id="toc-measuring-the-distance-between-the-bright-spots-x" class="nav-link" data-scroll-target="#measuring-the-distance-between-the-bright-spots-x">Measuring the distance between the bright spots (x)</a></li>
+  <li><a href="#measuring-slit-separation-d" id="toc-measuring-slit-separation-d" class="nav-link" data-scroll-target="#measuring-slit-separation-d">Measuring Slit Separation (d)</a></li>
+  <li><a href="#measuring-screen-distance-l" id="toc-measuring-screen-distance-l" class="nav-link" data-scroll-target="#measuring-screen-distance-l">Measuring screen distance (L)</a></li>
+  </ul></li>
+  <li><a href="#calculating-error" id="toc-calculating-error" class="nav-link" data-scroll-target="#calculating-error">Calculating Error</a></li>
+  <li><a href="#misc" id="toc-misc" class="nav-link" data-scroll-target="#misc">Misc</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -319,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 22, 2026</p>
+      <p class="date">August 1, 2026</p>
     </div>
   </div>
   
@@ -343,17 +386,190 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Work in Progress!
+<span class="screen-reader-only">Warning</span>Disclaimer
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Still need to finish writing this one!</p>
+<p>This document is intended to be a supplement to the lab brief, not a replacement for it. If someone in here contradicts what you have been told by David or something in the lab brief, trust them not me.</p>
 </div>
 </div>
+<p>The simulator we are using can be found <a href="https://phet.colorado.edu/en/simulation/wave-interference">here</a>.</p>
+<section id="taking-measurements" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="taking-measurements">Taking Measurements</h2>
+<section id="measuring-wavelength-λ" class="level3">
+<h3 class="anchored" data-anchor-id="measuring-wavelength-λ">Measuring Wavelength (λ)</h3>
+<p>To measure the wavelength, pause the simulation using the pause button</p>
+<p><img src="../../../assets/phys_L1/pause_simulation.png" class="img-fluid"></p>
+<p>Then, place the measuring tool between the <em>centers</em> of two waves on the left. Ideally do this along the bottom edge of the screen to make sure you don’t do it at an angle. For the default green light this should be roughly 510 - 520 nm.</p>
+<p>You could in principle use the waves on the right, but they are less clearly defined. You will get a better measurement if you use the ones on the left.</p>
+<p><img src="../../../assets/phys_L1/see_its_the_same.png" class="img-fluid"></p>
+</section>
+<section id="measuring-the-distance-between-the-bright-spots-x" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="measuring-the-distance-between-the-bright-spots-x">Measuring the distance between the bright spots (x)</h3>
+<p>To measure the distance between the bright spots, enable the “screen” using the checkbox on the right, and then take the distance between the center of the central bright spot, and the center of one of the adjacent bright spots. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;It does not matter if you use the top or bottom one, the answer should be the same.</p></div></div><p><img src="../../../assets/phys_L1/measure_bright_spots.png" class="img-fluid"></p>
+</section>
+<section id="measuring-slit-separation-d" class="level3">
+<h3 class="anchored" data-anchor-id="measuring-slit-separation-d">Measuring Slit Separation (d)</h3>
+<p>You do not need to measure this using the measuring tool, just read it off the box on the right.</p>
+<p><img src="../../../assets/phys_L1/Measuring_Slit_separation.png" class="img-fluid"></p>
+</section>
+<section id="measuring-screen-distance-l" class="level3">
+<h3 class="anchored" data-anchor-id="measuring-screen-distance-l">Measuring screen distance (L)</h3>
+<p>Use the measuring tool between the <strong>RIGHT</strong> side of the slits and the <strong>LEFT</strong> side of the screen.</p>
+<p><img src="../../../assets/phys_L1/measuring_L.png" class="img-fluid"></p>
+<p>As before, measure along the bottom edge of the simulation to avoid measuring it at an angle</p>
+</section>
+</section>
+<section id="calculating-error" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-error">Calculating Error</h2>
+<p>As part of this assessment you are asked to calculate the error between each of your measurements and their calculated value</p>
+<p>This is done using the formula: <span class="math display">\[
+\%\text{ERROR} = \left| \frac{ \text{calculated} - \text{measured}}{\text{measured}}\right|\times 100
+\]</span></p>
+<p>So, for example, if you calculate a wavelength of <span class="math inline">\(500 \space nm\)</span>, but measure a wavelength of <span class="math inline">\(510\space nm\)</span>, the error would be:</p>
+<p><span class="math display">\[
+\% \text{ERROR} = \left|\frac{ 500 - 510 }{510}\right| \times 100 \Rightarrow \left|\frac{-10}{510} \right|\times 100 = \boxed{1.961 \%}
+\]</span></p>
+<p>Reminder: Error does not have units (if I included the units in my calculation they would have immediately cancelled), so don’t give the error as something like “1.961% nm”</p>
+</section>
+<section id="misc" class="level2">
+<h2 class="anchored" data-anchor-id="misc">Misc</h2>
+<p>Some advice:</p>
+<ul>
+<li>Read the lab brief carefully.</li>
+<li>Always include units.</li>
+<li>I would recommend rounding to 4 significant figures for this lab.</li>
+</ul>
 
+
+</section>
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script>
+  // Code annotation layout.
+  //
+  // Quarto renders annotation numbers as right-floated anchors *inside* the
+  // code, with a gutter strip overlaid on top of it. That means the numbers
+  // scroll with the code, and long lines slide underneath them. This moves the
+  // anchors into a real column beside the <pre>, outside its scroll container.
+  //
+  // It also tags every line of a multi-line annotation: Quarto marks only the
+  // first line with .code-annotation-target, but the full range is on the
+  // annotation list entry as data-code-lines (e.g. "12,13").
+  //
+  // The marker class is .annotated-line rather than Quarto's own
+  // .code-annotation-target, and the Quarto class is stripped. The copy button
+  // deletes every child of <code> whose class starts with "code-annotation-" —
+  // meant for the number anchors, but it matches the marked lines too, so
+  // annotated lines go missing from copied code. Keeping the class off the
+  // line spans leaves the copy handler with nothing to delete.
+  (function () {
+    const RAIL_ANCHOR_SIZE = 18;
+
+    // (cell, annotation number) -> [line element ids]
+    const lineIdsByAnnotation = new Map();
+
+    const collectAnnotations = () => {
+      const notes = window.document.querySelectorAll(
+        "span[data-code-cell][data-code-lines][data-code-annotation]"
+      );
+      for (const note of notes) {
+        const cell = note.getAttribute("data-code-cell");
+        const number = note.getAttribute("data-code-annotation");
+        const ids = note
+          .getAttribute("data-code-lines")
+          .split(",")
+          .map((line) => cell + "-" + line.trim());
+        lineIdsByAnnotation.set(cell + "/" + number, ids);
+      }
+    };
+
+    const markAnnotatedLines = () => {
+      for (const ids of lineIdsByAnnotation.values()) {
+        for (const id of ids) {
+          const lineEl = window.document.getElementById(id);
+          if (lineEl) {
+            lineEl.classList.remove("code-annotation-target");
+            lineEl.classList.add("annotated-line");
+          }
+        }
+      }
+    };
+
+    const buildRails = () => {
+      for (const pre of window.document.querySelectorAll("pre.code-annotation-code")) {
+        const container = pre.parentElement;
+        if (!container || container.querySelector(":scope > .annotation-rail")) {
+          continue;
+        }
+        const rail = window.document.createElement("div");
+        rail.className = "annotation-rail";
+        container.appendChild(rail);
+        container.classList.add("has-annotation-rail");
+        // Move, don't clone — the anchors carry Quarto's own click handling.
+        for (const anchor of pre.querySelectorAll("a.code-annotation-anchor")) {
+          rail.appendChild(anchor);
+        }
+      }
+    };
+
+    // Anchors are absolutely positioned in the rail, so they have to be lined
+    // up with their code line by measurement. Redone on resize and font load.
+    const positionAnchors = () => {
+      for (const rail of window.document.querySelectorAll(".annotation-rail")) {
+        const railTop = rail.getBoundingClientRect().top;
+        for (const anchor of rail.querySelectorAll("a.code-annotation-anchor")) {
+          const key =
+            anchor.getAttribute("data-target-cell") +
+            "/" +
+            anchor.getAttribute("data-target-annotation");
+          const ids = lineIdsByAnnotation.get(key);
+          if (!ids || ids.length === 0) {
+            continue;
+          }
+          const lineEl = window.document.getElementById(ids[0]);
+          if (!lineEl) {
+            continue;
+          }
+          const rect = lineEl.getBoundingClientRect();
+          const offset = (rect.height - RAIL_ANCHOR_SIZE) / 2;
+          anchor.style.top = rect.top - railTop + offset + "px";
+        }
+      }
+    };
+
+    const relayout = () => {
+      positionAnchors();
+    };
+
+    const init = () => {
+      collectAnnotations();
+      if (lineIdsByAnnotation.size === 0) {
+        return;
+      }
+      markAnnotatedLines();
+      buildRails();
+      positionAnchors();
+
+      let frame;
+      window.addEventListener("resize", () => {
+        window.cancelAnimationFrame(frame);
+        frame = window.requestAnimationFrame(relayout);
+      });
+      if (window.document.fonts && window.document.fonts.ready) {
+        window.document.fonts.ready.then(relayout);
+      }
+    };
+
+    if (window.document.readyState === "loading") {
+      window.document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

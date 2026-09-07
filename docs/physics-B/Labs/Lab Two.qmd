@@ -3,6 +3,64 @@ title: "PHYS401 - Lab Two"
 author: "Zach Barrett"
 date: last-modified
 ---
-:::{.callout-warning}
-## This page is a work in progress!
-:::
+
+## Graphing Data
+I have had some people asking me how to graph their data for this
+assignment.
+
+I would recommend doing this using either Python (my personal preference)
+or R.
+
+### Graphing data in python
+
+I would recommend using python for this.
+
+In python, you can use the MatPlotLib[^1] library, which is a relatively easy to
+use plotting library for python.
+
+```{python}
+import matplotlib.pyplot as plt
+
+# Change these!
+currents = [ 0.1, 0.2, 0.3, 0.4, 0.5 ]
+voltages = [ 1, 2, 3, 4, 5 ]
+
+plt.plot(
+	currents, # The first argument is the "x" values
+	voltages, # The second argument is the "y" values
+	"b-"	  # This is the line style, 
+)             # "b-" means a blue solid line
+
+# Label the Axes
+plt.xlabel("Current (Amps)")
+plt.ylabel("Voltage (V)")
+
+# Display a grid
+plt.grid() 
+# Title the plot
+plt.title("Voltage plotted against current") 
+
+# Display the plot
+plt.show() 
+```
+
+### Graphing data in R
+
+I am less familiar with R, but a lot of you learn it in the CST for statistics. I have been told it is very good.
+
+```{r} 
+# Libraries
+library(ggplot2)
+
+# create data
+xValue <- 1:10
+yValue <- cumsum(rnorm(10))
+data <- data.frame(xValue,yValue)
+
+# Plot
+ggplot(data, aes(x=xValue, y=yValue)) +
+  geom_line()
+
+```
+
+[^1]: If you feel like being very fancy, try out [seaborn](https://seaborn.pydata.org/index.html), its a plotting library similar to matplotlib, it is harder to use but makes nicer looking graphs.

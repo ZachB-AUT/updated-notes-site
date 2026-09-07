@@ -4,16 +4,33 @@ author: "Zach Barrett"
 date: last-modified
 reference-location: margin
 ---
-
 ---
 
 ::: {.callout-warning}
  *If you do not know what you are doing, ask a TA.*\
  *We are literally paid to help you.*
 
-That being said, the following are quick guides on solving common problems. Try these first.
+That being said, the following are quick guides on solving common problems. Try
+these first.
 :::
 
+
+## Common minor problems
+
+1. Help, I can only see top / bottom layer tracks
+    - Press `SHIFT-S`.
+2. Help, I can only see one track
+    - Right click on empty space and then click "clear filter".
+3. Help, I am in some kind of 3D view
+    - Press `2`.
+
+## How to fix clearance issues between pins of the same component
+
+1. In the top bar press open "Design $\rightarrow$ Rules"
+2. Go to "Clearance"
+3. For each of "Schematic Clearance Constraint $n$" where $n$ is some number,
+   open it and tick "Ignore pad-to-pad clearances within a footprint"
+4. Press "apply" and then "Ok"
 
 ## How to fix the getting kicked off workspace problem
 
@@ -25,7 +42,8 @@ That being said, the following are quick guides on solving common problems. Try 
 
 ## How to fix the lastconnection.data error
 
-We do not know why this works, only that it does most of the time. Please follow these steps as closely as possible.
+We do not know why this works, only that it does most of the time. Please
+follow these steps as closely as possible.
 
 1. Open the components menu.
 2. Click the three horizontal lines (hamburger) button.
@@ -95,38 +113,55 @@ History and Version Control, and selecting "Add to Version Control"
 
 ### Saving to Server
 
-Finally, right click "Save to Server" next to your project, add a meaningful commit message, and save.
+Finally, right click "Save to Server" next to your project, add a meaningful
+commit message, and save.
+
 ### Checking you have done it correctly
 
-Open up Altium 365 and check your project has the file you added, if not call over a TA.
+Open up Altium 365 and check your project has the file you added, if not call
+over a TA.
 
 ![](../../assets/altium365.png)
 
----
 
-## Altium Libraries Path
+## Installing the local component libraries
 
-We will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.
+We will use a set of libraries in the K: drive, which is a network drive common
+to all engineering computers at AUT.
 
-The path looks like:
+To install them, open the "components" panel on the right
+
+![](../../assets/troubleshooting/open-components.png)
+
+Then, click the three lines (hamburger) icon on the top right, and click "Libraries Preferences"
+
+
+![](../../assets/troubleshooting/three-lines-and-lib-pref.png)
+
+Under the installed tab, click "Install"
+
+
+![](../../assets/troubleshooting/installed-install.png)
+
+This will then open a file picker. Open "This PC", and then follow this path:
+
 ```
 K:/
- └── WELLESLEY COPY/
-      └── DESIGN & CREATIVE TECHNOLOGIES/
-          └── School of Engineering/
-              └── Electrical & Electronic Engineering/
-                  └── Resources/
-                      └── AltiumLibraries/
+└── WELLESLEY COPY/
+    └── DESIGN & CREATIVE TECHNOLOGIES/
+         └── School of Engineering/
+             └── Electrical & Electronic Engineering/
+                 └── Resources/
+                     └── AltiumLibraries/
+                         └── 2026S2.IntLib
+                         └── Altium Libraries/
+                             └── *All other libraries*
 ```
+For projects one and two, you will use `2026S2.IntLib`[^1]
 
-<!-- - K:/ -->
-<!--   - WELLESLEY COPY/ -->
-<!--       - DESIGN & CREATIVE TECHNOLOGIES/ -->
-<!--           - School of Engineering/ -->
-<!--               - Electrical & Electronic Engineering/ -->
-<!--                   - Resources/ -->
-<!--                       - AltiumLibraries/ -->
+For reinstalling the altium libraries as described in [fixing the
+lastconnection.data error](#how-to-fix-the-lastconnection.data-error), use the
+libraries in the `AltiumLibraries/Altium Libraries` path.
 
-For projects one and two, you will use `2026S2.IntLib`.
 
-For reinstalling the altium libraries as described in [fixing the lastconnection.data error](#how-to-fix-the-lastconnection.data-error), use the libraries in the `AltiumLibraries\Altium Libraries` path.
+[^1]: Project two has components listed as being in "`2025S2.IntLib`", this is a typo. Use `2026S2.IntLib`

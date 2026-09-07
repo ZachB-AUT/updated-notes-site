@@ -1,0 +1,56 @@
+---
+title: "Instructions to export a Smart PDF"
+author: "Zach Barrett"
+date: last-modified
+---
+---
+
+This procedure tells you how to make a _Smart PDF_ of an Altium design.
+Do the steps in the given sequence.
+
+
+1.  In the menu bar, select "File".
+    Then select "Smart PDF".
+
+    ![](../../assets/smartpdf/files-smart-pdf.png)
+
+2.  Press "Next" until the "Export Bill of Materials" page comes into view.
+
+3.  Clear the "Export a Bill of Materials" checkbox.
+
+    ![](../../assets/smartpdf/export-bom.png)
+
+4.  Press "Next" to go to the "PCB Printout Settings" page.
+
+5.  Select the "Holes" checkbox.
+
+    ![](../../assets/smartpdf/pcb-printout-settings.png)
+
+6.  Press "Next" to go to the "Additional PDF Settings" page.
+
+7.  Make sure that "PCB Color Mode" is set to "Color".
+
+    ![](../../assets/smartpdf/additional-pdf-settings.png)
+
+8.  Press "Next" to go to the "Structure Settings" page.
+
+9.  Do not change the "Structure Settings" page.
+    Press "Next".
+
+10. On the "Final Steps" page, clear the "Save Settings to Output Job
+    Document" checkbox.
+
+    ![](../../assets/smartpdf/final-steps.png)
+
+11. Press "Finish".
+
+12. Wait until the Smart PDF opens in the default browser (Edge).
+
+13. In the top right corner, select "Save As".
+
+14. Save the file in a location that you can find again.
+    For example, save the file on the desktop.
+
+Submit this document to Canvas when you submit an Altium design.
+Examples of these designs are project one, project two, and the midterm
+assessment.

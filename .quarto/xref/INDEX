@@ -2,11 +2,13 @@
   "index.qmd": {
     "index.html": "4b1ba311",
     "index.pdf": "4f71f3fd",
-    "index.typ": "534b4aa1"
+    "index.typ": "534b4aa1",
+    "index.tex": "1c7825c7"
   },
   "about.qmd": {
     "about.html": "4e8ba267",
-    "about.typ": "d3892b12"
+    "about.typ": "d3892b12",
+    "about.tex": "8c34ef14"
   },
   "docs/Electronics Project.qmd": {
     "Electronics Project.html": "441efd3b"
@@ -27,7 +29,8 @@
   },
   "docs/physics-B/Foundation Physics B.qmd": {
     "Foundation Physics B.html": "8ab7ea26",
-    "Foundation Physics B.typ": "64c6eeef"
+    "Foundation Physics B.typ": "64c6eeef",
+    "Foundation-Physics-B.tex": "3ab40088"
   },
   "docs/Eproj/Project Two.qmd": {
     "Project Two.html": "f17f76b0",
@@ -44,76 +47,139 @@
     "Final Report.typ": "f8542fa7"
   },
   "docs/electronics-project/Electronics Project.qmd": {
-    "Electronics Project.html": "c26c3855"
+    "Electronics Project.html": "c26c3855",
+    "Electronics-Project.tex": "d34fc755"
   },
   "docs/electronics-project/Project One.qmd": {
-    "Project One.html": "ec2479d4"
+    "Project One.html": "ec2479d4",
+    "Project-One.tex": "9cade876"
   },
   "docs/electronics-project/troubleshooting.qmd": {
-    "troubleshooting.html": "7256496a"
+    "troubleshooting.html": "7256496a",
+    "troubleshooting.tex": "b4713041"
   },
   "docs/electronics-project/routing.qmd": {
-    "routing.html": "a2434950"
+    "routing.html": "a2434950",
+    "routing.tex": "b4b24970"
   },
   "docs/electronics-project/Final Report.qmd": {
-    "Final Report.html": "7c1db096"
+    "Final Report.html": "7c1db096",
+    "Final-Report.tex": "59793053"
   },
   "docs/electronics-project/Project Two.qmd": {
     "Project Two.html": "e5636d6a",
-    "Project Two.typ": "942ea0ef"
+    "Project Two.typ": "942ea0ef",
+    "Project-Two.tex": "a4fd95a4"
   },
   "docs/electronics-project/programming.qmd": {
-    "programming.html": "983a8890"
+    "programming.html": "983a8890",
+    "programming.tex": "3043be46"
   },
   "docs/electronics-project/Altium Test.qmd": {
-    "Altium Test.html": "a1fb3683"
+    "Altium Test.html": "a1fb3683",
+    "Altium-Test.tex": "ad0d4181"
   },
   "docs/physics-B/Labs/Lab One.qmd": {
-    "Lab One.html": "3127c440"
+    "Lab One.html": "3127c440",
+    "Lab-One.tex": "1120a21f"
   },
   "docs/other-courses/industrial-robotics/week-2.qmd": {
     "week-2.html": "88448914"
   },
   "docs/electronics-project/Assignments.qmd": {
-    "Assignments.html": "f37e4fce"
+    "Assignments.html": "f37e4fce",
+    "Assignments.tex": "36440564"
   },
   "docs/electronics-project/glossary.qmd": {
     "glossary.html": "4d1e91cb"
   },
   "docs/physics-B/Labs/Lab Three.qmd": {
-    "Lab Three.html": "7573a263"
+    "Lab Three.html": "7573a263",
+    "Lab-Three.tex": "97fc2636"
   },
   "docs/physics-B/Labs/Lab Four.qmd": {
-    "Lab Four.html": "7c261729"
+    "Lab Four.html": "7c261729",
+    "Lab-Four.tex": "90af2c8d"
   },
   "docs/physics-B/Labs/Lab Two.qmd": {
-    "Lab Two.html": "6a44114b"
+    "Lab Two.html": "6a44114b",
+    "Lab-Two.tex": "683e6d4d"
   },
   "docs/electronics-project/working_from_home.qmd": {
-    "working_from_home.html": "2797049d"
+    "working_from_home.html": "2797049d",
+    "working_from_home.tex": "c804545a"
   },
   "docs/personal_notes/human-computer-interaction/week_2.qmd": {
-    "week_2.html": "99d64af6"
+    "week_2.html": "99d64af6",
+    "week_2.tex": "54a34e1b"
   },
   "docs/personal_notes/personal_notes.qmd": {
-    "personal_notes.html": "ac38d29e"
+    "personal_notes.html": "ac38d29e",
+    "personal_notes.tex": "99f2e45e"
   },
   "docs/personal_notes/human-computer-interaction/COMP822-HCI.qmd": {
-    "COMP822-HCI.html": "8e5a558b"
+    "COMP822-HCI.html": "8e5a558b",
+    "COMP822-HCI.tex": "5c6abbaa"
   },
   "docs/personal_notes/industrial-robotics/industrial-robotics.qmd": {
-    "industrial-robotics.html": "3611ef89"
+    "industrial-robotics.html": "3611ef89",
+    "industrial-robotics.tex": "8d17afef"
   },
   "docs/personal_notes/industrial-robotics/ENME800_W2.qmd": {
-    "ENME800_W2.html": "487bdcd2"
+    "ENME800_W2.html": "487bdcd2",
+    "ENME800_W2.tex": "37030b28"
   },
   "docs/personal_notes/industrial-robotics/ENME800_W2_Lab.qmd": {
-    "ENME800_W2_Lab.html": "ce519c7e"
+    "ENME800_W2_Lab.html": "ce519c7e",
+    "ENME800_W2_Lab.tex": "afd9d643"
   },
   "docs/electronics-project/submitting_an_altium_project.qmd": {
-    "submitting_an_altium_project.html": "43928698"
+    "submitting_an_altium_project.html": "43928698",
+    "submitting_an_altium_project.tex": "8b58d0b8"
   },
   "docs/electronics-project/smart-pdf-export.qmd": {
-    "smart-pdf-export.html": "517f9ebd"
+    "smart-pdf-export.html": "517f9ebd",
+    "smart-pdf-export.tex": "3b40e5c5"
+  },
+  "docs/electronics-project/smart-pdf-export-ste.qmd": {
+    "smart-pdf-export-ste.html": "a77eb63a",
+    "smart-pdf-export-ste.tex": "ba15d173"
+  },
+  "docs/electronics-project/how-rules-work.qmd": {
+    "how-rules-work.html": "be66ed0b",
+    "how-rules-work.tex": "df4f2990"
+  },
+  "docs/electronics-project/p1_screw.qmd": {
+    "p1_screw.html": "16a64f8a"
+  },
+  "docs/electronics-project/P1_mechanical_1_layer.qmd": {
+    "P1_mechanical_1_layer.html": "eb89224f"
+  },
+  "docs/electronics-project/avr-programming-macos.qmd": {
+    "avr-programming-macos.html": "af1d2dbc"
+  },
+  "404.qmd": {
+    "404.html": "e51d0e0b"
+  },
+  "docs/electronics-project/P1-Design-Info.qmd": {
+    "P1-Design-Info.html": "a8d5b8ae"
+  },
+  "docs/electronics-project/P2-Design-Info.qmd": {
+    "P2-Design-Info.html": "85adea5e"
+  },
+  "docs/electronics-project/component-classes.qmd": {
+    "component-classes.html": "d988f580"
+  },
+  "docs/electronics-project/aligning-components.qmd": {
+    "aligning-components.html": "8464b41d"
+  },
+  "docs/electronics-project/keyboard-shortcuts.qmd": {
+    "keyboard-shortcuts.html": "b7a7b621"
+  },
+  "docs/electronics-project/board-cutouts.qmd": {
+    "board-cutouts.html": "7a299792"
+  },
+  "docs/electronics-project/board-outline.qmd": {
+    "board-outline.html": "d588663c"
   }
 }

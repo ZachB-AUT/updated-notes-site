@@ -3,6 +3,7 @@ title: "Common Routing Errors"
 author: "Zach Barrett"
 date: last-modified
 reference-location: "margin"
+draft: true
 ---
 ---
 

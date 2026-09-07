@@ -25,63 +25,133 @@
     "href": "docs/physics-B/Labs/Lab One.html",
     "title": "PHYS401 - Lab One",
     "section": "",
-    "text": "WarningWork in Progress!\n\n\n\nStill need to finish writing this one!\n\n\n\n\n\n Back to top"
+    "text": "The simulator we are using can be found here."
   },
   {
-    "objectID": "docs/electronics-project/smart-pdf-export.html",
-    "href": "docs/electronics-project/smart-pdf-export.html",
-    "title": "Exporting a Smart PDF",
-    "section": "",
-    "text": "To create a smart PDF, go to “file” in the top bar, and select “Smart PDF”.\n\nNext, press “next” until you get to “Export Bill of Materials” and disable “Export a Bill of Materials”\n\nIn “PCB Printout Settings” enable “Holes”.\n\nIn “Additional PDF Settings”, ensure that the PCB Color Mode is set to “Color”.\n\nNothing needs to be changed for “Structure Settings”, just press next.\nIn “Final Steps” disable “Save Settings to Output Job Document”.\n\nPress “Finish”.\nAfter a short wait, the Smart PDF will open in the default browser (Edge), click “Save As” in the top right corner, and save it somewhere you know how to get to (such as the desktop).\nThis is the document you will upload to canvas when you submit altium designs (such as projects one and two, and the midterm assessment)\n\n\n\n Back to top"
+    "objectID": "docs/physics-B/Labs/Lab One.html#taking-measurements",
+    "href": "docs/physics-B/Labs/Lab One.html#taking-measurements",
+    "title": "PHYS401 - Lab One",
+    "section": "Taking Measurements",
+    "text": "Taking Measurements\n\nMeasuring Wavelength (λ)\nTo measure the wavelength, pause the simulation using the pause button\n\nThen, place the measuring tool between the centers of two waves on the left. Ideally do this along the bottom edge of the screen to make sure you don’t do it at an angle. For the default green light this should be roughly 510 - 520 nm.\nYou could in principle use the waves on the right, but they are less clearly defined. You will get a better measurement if you use the ones on the left.\n\n\n\nMeasuring the distance between the bright spots (x)\nTo measure the distance between the bright spots, enable the “screen” using the checkbox on the right, and then take the distance between the center of the central bright spot, and the center of one of the adjacent bright spots. 1\n1 It does not matter if you use the top or bottom one, the answer should be the same.\n\n\nMeasuring Slit Separation (d)\nYou do not need to measure this using the measuring tool, just read it off the box on the right.\n\n\n\nMeasuring screen distance (L)\nUse the measuring tool between the RIGHT side of the slits and the LEFT side of the screen.\n\nAs before, measure along the bottom edge of the simulation to avoid measuring it at an angle"
   },
   {
-    "objectID": "docs/electronics-project/Project One.html#project-naming-scheme",
-    "href": "docs/electronics-project/Project One.html#project-naming-scheme",
-    "title": "ENEL602 - Project One",
-    "section": "Project Naming Scheme",
-    "text": "Project Naming Scheme\nWe will use the naming scheme:\nP1_FIRSTNAME_LASTNAME_STUDENT-ID\nFor example, my name is Zach Barrett, and if my student ID was 12345678 I would call my project P1_ZACH_BARRETT_22160418, my schematic would be called P1_ZACH_BARRETT_22160418.SchDoc, and my PCB would be called P1_ZACH_BARRETT_22160418.PcbDoc"
+    "objectID": "docs/physics-B/Labs/Lab One.html#calculating-error",
+    "href": "docs/physics-B/Labs/Lab One.html#calculating-error",
+    "title": "PHYS401 - Lab One",
+    "section": "Calculating Error",
+    "text": "Calculating Error\nAs part of this assessment you are asked to calculate the error between each of your measurements and their calculated value\nThis is done using the formula: \\[\n\\%\\text{ERROR} = \\left| \\frac{ \\text{calculated} - \\text{measured}}{\\text{measured}}\\right|\\times 100\n\\]\nSo, for example, if you calculate a wavelength of \\(500 \\space nm\\), but measure a wavelength of \\(510\\space nm\\), the error would be:\n\\[\n\\% \\text{ERROR} = \\left|\\frac{ 500 - 510 }{510}\\right| \\times 100 \\Rightarrow \\left|\\frac{-10}{510} \\right|\\times 100 = \\boxed{1.961 \\%}\n\\]\nReminder: Error does not have units (if I included the units in my calculation they would have immediately cancelled), so don’t give the error as something like “1.961% nm”"
   },
   {
-    "objectID": "docs/electronics-project/Project One.html#project-one-setup",
-    "href": "docs/electronics-project/Project One.html#project-one-setup",
-    "title": "ENEL602 - Project One",
-    "section": "Project One Setup",
-    "text": "Project One Setup\n\nCreate project in Altium 365 using the naming scheme.\n\nMake sure it is under your folder!\n\nOpen it in Altium Designer.\nImport the PCB template file.\nRename the PCB template file to use the naming scheme.\nCreate a schematic file using the naming scheme.\nInstall project library (2026S2.IntLib), find it under this path.\nSave to Server to upload an initial commit."
+    "objectID": "docs/physics-B/Labs/Lab One.html#misc",
+    "href": "docs/physics-B/Labs/Lab One.html#misc",
+    "title": "PHYS401 - Lab One",
+    "section": "Misc",
+    "text": "Misc\nSome advice:\n\nRead the lab brief carefully.\nAlways include units.\nI would recommend rounding to 4 significant figures for this lab."
   },
   {
-    "objectID": "docs/electronics-project/Project One.html#project-submission",
-    "href": "docs/electronics-project/Project One.html#project-submission",
-    "title": "ENEL602 - Project One",
-    "section": "Project Submission",
-    "text": "Project Submission\nIn order to submit project one, you need to do two things.\nFirst, you must ensure your project is properly saved to server. Ensure that when you open Altium 365 and navigate to your project, both the schematic and PCB are present (and correct).\nSecondly, you must create a “Smart PDF”, and upload it to canvas. Ensure you create it with the correct settings. Ensure you save it with the correct file name (follow the naming scheme!)"
+    "objectID": "docs/electronics-project/troubleshooting.html#common-minor-problems",
+    "href": "docs/electronics-project/troubleshooting.html#common-minor-problems",
+    "title": "Troubleshooting Altium",
+    "section": "Common minor problems",
+    "text": "Common minor problems\n\nHelp, I can only see top / bottom layer tracks\n\nPress SHIFT-S.\n\nHelp, I can only see one track\n\nRight click on empty space and then click “clear filter”.\n\nHelp, I am in some kind of 3D view\n\nPress 2."
   },
   {
-    "objectID": "docs/electronics-project/glossary.html",
-    "href": "docs/electronics-project/glossary.html",
-    "title": "Zach's Notes",
+    "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
+    "href": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
+    "title": "Troubleshooting Altium",
+    "section": "How to fix the getting kicked off workspace problem",
+    "text": "How to fix the getting kicked off workspace problem\n\nClose Altium.\nOpen Altium.\nIMMEDIATELY OPEN COMPONENTS BEFORE ANYTHING ELSE OPENS.\nReconnect to workspace.\nLogin."
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-lastconnection.data-error",
+    "href": "docs/electronics-project/troubleshooting.html#how-to-fix-the-lastconnection.data-error",
+    "title": "Troubleshooting Altium",
+    "section": "How to fix the lastconnection.data error",
+    "text": "How to fix the lastconnection.data error\nWe do not know why this works, only that it does most of the time. Please follow these steps as closely as possible.\n\nOpen the components menu.\nClick the three horizontal lines (hamburger) button.\nSelect “libraries preferences”\nOpen the “Installed” tab.\nSelect all libraries.\nPress “remove”.\nPress “Install”.\nOpen the K drive libraries path.\nSelect all libraries under “Altium Libraries”.\nPress “Open”.\nClose Altium.\nReopen Altium\nImmediately select the components tab\nLog in.\nConnect to the AUT workspace."
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
+    "href": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
+    "title": "Troubleshooting Altium",
+    "section": "How to add an External File in Altium",
+    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\nIt must not be a referenced file.\nIt must be added to version control.\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under History and Version Control, and selecting “Add to Version Control”\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save.\n\n\nChecking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
+    "href": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
+    "title": "Troubleshooting Altium",
+    "section": "Altium Libraries Path",
+    "text": "Altium Libraries Path\nWe will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.\nThe path looks like:\nK:/\n └── WELLESLEY COPY/\n      └── DESIGN & CREATIVE TECHNOLOGIES/\n          └── School of Engineering/\n              └── Electrical & Electronic Engineering/\n                  └── Resources/\n                      └── AltiumLibraries/\nFor projects one and two, you will use 2026S2.IntLib.\nFor reinstalling the altium libraries as described in fixing the lastconnection.data error, use the libraries in the AltiumLibraries\\Altium Libraries path."
+  },
+  {
+    "objectID": "docs/electronics-project/component-classes.html",
+    "href": "docs/electronics-project/component-classes.html",
+    "title": "How to do component classes for project two",
     "section": "",
     "text": "Back to top"
   },
   {
-    "objectID": "docs/electronics-project/Electronics Project.html",
-    "href": "docs/electronics-project/Electronics Project.html",
-    "title": "ENEL602 - Electronics Project",
+    "objectID": "docs/electronics-project/P1_mechanical_1_layer.html",
+    "href": "docs/electronics-project/P1_mechanical_1_layer.html",
+    "title": "Placing a Mechanical-1 layer for Project 1",
     "section": "",
-    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nProject One Information\nProject One\n\n\nHow to create Smart PDFs\nSmart PDF export"
+    "text": "For Project 1, you will need to place a mechanical 1 board outline. This was only clarified in the lab last night, so for those of you who were not there please follow these instructions.\nIf you submitted project one before doing this, you will need to resubmit. This means saving to server again1 and submitting another Smart PDF. If you are out of submissions on canvas you should probably send Michael an email."
   },
   {
-    "objectID": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
-    "href": "docs/electronics-project/Electronics Project.html#electronics-project-notes",
-    "title": "ENEL602 - Electronics Project",
-    "section": "",
-    "text": "Description\nLink\n\n\n\n\nInformation on altium troubleshooting\nTroubleshooting Altium\n\n\nDescriptions of common routing errors\nCommon Routing Errors\n\n\nProject One Information\nProject One\n\n\nHow to create Smart PDFs\nSmart PDF export"
+    "objectID": "docs/electronics-project/P1_mechanical_1_layer.html#instructions",
+    "href": "docs/electronics-project/P1_mechanical_1_layer.html#instructions",
+    "title": "Placing a Mechanical-1 layer for Project 1",
+    "section": "Instructions",
+    "text": "Instructions\n\nFirst, select the mechanical 1 layer.\n\n\n\nIn the toolbar at the top, select the line tool.\n\n\n\nStart drawing a line by snapping onto one of the breakaway tab points. 2\n\n2 Make sure the green circle pops up to indicate you are locking to the breakway point (teal circle)\n\nDrag it out along the edge to the next breakaway tab point, make sure you make a right angle at the corners of the board\n\n\n\n\nRepeat for all edges.\n\n\n\n\n\n\n\nImportantDO NOT DO THIS\n\n\n\n\n\n\n\n\n\n\n\n\nTipDO THIS INSTEAD\n\n\n\n\n\n\n\nOnce you are done, you should select all of the lines you just made:\n\n\n\nOpen properties and change the “Width”\n\n\n\nSet the thickness to “0.8mm”. Not 0.8 mils, 0.8 millimeters. You do this by putting “mm” after the “0.8” It will automatically convert that to mils for you.\n\n \n\nOnce you do that, your board should look something like this:"
   },
   {
-    "objectID": "docs/electronics-project/Final Report.html",
-    "href": "docs/electronics-project/Final Report.html",
-    "title": "Final Report",
-    "section": "",
-    "text": "WarningWork in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-robot",
+    "href": "docs/electronics-project/programming.html#writing-code-for-the-robot",
+    "title": "Programming for Electronics Project",
+    "section": "Writing Code for the Robot",
+    "text": "Writing Code for the Robot\n\nvoid main() {\n\n\n}"
+  },
+  {
+    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-starger",
+    "href": "docs/electronics-project/programming.html#writing-code-for-the-starger",
+    "title": "Programming for Electronics Project",
+    "section": "Writing Code for the Starger",
+    "text": "Writing Code for the Starger"
+  },
+  {
+    "objectID": "docs/electronics-project/Electronics Project.html#pcb-design",
+    "href": "docs/electronics-project/Electronics Project.html#pcb-design",
+    "title": "ENEL602 - Electronics Project",
+    "section": "PCB Design",
+    "text": "PCB Design\n\nProject One Design Assessment\n\nHow to create the Mechanical One Outline for Project One\nHow to create the screw for Project One\n\nProject Two Design Assessment\nAltium Test"
+  },
+  {
+    "objectID": "docs/electronics-project/Electronics Project.html#misc",
+    "href": "docs/electronics-project/Electronics Project.html#misc",
+    "title": "ENEL602 - Electronics Project",
+    "section": "Misc",
+    "text": "Misc\n\nHow to Program AVR microcontrollers on MacOS\nHow to Create Smart PDF’s\nInformation on Altium Troubleshooting\nMaking a board cutout (for real)"
+  },
+  {
+    "objectID": "docs/electronics-project/P1-Design-Info.html#project-naming-scheme",
+    "href": "docs/electronics-project/P1-Design-Info.html#project-naming-scheme",
+    "title": "Project One - PCB Design",
+    "section": "Project Naming Scheme",
+    "text": "Project Naming Scheme\nWe will use the naming scheme:\nP1_FIRSTNAME_LASTNAME_STUDENT-ID\nFor example, my name is Zach Barrett, and if my student ID was 12345678 I would call my project P1_ZACH_BARRETT_12345678, my schematic would be called P1_ZACH_BARRETT_12345678.SchDoc, and my PCB would be called P1_ZACH_BARRETT_12345678.PcbDoc."
+  },
+  {
+    "objectID": "docs/electronics-project/P1-Design-Info.html#project-one-setup",
+    "href": "docs/electronics-project/P1-Design-Info.html#project-one-setup",
+    "title": "Project One - PCB Design",
+    "section": "Project One Setup",
+    "text": "Project One Setup\n\nCreate project in Altium 365 using the naming scheme.\n\nMake sure it is under your folder!\n\nOpen it in Altium Designer.\nImport the PCB template file.\nRename the PCB template file to use the naming scheme.\nCreate a schematic file using the naming scheme.\nInstall project library (2026S2.IntLib), find it under this path.\nSave to Server to upload an initial commit."
+  },
+  {
+    "objectID": "docs/electronics-project/P1-Design-Info.html#project-submission",
+    "href": "docs/electronics-project/P1-Design-Info.html#project-submission",
+    "title": "Project One - PCB Design",
+    "section": "Project Submission",
+    "text": "Project Submission\nIn order to submit project one, you need to do two things.\nFirst, you must ensure your project is properly saved to server. Ensure that when you open Altium 365 and navigate to your project, both the schematic and PCB are present (and correct).\nSecondly, you must create a “Smart PDF”, and upload it to canvas. Ensure you create it with the correct settings. Ensure you save it with the correct file name (follow the naming scheme!)"
   },
   {
     "objectID": "docs/electronics-project/submitting_an_altium_project.html",
@@ -151,70 +221,98 @@
     "href": "docs/electronics-project/Altium Test.html",
     "title": "Midterm Assessment",
     "section": "",
-    "text": "WarningWork in progress!\n\n\n\n\n\n\nThe midterm test is a closed book assessment. Because of that and the fact that I like my job, I cannot give you much information about it.\nThat being said, what I can tell you, is that it has two parts. The first is a multi choice questionaire, and the second is a timed PCB design assessment. You will get ~3.5 hours to route a PCB.\nI would recommend that you learn how to route a PCB quickly, and with minimal outside information. You will also need to make the outline of the PCB, so I recommend learning how to do that.\nGood luck, this one is hard.\n\n\n\n Back to top"
+    "text": "The midterm test is a closed book assessment, so I can’t really say much about it. That being said, what I can tell you, is that it has two parts. The first is a multi choice questionaire (which is pretty easy), and the second is a timed PCB routing assessment. You will get ~3.5 hours to route a PCB. Last semester students were given the schematic file, but before that you had to do the schematic yourself as well.\nI recently tried doing the altium test myself just to see how hard it was and how long it took. It took me about two and a half hours (including making the schematic, which took me about 40 minutes). I did not find it particularly hard knowing what I know now, but I did find it difficult back when I took it as a student.\nHere is a list of things I think it is safe for me to tell you:"
   },
   {
-    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-robot",
-    "href": "docs/electronics-project/programming.html#writing-code-for-the-robot",
-    "title": "Programming for Electronics Project",
-    "section": "Writing Code for the Robot",
-    "text": "Writing Code for the Robot\n\nvoid main() {\n\n\n}"
-  },
-  {
-    "objectID": "docs/electronics-project/programming.html#writing-code-for-the-starger",
-    "href": "docs/electronics-project/programming.html#writing-code-for-the-starger",
-    "title": "Programming for Electronics Project",
-    "section": "Writing Code for the Starger",
-    "text": "Writing Code for the Starger"
-  },
-  {
-    "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
-    "href": "docs/electronics-project/troubleshooting.html#how-to-fix-the-getting-kicked-off-workspace-problem",
-    "title": "Troubleshooting Altium",
-    "section": "How to fix the getting kicked off workspace problem",
-    "text": "How to fix the getting kicked off workspace problem\n\nClose Altium.\nOpen Altium.\nIMMEDIATELY OPEN COMPONENTS BEFORE ANYTHING ELSE OPENS.\nReconnect to workspace.\nLogin."
-  },
-  {
-    "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-the-lastconnection.data-error",
-    "href": "docs/electronics-project/troubleshooting.html#how-to-fix-the-lastconnection.data-error",
-    "title": "Troubleshooting Altium",
-    "section": "How to fix the lastconnection.data error",
-    "text": "How to fix the lastconnection.data error\nWe do not know why this works, only that it does most of the time. Please follow these steps as closely as possible.\n\nOpen the components menu.\nClick the three horizontal lines (hamburger) button.\nSelect “libraries preferences”\nOpen the “Installed” tab.\nSelect all libraries.\nPress “remove”.\nPress “Install”.\nOpen the K drive libraries path.\nSelect all libraries under “Altium Libraries”.\nPress “Open”.\nClose Altium.\nReopen Altium\nImmediately select the components tab\nLog in.\nConnect to the AUT workspace."
-  },
-  {
-    "objectID": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
-    "href": "docs/electronics-project/troubleshooting.html#how-to-add-an-external-file-in-altium",
-    "title": "Troubleshooting Altium",
-    "section": "How to add an External File in Altium",
-    "text": "How to add an External File in Altium\nFor a file to be properly included in an Altium project, it must meet three criteria:\n\nIt must be in the correct folder.\nIt must not be a referenced file.\nIt must be added to version control.\n\nYou must make sure that any externally added file meets these conditions.\n\nMoving a file to the correct folder\nOnce you have your project open, right click on it and select “Explore”\n\nThis will open the file explorer location for the project you are working on.\nNow, move the file from its original location into the project:\n\n(Demo has been moved from downloads into here)\n\n\nAdding the file to the project\nOnce that is done, right click on the project and click “Add existing to project”\n\nSelect the new file, and press “Open”.\nEnsure the file icon does not have an arrow on it like this icon:  If it does, you need to go through the “Add existing to project” step again. Then, remove the old referenced file. Ensure you press “Exclude from project” instead of deleting it, to make sure that you can recover from mistakes on this step.\n\n\nOnce that is done, add it to version control by right-clicking it, going under History and Version Control, and selecting “Add to Version Control”\n\n\n\nSaving to Server\nFinally, right click “Save to Server” next to your project, add a meaningful commit message, and save. ### Checking you have done it correctly\nOpen up Altium 365 and check your project has the file you added, if not call over a TA."
-  },
-  {
-    "objectID": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
-    "href": "docs/electronics-project/troubleshooting.html#altium-libraries-path",
-    "title": "Troubleshooting Altium",
-    "section": "Altium Libraries Path",
-    "text": "Altium Libraries Path\nWe will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.\nThe path looks like:\nK:/\n └── WELLESLEY COPY/\n      └── DESIGN & CREATIVE TECHNOLOGIES/\n          └── School of Engineering/\n              └── Electrical & Electronic Engineering/\n                  └── Resources/\n                      └── AltiumLibraries/\n\n\n\n\n\n\n\nFor projects one and two, you will use 2026S2.IntLib.\nFor reinstalling the altium libraries as described in fixing the lastconnection.data error, use the libraries in the AltiumLibraries\\Altium Libraries path."
-  },
-  {
-    "objectID": "docs/electronics-project/routing.html",
-    "href": "docs/electronics-project/routing.html",
-    "title": "Common Routing Errors",
+    "objectID": "docs/electronics-project/avr-programming-macos.html",
+    "href": "docs/electronics-project/avr-programming-macos.html",
+    "title": "AVR Programming on MacOS",
     "section": "",
-    "text": "There are two guiding principles for routing, almost all errors are violating one of these. All tracks should be neat and as short as possible.\nWe want them to be neat for aesthetic reasons, but we want them to be as short as possible because the longer a track is, the more resistance it has. We can see this from the formula for resistance: \\[\nR = \\rho \\frac{L}{A} \\] Where:\nBecause \\(R \\propto L\\) (\\(R\\) is proportional to \\(L\\)), if we double the length of the wire, we double its resistance. Because of this, we try to keep any power tracks as short as possible.\nFor example, in project one we have power lines that can draw as much as \\(300mA\\). This means that if have a power track with a resistance of \\(1 \\Omega\\) we get a voltage drop across it of \\(300 mV\\).\nTherefore, with power lines (such as +5V and GND), we want to keep them as short as possible to minimise resistance."
+    "text": "My main computer is a Macbook, and I dislike both windows and Microchip Studio. Because of this I went to great lengths to be able to program microcontrollers from my laptop. Turns out it is not very hard. These instructions are for MacOS, but the process is pretty similar for Linux.1"
   },
   {
-    "objectID": "docs/electronics-project/routing.html#functional-guidelines",
-    "href": "docs/electronics-project/routing.html#functional-guidelines",
-    "title": "Common Routing Errors",
-    "section": "Functional Guidelines",
-    "text": "Functional Guidelines\nThese are guidelines that affect the functionality of the board.\n\nLong Tracks\nThis one matters more for power wires because the voltage drop across a wire is proportional to current. For most signal lines the current through them is extremely low, so the resistance doesn’t matter too much.\nGenerally shorter lines are more efficient, but prioritise making power lines shorter even if that means using a longer signal line.\n\n\nRight Angles\nRight angle traces are generally frowned upon. This is because if you have a right angle, generally speaking you can get a shorter path by taking a diagonal path.\nOne exception to this is junctions. We prefer a T junction over something like this:\n1\n1 All images taken from the week 2 slides on canvas.\n\nUnnecessary Vias\nFor both project one and project two you will have a limit to the number of vias you can use. Avoid using them unnecessarily, for example:\n\nOnly one of the vias in the green circle is necessary as the diode on the right is a through hole component, and as such the top layer track (red) can connect to it directly."
+    "objectID": "docs/electronics-project/avr-programming-macos.html#software-installation",
+    "href": "docs/electronics-project/avr-programming-macos.html#software-installation",
+    "title": "AVR Programming on MacOS",
+    "section": "Software Installation",
+    "text": "Software Installation\n\nInstalling Homebrew\nSkip this if you are not using MacOS or already have homebrew installed.\nHomebrew is a “package manager” for MacOS, it helps you install software easily. I highly recommend it.\n\nIf you dont have the XCode dev tools installed, do that by running xcode-select --install in your terminal.\nGo to their website, paste the command into your terminal.\nAdd homebrew to your path by running export PATH=\"/opt/homebrew/bin:$PATH\" &gt;&gt; ~/.zshrc in your terminal2.\nReload your shell config by either closing and reopening it or running source ~/.zshrc\n\n\n\nInstalling the AVR toolchain and AVRDUDE\nOnce homebrew is installed, run these commands\nbrew tap osx-cross/avr\nbrew trust osx-cross/avr\nbrew install avr-gcc avr-binutils avrdude\nNow you should be basically done! That is all you need to install. You can move on to Compiling and flashing"
   },
   {
-    "objectID": "docs/electronics-project/routing.html#aesthetic-guidelines",
-    "href": "docs/electronics-project/routing.html#aesthetic-guidelines",
-    "title": "Common Routing Errors",
-    "section": "Aesthetic Guidelines",
-    "text": "Aesthetic Guidelines\nThese are guidelines that are entirely aesthetic preferences. If you violate these you will probably receive a lower grade, but they shouldn’t affect how functional your board is.\n\n45 Degree Pad Connections on Square Pads\nWith circular pads you can connect to it at either right angles or 45 degree angles, but with square pads you should only connect to it on one of the flat sides.\n\n\n\n\n\n\nTipAllowed\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportantNot Allowed"
+    "objectID": "docs/electronics-project/avr-programming-macos.html#compiling-and-flashing",
+    "href": "docs/electronics-project/avr-programming-macos.html#compiling-and-flashing",
+    "title": "AVR Programming on MacOS",
+    "section": "Compiling and Flashing",
+    "text": "Compiling and Flashing\nThe commands to compile and flash code for a microcontroller are extremely long and hard to remember. For example, here is the sequence of commands to compile a program called main.c for the attiny1634 and upload it over the dragon programming module.\navr-gcc -Wall -mmcu=attiny1634 -Os -o main.elf main.c\navr-objcopy -O ihex main.elf main.hex\navrdude -c dragon_isp -p attiny1634 -v -U \"flash:w:main.hex:i\" -B10 -P usb\nThese, in order:\n\nCompile your program to a .elf\nConvert that .elf to a .hex file\nTransmit that .hex file to the microcontroller over the programming module.\n\nThis would be an enormous pain to type out (or even copy paste) every time you wanted to program your microcontroller. Fortunately, some nerds 30 years ago ran into the same kind of problem and wrote something to make this easier. It is (in my opinion), one of the best programs ever written. It is called make. It comes preinstalled on both Mac and Linux.\n\n\n\n\n\n\nTipTangent about Make\n\n\n\n\n\nBasically Make let you define a set of named shell scripts called “targets”, each target is a sequence of shell commands used to create the target. Normally a target is the name of a file the target produces, i.e. a target called example.txt is a list of instructions used to construct the file example.txt. However, targets can be called anything or do anything.\nThe really cool thing about makefiles is that targets can depend on each other. If the target file1.txt depends on file2.txt and file2.txt does not exist, Make automatically uses the file2.txt target to generate it before creating file1.txt. Importantly it also keeps track on a targets dependencies to see if they have changed, recreating them if they have. In a makefile this would look like:\nfile1.txt: file2.txt\n    # Something that turns file2.txt into file1.txt\n\nfile2.txt:\n    # Something that produces file2.txt\nIn the makefile I give you later the upload target depends on main.hex, which then depends on main.c. This means that when you try and upload your code to the robot it will automatically compile it, but will then only recompile it before flashing if you have changed main.c since the last time you uploaded (unlike microchip studio that recompiles every time you try and flash).\nIn combination with other more advanced features (shell subsitutions, pattern matching, automatic variables, etc) this makes Make a very very powerful tool and I cannot recommend using it enough. Make is so awesome. Big Make fan over here.\n\n\n\nIf you are interested I would highly recommend learning more about makefiles, I use them constantly and love them. Otherwise, here is the one I use for this process:\n\n\nmakefile\n\n1MCU := \"attiny1634\"\n\nupload: main.hex\n    avrdude -c dragon_isp -p $(MCU) -v -U \"flash:w:main.hex:i\" -B10 -P usb\n\nmain.hex: main.c\n    avr-gcc -Wall -mmcu=$(MCU) -Os  -o main.elf main.c\n    avr-objcopy -O ihex main.elf main.hex\n\nclean:\n    rm *.hex *.elf\n\n\n1\n\nChange this to “attiny2313” for project two.\n\n\nCopy this into a file called makefile on the same level as your robot.c. Then when you want to compile and flash your code, run make in the same directory. 3 If you use the excellent zed text editor (which you should, its great), you can press Cmd-Shift-R and select the “all” target to do this faster. Otherwise, if you are using VSCode you can use this extension."
+  },
+  {
+    "objectID": "docs/electronics-project/avr-programming-macos.html#getting-clangd-to-stop-complaining",
+    "href": "docs/electronics-project/avr-programming-macos.html#getting-clangd-to-stop-complaining",
+    "title": "AVR Programming on MacOS",
+    "section": "Getting clangd to stop complaining",
+    "text": "Getting clangd to stop complaining\nWhen you open AVR C code in a text editor (Such as VSCode) you will probably get many errors because your LSP4 cannot find the headers you reference in the file (such as avr/io.h). It should still compile just fine using avr-gcc5, but its still worth fixing. Most text editors use clangd for syntax highlighting and error detection in C, which can be told where to find these headers using a compile_commands.json file.\nIf you are on MacOS this file will look like:\n\n\ncompile_commands.json\n\n[\n  {\n    \"arguments\": [\n      \"/opt/homebrew/bin/avr-gcc\",\n      \"-c\",\n1      \"--mmcu=attiny1634\",\n      \"-Wall\",\n      \"-Os\",\n      \"-o\",\n      \"main.elf\",\n      \"main.c\",\n2      \"-I/usr/lib/gcc/avr/15.1.0/include\",\n      \"-I/usr/lib/gcc/avr/15.1.0/include-fixed\"\n    ],\n3    \"directory\": \"/Users/YOURUSERNAME/Example\",\n4    \"file\": \"/Users/YOURUSERNAME/Example/main.c\",\n5    \"output\": \"/Users/YOURUSERNAME/Example/main.elf\"\n  }\n]\n\n\n1\n\nChange this to --mmcu=attiny2313 for project two.\n\n2\n\nThese paths may change! Particularly the version number. Check where it is on your machine!\n\n3\n\nThis is the path to your current project, make sure it is an absolute path with no trailing slash 6\n\n4\n\nThis is the path to whatever file you are trying to compile, in this case main.c but change it if you call it something else.\n\n5\n\nOutput .elf file, its fine if you call it something else but keep it consistent with 4."
+  },
+  {
+    "objectID": "docs/electronics-project/avr-programming-macos.html#putting-it-all-together",
+    "href": "docs/electronics-project/avr-programming-macos.html#putting-it-all-together",
+    "title": "AVR Programming on MacOS",
+    "section": "Putting it all together",
+    "text": "Putting it all together\nOnce you have installed all the software you need, you should have a directory that looks like this:\nexampledirectory/\n├── main.c\n├── compile_commands.json\n└── makefile \nYou will copy the contents of compilecommands.json and the makefile into their appropriate files alongside your main.c. When you are ready to compile your code you can run make compile, and to flash it you run make flash. To do both you can run make by itself (which will run the first target, which depends on the other two.)\nYou will almost certainly run into errors doing this, its a complicated setup process the first time you do it. That is fine and expected. Read the error messages, google them, fix it yourself (or ask AI to do it for you if you can’t be bothered.)"
+  },
+  {
+    "objectID": "docs/electronics-project/avr-programming-macos.html#footnotes",
+    "href": "docs/electronics-project/avr-programming-macos.html#footnotes",
+    "title": "AVR Programming on MacOS",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIf you are doing this on linux you can probably figure out the differences yourself. If not, reach out to me and I am happy to help!↩︎\nThis step tells your computer where to look for programs you install with homebrew. Without it they are still installed but you can’t access them without specifying the whole path of the program. i.e. you have to go like /opt/homebrew/bin/gcc instead of just gcc which would be annoying.↩︎\nI use the word “directory” here but you can mentally swap out the word “folder” if you want.↩︎\nThis stands for Language Server Protocol, which is basically a server that tells your editor what is wrong with your code.↩︎\nBecause avr-gcc already knows where to look (the headers are included in the same directory when you install it)↩︎\nHot tip, run pwd | pbcopy to copy the current absolute directory path to your clipboard.↩︎"
+  },
+  {
+    "objectID": "docs/electronics-project/how-rules-work.html",
+    "href": "docs/electronics-project/how-rules-work.html",
+    "title": "How Rules Work",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/p1_screw.html",
+    "href": "docs/electronics-project/p1_screw.html",
+    "title": "Adding the screw for Project One",
+    "section": "",
+    "text": "There was a mistake with the PCB template and a screw near the top of the board. You will need to fix this by copying them over from an updated template. To do so, download the template again from canvas, (same place as last time, on the assignment page), and open it in altium as a seperate file.\n\nThen, once you have it open, select the screw parts.\n(Do not select anything else!):\n\nIf you drag your cursor up and left it will select anything that touches the box, which makes it easy to select these.\n\nWhen you press CTRL-C to copy it will come up with a crosshair. This is to select a reference point for the copy paste. Select a known point, I would recommend the leftmost breakaway tab: (Make sure it comes up with a circle, that means it is locked on!)\n\nThen, switch over to your board, and press CTRL-V, and it will come up with the same green crosshair. Place it onto the same point and click.\n\nYou will need to reroute the section at the top, but it is not too bad. Please do not try and route tracks over the screw. Good luck!\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/smart-pdf-export-ste.html",
+    "href": "docs/electronics-project/smart-pdf-export-ste.html",
+    "title": "Instructions to export a Smart PDF",
+    "section": "",
+    "text": "This procedure tells you how to make a Smart PDF of an Altium design. Do the steps in the given sequence.\n\nIn the menu bar, select “File”. Then select “Smart PDF”.\n\nPress “Next” until the “Export Bill of Materials” page comes into view.\nClear the “Export a Bill of Materials” checkbox.\n\nPress “Next” to go to the “PCB Printout Settings” page.\nSelect the “Holes” checkbox.\n\nPress “Next” to go to the “Additional PDF Settings” page.\nMake sure that “PCB Color Mode” is set to “Color”.\n\nPress “Next” to go to the “Structure Settings” page.\nDo not change the “Structure Settings” page. Press “Next”.\nOn the “Final Steps” page, clear the “Save Settings to Output Job Document” checkbox.\n\nPress “Finish”.\nWait until the Smart PDF opens in the default browser (Edge).\nIn the top right corner, select “Save As”.\nSave the file in a location that you can find again. For example, save the file on the desktop.\n\nSubmit this document to Canvas when you submit an Altium design. Examples of these designs are project one, project two, and the midterm assessment.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/P2-Design-Info.html#how-to-arrange-relative-components",
+    "href": "docs/electronics-project/P2-Design-Info.html#how-to-arrange-relative-components",
+    "title": "Project Two - PCB Design",
+    "section": "How to arrange relative components",
+    "text": "How to arrange relative components\nThere are certain components in this project you are given coodinates for. For these, just select the component, open “properties”, and set the coordinates and rotations. However there are others you are given relative coordinates for. (i.e. coordinates that depend on the position of other components)\n\nTo do this, you can use the align tools. If you place the component at the right known coordinate, select both components, and use “Right Click \\(\\rightarrow\\) Align” you will get a menu with the alignment tools. In the example of D5 and D4, you will use the “align vertical centers” option, as you are trying to align them vertically.\nThere are two special cases that require consideration here. These are:\n\n“^ Horizontally centered between D13 and D15”\n\nPlace the component inbetween D13 and D15 at the same height.\nSelect all three components\nRight click any of the three, and go “Align \\(\\rightarrow\\) Distribute Horizontally”\n\n“*** Vertically aligned with the centre pad of P2”\n\nSelect one of the center pads of P2\nSelect the component\nRight click either the pad or the component, and go “Align \\(\\rightarrow\\) Align Vertical Centers”\nClick on the center of the component you don’t want to move (i.e. the centre pad of P2)"
+  },
+  {
+    "objectID": "docs/electronics-project/P2-Design-Info.html#faq",
+    "href": "docs/electronics-project/P2-Design-Info.html#faq",
+    "title": "Project Two - PCB Design",
+    "section": "FAQ",
+    "text": "FAQ\n\nQ: How do I access 2025S1.IntLib?\n\nA: You don’t, this is a typo on the document. Use 2026S2.IntLib as described here.\n\nQ: Do I need to make a Mechanical-1 outline?\n\nA: Yes, but the process is basically the same as for project one."
+  },
+  {
+    "objectID": "docs/electronics-project/smart-pdf-export.html",
+    "href": "docs/electronics-project/smart-pdf-export.html",
+    "title": "Exporting a Smart PDF",
+    "section": "",
+    "text": "To create a smart PDF, go to “file” in the top bar, and select “Smart PDF”.\n\nNext, press “next” until you get to “Export Bill of Materials” and disable “Export a Bill of Materials”\n\nIn “PCB Printout Settings” enable “Holes”.\n\nIn “Additional PDF Settings”, ensure that the PCB Color Mode is set to “Color”.\n\nNothing needs to be changed for “Structure Settings”, just press next.\nIn “Final Steps” disable “Save Settings to Output Job Document”.\n\nPress “Finish”.\nAfter a short wait, the Smart PDF will open in the default browser (Edge), click “Save As” in the top right corner, and save it somewhere you know how to get to (such as the desktop).\nThis is the document you will upload to canvas when you submit altium designs (such as projects one and two, and the midterm assessment)\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/aligning-components.html",
+    "href": "docs/electronics-project/aligning-components.html",
+    "title": "Aligning Components",
+    "section": "",
+    "text": "Back to top"
   },
   {
     "objectID": "docs/physics-B/Labs/Lab Three.html",
@@ -228,14 +326,14 @@
     "href": "docs/physics-B/Labs/Lab Two.html",
     "title": "PHYS401 - Lab Two",
     "section": "",
-    "text": "WarningThis page is a work in progress!\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "I have had some people asking me how to graph their data for this assignment.\nI would recommend doing this using either Python (my personal preference) or R.\n\n\nI would recommend using python for this.\nIn python, you can use the MatPlotLib1 library, which is a relatively easy to use plotting library for python.\n1 If you feel like being very fancy, try out seaborn, its a plotting library similar to matplotlib, it is harder to use but makes nicer looking graphs.\nimport matplotlib.pyplot as plt\n\n# Change these!\ncurrents = [ 0.1, 0.2, 0.3, 0.4, 0.5 ]\nvoltages = [ 1, 2, 3, 4, 5 ]\n\nplt.plot(\n    currents, # The first argument is the \"x\" values\n    voltages, # The second argument is the \"y\" values\n    \"b-\"      # This is the line style, \n)             # \"b-\" means a blue solid line\n\n# Label the Axes\nplt.xlabel(\"Current (Amps)\")\nplt.ylabel(\"Voltage (V)\")\n\n# Display a grid\nplt.grid() \n# Title the plot\nplt.title(\"Voltage plotted against current\") \n\n# Display the plot\nplt.show() \n\n\n\n\n\n\n\n\n\n\n\nI am less familiar with R, but a lot of you learn it in the CST for statistics. I have been told it is very good.\n\n# Libraries\nlibrary(ggplot2)\n\n# create data\nxValue &lt;- 1:10\nyValue &lt;- cumsum(rnorm(10))\ndata &lt;- data.frame(xValue,yValue)\n\n# Plot\nggplot(data, aes(x=xValue, y=yValue)) +\n  geom_line()"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Courses",
     "section": "",
-    "text": "If you are looking for electronics project troubleshooting information, open this page."
+    "text": "If you are looking for electronics project troubleshooting information, open this page.\nIf you have questions about the first lab for Physics B, see this."
   },
   {
     "objectID": "index.html#classes-i-ta-for",
@@ -245,10 +343,101 @@
     "text": "Classes I TA for\n\nENEL602 - Electronics Project\nPHYS401 - Foundation Physics B"
   },
   {
-    "objectID": "index.html#my-classes",
-    "href": "index.html#my-classes",
-    "title": "Courses",
-    "section": "My Classes",
-    "text": "My Classes\nPersonal Courses"
+    "objectID": "docs/electronics-project/troubleshooting.html#how-to-fix-clearance-issues-between-pins-of-the-same-component",
+    "href": "docs/electronics-project/troubleshooting.html#how-to-fix-clearance-issues-between-pins-of-the-same-component",
+    "title": "Troubleshooting Altium",
+    "section": "How to fix clearance issues between pins of the same component",
+    "text": "How to fix clearance issues between pins of the same component\n\nIn the top bar press open “Design \\(\\rightarrow\\) Rules”\nGo to “Clearance”\nFor each of “Schematic Clearance Constraint \\(n\\)” where \\(n\\) is some number, open it and tick “Ignore pad-to-pad clearances within a footprint”\nPress “apply” and then “Ok”"
+  },
+  {
+    "objectID": "docs/electronics-project/troubleshooting.html#installing-the-local-component-libraries",
+    "href": "docs/electronics-project/troubleshooting.html#installing-the-local-component-libraries",
+    "title": "Troubleshooting Altium",
+    "section": "Installing the local component libraries",
+    "text": "Installing the local component libraries\nWe will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.\nTo install them, open the “components” panel on the right\n\nThen, click the three lines (hamburger) icon on the top right, and click “Libraries Preferences”\n\nUnder the installed tab, click “Install”\n\nThis will then open a file picker. Open “This PC”, and then follow this path:\nK:/\n└── WELLESLEY COPY/\n    └── DESIGN & CREATIVE TECHNOLOGIES/\n         └── School of Engineering/\n             └── Electrical & Electronic Engineering/\n                 └── Resources/\n                     └── AltiumLibraries/\n                         └── 2026S2.IntLib\n                         └── Altium Libraries/\n                             └── *All other libraries*\nFor projects one and two, you will use 2026S2.IntLib1\n1 Project two has components listed as being in “2025S2.IntLib”, this is a typo. Use 2026S2.IntLibFor reinstalling the altium libraries as described in fixing the lastconnection.data error, use the libraries in the AltiumLibraries/Altium Libraries path."
+  },
+  {
+    "objectID": "docs/electronics-project/P2-Design-Info.html#adding-components-to-rooms",
+    "href": "docs/electronics-project/P2-Design-Info.html#adding-components-to-rooms",
+    "title": "Project Two - PCB Design",
+    "section": "Adding Components to Rooms",
+    "text": "Adding Components to Rooms"
+  },
+  {
+    "objectID": "docs/physics-B/Labs/Lab Two.html#graphing-data",
+    "href": "docs/physics-B/Labs/Lab Two.html#graphing-data",
+    "title": "PHYS401 - Lab Two",
+    "section": "",
+    "text": "I have had some people asking me how to graph their data for this assignment.\nI would recommend doing this using either Python (my personal preference) or R.\n\n\nI would recommend using python for this.\nIn python, you can use the MatPlotLib1 library, which is a relatively easy to use plotting library for python.\n1 If you feel like being very fancy, try out seaborn, its a plotting library similar to matplotlib, it is harder to use but makes nicer looking graphs.\nimport matplotlib.pyplot as plt\n\n# Change these!\ncurrents = [ 0.1, 0.2, 0.3, 0.4, 0.5 ]\nvoltages = [ 1, 2, 3, 4, 5 ]\n\nplt.plot(\n    currents, # The first argument is the \"x\" values\n    voltages, # The second argument is the \"y\" values\n    \"b-\"      # This is the line style, \n)             # \"b-\" means a blue solid line\n\n# Label the Axes\nplt.xlabel(\"Current (Amps)\")\nplt.ylabel(\"Voltage (V)\")\n\n# Display a grid\nplt.grid() \n# Title the plot\nplt.title(\"Voltage plotted against current\") \n\n# Display the plot\nplt.show() \n\n\n\n\n\n\n\n\n\n\n\nI am less familiar with R, but a lot of you learn it in the CST for statistics. I have been told it is very good.\n\n# Libraries\nlibrary(ggplot2)\n\n# create data\nxValue &lt;- 1:10\nyValue &lt;- cumsum(rnorm(10))\ndata &lt;- data.frame(xValue,yValue)\n\n# Plot\nggplot(data, aes(x=xValue, y=yValue)) +\n  geom_line()"
+  },
+  {
+    "objectID": "docs/electronics-project/Altium Test.html#what-we-meen-by-horizontally-aligned-or-vertically-aligned",
+    "href": "docs/electronics-project/Altium Test.html#what-we-meen-by-horizontally-aligned-or-vertically-aligned",
+    "title": "Midterm Assessment",
+    "section": "What we meen by “horizontally aligned” or “vertically aligned”",
+    "text": "What we meen by “horizontally aligned” or “vertically aligned”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis _can be confusing because you use the “align horizontal centers” tool to make things “vertically aligned” and vice versa. Many people have been confused by this."
+  },
+  {
+    "objectID": "docs/electronics-project/Altium Test.html#overview",
+    "href": "docs/electronics-project/Altium Test.html#overview",
+    "title": "Midterm Assessment",
+    "section": "Overview",
+    "text": "Overview\nThe midterm test is a closed book assessment, so I can’t really say much about it. That being said, what I can tell you, is that it has two parts. The first is a multi choice questionaire (which is pretty easy), and the second is a timed PCB routing assessment. You will get ~3.5 hours to route a PCB. Last semester students were given the schematic file, but before that you had to do the schematic yourself as well.\nI recently tried doing the altium test myself just to see how hard it was and how long it took. It took me about two and a half hours (including making the schematic, which took me about 40 minutes). I did not find it particularly hard knowing what I know now, but I did find it difficult back when I took it as a student."
+  },
+  {
+    "objectID": "docs/electronics-project/Altium Test.html#what-you-should-know",
+    "href": "docs/electronics-project/Altium Test.html#what-you-should-know",
+    "title": "Midterm Assessment",
+    "section": "What you should know",
+    "text": "What you should know\nWhile I am not allowed to tell you much about it, here is a list of statements I can make.\n\nYou will need to construct a board outline that actually cuts out the board at the right distance from the edge. You should know how to do that.\nThe board you will make is small and dense, get good at routing in tight spaces.\nOn the smallest track size, it is possible to route between the pads of most of the resistors and capacitors.\nThis assignment has been basically the same for the past few years."
+  },
+  {
+    "objectID": "docs/electronics-project/board-outline.html",
+    "href": "docs/electronics-project/board-outline.html",
+    "title": "Zach's Notes",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "docs/electronics-project/board-cutouts.html",
+    "href": "docs/electronics-project/board-cutouts.html",
+    "title": "Making board cutouts",
+    "section": "",
+    "text": "For projects one and two, we get you to add a mechanical one layer to a prexisting board outline. This method is fine for the other two, but for the altium test you will need to actually define the board edge yourself.\nWe showed you how to do this in one of the first few labs, but its been a while so here is a quick guide."
+  },
+  {
+    "objectID": "docs/electronics-project/board-cutouts.html#defining-a-board-outline",
+    "href": "docs/electronics-project/board-cutouts.html#defining-a-board-outline",
+    "title": "Making board cutouts",
+    "section": "Defining a board outline",
+    "text": "Defining a board outline\nImagine we want to make an 8cm x 8cm board with a 0.80 mm cutting tool diameter.\n\n\n\n\n\n\n\nStep One: Defining the Board Shape\nFirst, we create a rectangle the intended shape and size on the Keep Out layer.\n\n\n\n\n\n\nSelect it, and use Design -&gt; Board Shape -&gt; Define Board Shape from Selected Objects\nThis will define the shape of the board.\n\n\nStep Two: Adding a mechanical One Line\nSelect Mechanical 1 and create a line on the board edge\n\n\n\n\n\n\nRepeat this for all edges of the board.\n\n\nStep Three: Set Mechanical 1 lines to Correct Thickness\nSelect all of your Mechanical 1 lines, open Properties 1, and set “Width” to whatever the diameter of your cutting tool is (in this case, 0.80mm).\n1 You can do this quickly by pressing F11! See here for more keyboard shortcuts.\n\nStep Four: Move out from edge\nFor each of your new Mechanical 1 lines you just made, you will need to move them out so that the interior edge of this line is where you want to cut.\ni.e. you need to go from this:\n\n\n\n\n\n\nTo this:\n\n\n\n\n\n\nI would recommend doing this by modifying the coordinates. If you select the line and open Properties, you can change either both the start and end x or y coordinates by half the cutting tool diameter.\nIn the example diagram I showed you, I need to move it right by 0.4mm. So I will add 0.4mm to the x coordinates.\nYou can either do the math for that in your head, or you can literally add +0.4mm to the x coordinate boxes. 2\n2 So if it was originally like 1000mil you would change it to 1000+0.4mm and it will automatically update to 1,015.74milIf it was on the top of bottom of the board you would add or subtract 0.4mm to the y coordinates instead.\n\n\nStep Five: Extending the Lines\nOnce you have done that, it will look like this:\n\n\n\n\n\n\nYou can connect these together by modifying the other coordinates, or you can click and drag the ends togther.\n\n\n\n\n\n\nNow you are done."
+  },
+  {
+    "objectID": "docs/electronics-project/keyboard-shortcuts.html",
+    "href": "docs/electronics-project/keyboard-shortcuts.html",
+    "title": "Useful keyboard shortcuts for Altium",
+    "section": "",
+    "text": "NoteShortcut Notation\n\n\n\n\n\nIn altium designer, there are two types of keyboard shortcuts.\nI don’t know if they have names, but I think of them as being chords and riffs.\nYou are probably most familiar with chord style keyboard shortcuts, its when you press multiple keys at the same time to do something. For example, the keyboard shortcut CTRL-C to copy something. You press CTRL and c at the same time to trigger it.\nIn contrast, Altium also has several riff style keyboard shortcuts, which is where you press a number of keys in sequence. For example, pressing the sequence of keys t m in the PCB view resets error markers.\nWhen I am telling you to press two keys at once, I will put a hyphen between them (e.g. CTRL-C) and when I am telling you to press two keys in sequence I will put a space btween them (e.g. j c)\nGenerally speaking almost all things you can do through context menus can be done with this type of keyboard shortcut. When you open one of these menus, you may notice that most options have one letter that is underlined. Pressing that letter next will use that option.\n\nFor example, in the tools menu pressing D will run a design rule check, and pressing M resets error markers.\nEDIT: Found out later that Altium refers to these as “Accelerator Keys”. Which I think is a bad name I like my one better."
+  },
+  {
+    "objectID": "docs/electronics-project/keyboard-shortcuts.html#in-the-schematic-editor.",
+    "href": "docs/electronics-project/keyboard-shortcuts.html#in-the-schematic-editor.",
+    "title": "Useful keyboard shortcuts for Altium",
+    "section": "In the Schematic Editor.",
+    "text": "In the Schematic Editor."
+  },
+  {
+    "objectID": "docs/electronics-project/keyboard-shortcuts.html#in-the-pcb-editor.",
+    "href": "docs/electronics-project/keyboard-shortcuts.html#in-the-pcb-editor.",
+    "title": "Useful keyboard shortcuts for Altium",
+    "section": "In the PCB editor.",
+    "text": "In the PCB editor.\n\nMisc\n\nPress 3 to enter 3D view 1\n\nPress 2 to go back to 2D view\n\nPress Q to swap between mils and millimeters.\nPress G to change your snap grid size.\n\n1 Did you know that you can move designators around in 3D view? Very useful to see where you are putting them more clearly!\n\nAlignment\n\nCTRL-SHIFT-T: This aligns all components to the top"
+  },
+  {
+    "objectID": "docs/electronics-project/keyboard-shortcuts.html#in-both",
+    "href": "docs/electronics-project/keyboard-shortcuts.html#in-both",
+    "title": "Useful keyboard shortcuts for Altium",
+    "section": "In both",
+    "text": "In both\nThe function keys"
   }
 ]

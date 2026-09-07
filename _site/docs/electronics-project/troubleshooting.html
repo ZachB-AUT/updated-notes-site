@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Zach Barrett">
-<meta name="dcterms.date" content="2026-07-22">
+<meta name="dcterms.date" content="2026-08-18">
 
 <title>Troubleshooting Altium – Zach’s Notes</title>
 <style>
@@ -47,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-87c8eabe2b0af90fe7463c77d0cbc8fc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-19376518d03d1ed6661cd0ed358ad9b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-2981175552b475d06fb59f79bc67145b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-19376518d03d1ed6661cd0ed358ad9b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-60ac156d3fb8eef846f5d859668a8297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3f5f57a08496c514461e477438cf32f1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-60ac156d3fb8eef846f5d859668a8297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,6 +82,35 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -298,20 +327,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-to-fix-the-getting-kicked-off-workspace-problem" id="toc-how-to-fix-the-getting-kicked-off-workspace-problem" class="nav-link active" data-scroll-target="#how-to-fix-the-getting-kicked-off-workspace-problem">How to fix the getting kicked off workspace problem</a></li>
+  <li><a href="#common-minor-problems" id="toc-common-minor-problems" class="nav-link active" data-scroll-target="#common-minor-problems">Common minor problems</a></li>
+  <li><a href="#how-to-fix-clearance-issues-between-pins-of-the-same-component" id="toc-how-to-fix-clearance-issues-between-pins-of-the-same-component" class="nav-link" data-scroll-target="#how-to-fix-clearance-issues-between-pins-of-the-same-component">How to fix clearance issues between pins of the same component</a></li>
+  <li><a href="#how-to-fix-the-getting-kicked-off-workspace-problem" id="toc-how-to-fix-the-getting-kicked-off-workspace-problem" class="nav-link" data-scroll-target="#how-to-fix-the-getting-kicked-off-workspace-problem">How to fix the getting kicked off workspace problem</a></li>
   <li><a href="#how-to-fix-the-lastconnection.data-error" id="toc-how-to-fix-the-lastconnection.data-error" class="nav-link" data-scroll-target="#how-to-fix-the-lastconnection.data-error">How to fix the lastconnection.data error</a></li>
   <li><a href="#how-to-add-an-external-file-in-altium" id="toc-how-to-add-an-external-file-in-altium" class="nav-link" data-scroll-target="#how-to-add-an-external-file-in-altium">How to add an External File in Altium</a>
   <ul class="collapse">
   <li><a href="#moving-a-file-to-the-correct-folder" id="toc-moving-a-file-to-the-correct-folder" class="nav-link" data-scroll-target="#moving-a-file-to-the-correct-folder">Moving a file to the correct folder</a></li>
   <li><a href="#adding-the-file-to-the-project" id="toc-adding-the-file-to-the-project" class="nav-link" data-scroll-target="#adding-the-file-to-the-project">Adding the file to the project</a></li>
   <li><a href="#saving-to-server" id="toc-saving-to-server" class="nav-link" data-scroll-target="#saving-to-server">Saving to Server</a></li>
+  <li><a href="#checking-you-have-done-it-correctly" id="toc-checking-you-have-done-it-correctly" class="nav-link" data-scroll-target="#checking-you-have-done-it-correctly">Checking you have done it correctly</a></li>
   </ul></li>
-  <li><a href="#altium-libraries-path" id="toc-altium-libraries-path" class="nav-link" data-scroll-target="#altium-libraries-path">Altium Libraries Path</a></li>
+  <li><a href="#installing-the-local-component-libraries" id="toc-installing-the-local-component-libraries" class="nav-link" data-scroll-target="#installing-the-local-component-libraries">Installing the local component libraries</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -333,7 +365,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 22, 2026</p>
+      <p class="date">August 18, 2026</p>
     </div>
   </div>
   
@@ -361,6 +393,32 @@ Warning
 <p>That being said, the following are quick guides on solving common problems. Try these first.</p>
 </div>
 </div>
+<section id="common-minor-problems" class="level2">
+<h2 class="anchored" data-anchor-id="common-minor-problems">Common minor problems</h2>
+<ol type="1">
+<li>Help, I can only see top / bottom layer tracks
+<ul>
+<li>Press <code>SHIFT-S</code>.</li>
+</ul></li>
+<li>Help, I can only see one track
+<ul>
+<li>Right click on empty space and then click “clear filter”.</li>
+</ul></li>
+<li>Help, I am in some kind of 3D view
+<ul>
+<li>Press <code>2</code>.</li>
+</ul></li>
+</ol>
+</section>
+<section id="how-to-fix-clearance-issues-between-pins-of-the-same-component" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-fix-clearance-issues-between-pins-of-the-same-component">How to fix clearance issues between pins of the same component</h2>
+<ol type="1">
+<li>In the top bar press open “Design <span class="math inline">\(\rightarrow\)</span> Rules”</li>
+<li>Go to “Clearance”</li>
+<li>For each of “Schematic Clearance Constraint <span class="math inline">\(n\)</span>” where <span class="math inline">\(n\)</span> is some number, open it and tick “Ignore pad-to-pad clearances within a footprint”</li>
+<li>Press “apply” and then “Ok”</li>
+</ol>
+</section>
 <section id="how-to-fix-the-getting-kicked-off-workspace-problem" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-fix-the-getting-kicked-off-workspace-problem">How to fix the getting kicked off workspace problem</h2>
 <ol type="1">
@@ -423,37 +481,165 @@ Warning
 </section>
 <section id="saving-to-server" class="level3">
 <h3 class="anchored" data-anchor-id="saving-to-server">Saving to Server</h3>
-<p>Finally, right click “Save to Server” next to your project, add a meaningful commit message, and save. ### Checking you have done it correctly</p>
+<p>Finally, right click “Save to Server” next to your project, add a meaningful commit message, and save.</p>
+</section>
+<section id="checking-you-have-done-it-correctly" class="level3">
+<h3 class="anchored" data-anchor-id="checking-you-have-done-it-correctly">Checking you have done it correctly</h3>
 <p>Open up Altium 365 and check your project has the file you added, if not call over a TA.</p>
 <p><img src="../../assets/altium365.png" class="img-fluid"></p>
-<hr>
 </section>
 </section>
-<section id="altium-libraries-path" class="level2">
-<h2 class="anchored" data-anchor-id="altium-libraries-path">Altium Libraries Path</h2>
+<section id="installing-the-local-component-libraries" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="installing-the-local-component-libraries">Installing the local component libraries</h2>
 <p>We will use a set of libraries in the K: drive, which is a network drive common to all engineering computers at AUT.</p>
-<p>The path looks like:</p>
+<p>To install them, open the “components” panel on the right</p>
+<p><img src="../../assets/troubleshooting/open-components.png" class="img-fluid"></p>
+<p>Then, click the three lines (hamburger) icon on the top right, and click “Libraries Preferences”</p>
+<p><img src="../../assets/troubleshooting/three-lines-and-lib-pref.png" class="img-fluid"></p>
+<p>Under the installed tab, click “Install”</p>
+<p><img src="../../assets/troubleshooting/installed-install.png" class="img-fluid"></p>
+<p>This will then open a file picker. Open “This PC”, and then follow this path:</p>
 <pre><code>K:/
- └── WELLESLEY COPY/
-      └── DESIGN &amp; CREATIVE TECHNOLOGIES/
-          └── School of Engineering/
-              └── Electrical &amp; Electronic Engineering/
-                  └── Resources/
-                      └── AltiumLibraries/</code></pre>
-<!-- - K:/ -->
-<!--   - WELLESLEY COPY/ -->
-<!--       - DESIGN & CREATIVE TECHNOLOGIES/ -->
-<!--           - School of Engineering/ -->
-<!--               - Electrical & Electronic Engineering/ -->
-<!--                   - Resources/ -->
-<!--                       - AltiumLibraries/ -->
-<p>For projects one and two, you will use <code>2026S2.IntLib</code>.</p>
-<p>For reinstalling the altium libraries as described in <a href="#how-to-fix-the-lastconnection.data-error">fixing the lastconnection.data error</a>, use the libraries in the <code>AltiumLibraries\Altium Libraries</code> path.</p>
+└── WELLESLEY COPY/
+    └── DESIGN &amp; CREATIVE TECHNOLOGIES/
+         └── School of Engineering/
+             └── Electrical &amp; Electronic Engineering/
+                 └── Resources/
+                     └── AltiumLibraries/
+                         └── 2026S2.IntLib
+                         └── Altium Libraries/
+                             └── *All other libraries*</code></pre>
+<p>For projects one and two, you will use <code>2026S2.IntLib</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Project two has components listed as being in “<code>2025S2.IntLib</code>”, this is a typo. Use <code>2026S2.IntLib</code></p></div></div><p>For reinstalling the altium libraries as described in <a href="#how-to-fix-the-lastconnection.data-error">fixing the lastconnection.data error</a>, use the libraries in the <code>AltiumLibraries/Altium Libraries</code> path.</p>
 
 
 </section>
+
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script>
+  // Code annotation layout.
+  //
+  // Quarto renders annotation numbers as right-floated anchors *inside* the
+  // code, with a gutter strip overlaid on top of it. That means the numbers
+  // scroll with the code, and long lines slide underneath them. This moves the
+  // anchors into a real column beside the <pre>, outside its scroll container.
+  //
+  // It also tags every line of a multi-line annotation: Quarto marks only the
+  // first line with .code-annotation-target, but the full range is on the
+  // annotation list entry as data-code-lines (e.g. "12,13").
+  //
+  // The marker class is .annotated-line rather than Quarto's own
+  // .code-annotation-target, and the Quarto class is stripped. The copy button
+  // deletes every child of <code> whose class starts with "code-annotation-" —
+  // meant for the number anchors, but it matches the marked lines too, so
+  // annotated lines go missing from copied code. Keeping the class off the
+  // line spans leaves the copy handler with nothing to delete.
+  (function () {
+    const RAIL_ANCHOR_SIZE = 18;
+
+    // (cell, annotation number) -> [line element ids]
+    const lineIdsByAnnotation = new Map();
+
+    const collectAnnotations = () => {
+      const notes = window.document.querySelectorAll(
+        "span[data-code-cell][data-code-lines][data-code-annotation]"
+      );
+      for (const note of notes) {
+        const cell = note.getAttribute("data-code-cell");
+        const number = note.getAttribute("data-code-annotation");
+        const ids = note
+          .getAttribute("data-code-lines")
+          .split(",")
+          .map((line) => cell + "-" + line.trim());
+        lineIdsByAnnotation.set(cell + "/" + number, ids);
+      }
+    };
+
+    const markAnnotatedLines = () => {
+      for (const ids of lineIdsByAnnotation.values()) {
+        for (const id of ids) {
+          const lineEl = window.document.getElementById(id);
+          if (lineEl) {
+            lineEl.classList.remove("code-annotation-target");
+            lineEl.classList.add("annotated-line");
+          }
+        }
+      }
+    };
+
+    const buildRails = () => {
+      for (const pre of window.document.querySelectorAll("pre.code-annotation-code")) {
+        const container = pre.parentElement;
+        if (!container || container.querySelector(":scope > .annotation-rail")) {
+          continue;
+        }
+        const rail = window.document.createElement("div");
+        rail.className = "annotation-rail";
+        container.appendChild(rail);
+        container.classList.add("has-annotation-rail");
+        // Move, don't clone — the anchors carry Quarto's own click handling.
+        for (const anchor of pre.querySelectorAll("a.code-annotation-anchor")) {
+          rail.appendChild(anchor);
+        }
+      }
+    };
+
+    // Anchors are absolutely positioned in the rail, so they have to be lined
+    // up with their code line by measurement. Redone on resize and font load.
+    const positionAnchors = () => {
+      for (const rail of window.document.querySelectorAll(".annotation-rail")) {
+        const railTop = rail.getBoundingClientRect().top;
+        for (const anchor of rail.querySelectorAll("a.code-annotation-anchor")) {
+          const key =
+            anchor.getAttribute("data-target-cell") +
+            "/" +
+            anchor.getAttribute("data-target-annotation");
+          const ids = lineIdsByAnnotation.get(key);
+          if (!ids || ids.length === 0) {
+            continue;
+          }
+          const lineEl = window.document.getElementById(ids[0]);
+          if (!lineEl) {
+            continue;
+          }
+          const rect = lineEl.getBoundingClientRect();
+          const offset = (rect.height - RAIL_ANCHOR_SIZE) / 2;
+          anchor.style.top = rect.top - railTop + offset + "px";
+        }
+      }
+    };
+
+    const relayout = () => {
+      positionAnchors();
+    };
+
+    const init = () => {
+      collectAnnotations();
+      if (lineIdsByAnnotation.size === 0) {
+        return;
+      }
+      markAnnotatedLines();
+      buildRails();
+      positionAnchors();
+
+      let frame;
+      window.addEventListener("resize", () => {
+        window.cancelAnimationFrame(frame);
+        frame = window.requestAnimationFrame(relayout);
+      });
+      if (window.document.fonts && window.document.fonts.ready) {
+        window.document.fonts.ready.then(relayout);
+      }
+    };
+
+    if (window.document.readyState === "loading") {
+      window.document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

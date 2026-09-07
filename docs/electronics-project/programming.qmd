@@ -10,7 +10,6 @@ date: 07/20/2026
 # Work in progress!
 :::
 
-
 ## Writing Code for the Robot
 
 ```c

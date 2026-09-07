@@ -7,7 +7,7 @@ project:
 
 website:
   title: "Zach's Notes"
-  description: "This website is where I keep answers to commonly asked questions and solutions to common problems."
+  description: "This is my website where I put notes for the courses I TA for"
   back-to-top-navigation: true
   favicon: ./favicons/favicon.ico
   navbar:
@@ -29,11 +29,13 @@ format:
       light: flexoki-light.theme
       dark: flexoki-dark.theme
     css: styles.css
-    # toc: true
     code-copy: true
     smooth-scroll: true
     toc: true
+    reference-location: margin
     anchor-sections: true
+    include-after-body:
+      - annotation-lines.html
     include-in-header:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">
